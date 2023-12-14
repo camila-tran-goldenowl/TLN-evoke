@@ -578,6 +578,71 @@ form#orderForm{
     }
 }
 
+// calendar
+html .ui-datepicker{
+    box-shadow: 2px 2px 4px 0px #00000021;
+
+    tbody {
+        background: white;
+    }
+    
+    table tbody tr:nth-child(odd) td, 
+    table tbody tr:nth-child(odd) td, 
+    table tbody tr:nth-child(even) td, 
+    table tbody tr:nth-child(even) td{
+        background: white !important;
+    }
+
+    th{
+        @include black-text();
+        @include body-text();
+        background: white !important;
+        text-shadow: none!important;
+        background-color: white !important;
+        box-shadow: none!important;
+        padding: 0.5rem 1.5rem !important;
+        border: none !important;
+    }
+
+    td{
+        width: 4rem;
+        height: 4rem;
+        padding: 0 !important;
+        margin: auto;
+    }
+
+    td.ui-datepicker-week-end.ui-datepicker-days-cell-over.undefined.ui-datepicker-current-day:has(a.ui-state-active){
+        background-color: $secondary-orange-color !important;
+    }
+
+    .ui-state-default{
+        @include body-text();
+        @include black-text();
+        font-weight: 400!important;
+        line-height: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+}
+
+#ui-datepicker-div{
+    border: 0 !important;
+    width: fit-content;
+
+    .ui-datepicker-header{
+        padding: 1.2em 0;
+        background-color: $secondary-orange-color !important;
+        border: none !important;
+
+        .ui-datepicker-title{
+            > select{
+                @include body-text();
+                padding: 1rem 0.5rem;
+                margin-right: 2px;
+            }
+        }
+    }
+}
 
 /*=================== SIGN IN PAGE ===================*/
 label#orderForm\:existglbl,
