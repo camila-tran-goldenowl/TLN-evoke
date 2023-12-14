@@ -8,7 +8,7 @@ $primary-brown-color: #625956;
 $primary-black-color: #18181B;
 
 $secondary-yellow-color: #FFD075;
-$secondary-orange-color: #F89426;
+$secondary-orange-color: #ff7900;
 $secondary-beige-color: #F9F6F0;
 $secondary-white-color: #FFFDFA;
 $secondary-grey-color: #DCDDDE;
@@ -27,7 +27,6 @@ $link-color:#3388CC;
     font-size: 6px !important;
     font-weight: 400;
     line-height: 15px;
-    letter-spacing: 0.15em;
     text-align: right;    
 }
 
@@ -36,7 +35,6 @@ $link-color:#3388CC;
     font-size: 18px !important;
     font-weight: 400;
     line-height: 22px;
-    letter-spacing: 0em;
 }
 
 @mixin sub-header{
@@ -118,13 +116,11 @@ body{
 // general 
 html .ui-button-text{
     @include main-font();
-    @include black-text();
-    letter-spacing: 0.15em;
     font-weight: 400 !important;
 }
 
 html .ui-corner-all{
-border-radius: 0 !important;
+    border-radius: 0 !important;
 }
 
 // icon
@@ -177,6 +173,7 @@ html .ui-widget-content .ui-state-highlight{
 
 .ui-selectonemenu-trigger{
     padding: 0 !important;
+    width: 20px !important;
     .ui-icon{
         position: absolute;
         top: 50%;
@@ -203,7 +200,7 @@ html .vc-chip-container .chip {
 
 .vc-chip-container .chip {
     @include body-text();
-    background-color: white !important;    
+    background-color: white;    
 
     > .ui-button-text{
         font-weight: 400!important;
@@ -220,15 +217,15 @@ html .vc-chip-container .chip {
 .rb-child-cat-text,
 .rb-prod-panel-text,
 .rb-basket-title{
-    @include sub-header();
     @include black-text();
     font-size: 22px !important;
+    font-weight: 700;
 }
 
-.rb-vendor-title:before, .rb-prod-title:before, .rb-parent-cat-title:before, .rb-child-cat-title:before{
+.rb-vendor-title:before, .rb-prod-title:before, .rb-parent-cat-title:before, .rb-child-cat-title:before, .rb-basket-title-pg::before{
     @include black-text();
-    @include body-text();
     line-height: 0 !important;
+    font-size: 22px;
 }
 
 
@@ -246,8 +243,7 @@ html[lang="en"] #orderForm:vndcat button{
     padding-bottom: 10px !important;
 
     label{
-        @include body-text();
-        font-weight: 500 !important;
+        @include caption();
     }
 
     img{
@@ -350,16 +346,15 @@ div#orderForm\:itemdtbsk{
         .ui-state-default{
             padding: 1.6rem 1rem;
             background-color: $secondary-grey-color !important;
-            text-align: left !important;
+            text-align: center !important;
             
 
             .ui-column-title{
                 @include black-text();
-                @include title(); 
+                @include title();
+                font-size: 16px !important;
                 font-weight: 500;
-                text-transform: uppercase;
                 line-height: 19px;
-                letter-spacing: 0.15em;
             }
         }
         
@@ -367,17 +362,17 @@ div#orderForm\:itemdtbsk{
 
     tbody{
         td{
-            text-align: left !important;
+            text-align: center !important;
             padding: 2rem 1rem !important;
 
             label[id$=":itempdt"]{
                 @include title;
+                font-size: 16px !important;
                 border-radius: 0!important;
-                text-transform: uppercase;
             }
 
             .status-pill{
-                margin: 0.5rem;
+                font-size: 12px;
             }
 
 
@@ -389,6 +384,10 @@ div#orderForm\:itemdtbsk{
             }
         }
     }
+}
+
+#locform\:currencySelect, #locform\:languageSelect {
+    box-sizing: content-box;
 }
 
 table tbody tr:nth-child(odd) td, table tbody tr:nth-child(odd) td{
@@ -419,6 +418,8 @@ button#orderForm\:next{
 
     span{
         padding: 0 !important;
+        font-weight: bold !important;
+        font-size: 16px;
     }
 }
 /* ennd cart section */
@@ -447,6 +448,11 @@ form#orderForm{
             @include black-text();
             margin: 0 !important;
         }
+    }
+
+    .ui-dialog-titlebar-icon.ui-dialog-titlebar-close {
+        width: auto;
+        height: auto;
     }
 
     button#orderForm\:gcontshop{
@@ -512,10 +518,10 @@ form#orderForm{
 
     .ui-button-text{
         @include title();
-        @include black-text();
         padding: 0 !important;
         background-color: $secondary-orange-color;
-        font-weight: 400 !important;
+        font-weight: bold !important;
+        font-size: 16px !important;
     }
 
     .ui-button.ui-widget.ui-state-default{
@@ -534,7 +540,6 @@ form#orderForm{
     input, 
     .ui-selectonemenu,
     input#orderForm\:stdtcal_input{
-        @include border;
         padding: 1rem 1.5rem;
         caret-color: $primary-black-color;
     }
@@ -578,6 +583,71 @@ form#orderForm{
     }
 }
 
+// calendar
+html .ui-datepicker{
+    box-shadow: 2px 2px 4px 0px #00000021;
+
+    tbody {
+        background: white;
+    }
+    
+    table tbody tr:nth-child(odd) td, 
+    table tbody tr:nth-child(odd) td, 
+    table tbody tr:nth-child(even) td, 
+    table tbody tr:nth-child(even) td{
+        background: white !important;
+    }
+
+    th{
+        @include black-text();
+        @include body-text();
+        background: white !important;
+        text-shadow: none!important;
+        background-color: white !important;
+        box-shadow: none!important;
+        padding: 0.5rem 1.5rem !important;
+        border: none !important;
+    }
+
+    td{
+        width: 4rem;
+        height: 4rem;
+        padding: 0 !important;
+        margin: auto;
+    }
+
+    td.ui-datepicker-week-end.ui-datepicker-days-cell-over.undefined.ui-datepicker-current-day:has(a.ui-state-active){
+        background-color: $secondary-orange-color !important;
+    }
+
+    .ui-state-default{
+        @include body-text();
+        @include black-text();
+        font-weight: 400!important;
+        line-height: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+}
+
+#ui-datepicker-div{
+    border: 0 !important;
+    width: fit-content;
+
+    .ui-datepicker-header{
+        padding: 1.2em 0;
+        background-color: $secondary-orange-color !important;
+        border: none !important;
+
+        .ui-datepicker-title{
+            > select{
+                @include body-text();
+                padding: 1rem 0.5rem;
+                margin-right: 2px;
+            }
+        }
+    }
+}
 
 /*=================== SIGN IN PAGE ===================*/
 label#orderForm\:existglbl,
