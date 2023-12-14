@@ -1,0 +1,1776 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+
+<head id="j_idt2">
+    <link type="text/css" rel="stylesheet" href="/javax.faces.resource/theme.css">
+    <link type="text/css" rel="stylesheet"
+        href="/javax.faces.resource/fa/font-awesome.css">
+    <link type="text/css" rel="stylesheet" href="/javax.faces.resource/primeflex.css">
+    <link type="text/css" rel="stylesheet" href="/javax.faces.resource/order02.css">
+    <link type="text/css" rel="stylesheet" href="/javax.faces.resource/components.css">
+    <script type="text/javascript" src="/javax.faces.resource/jquery/jquery.js"></script>
+    <link id="custom" type="text/css" rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link type="text/css" rel="stylesheet" href="https://tln-web-widget-git-main-camila-tran-goldenowl.vercel.app/public.css"> -->
+    
+
+    <script type="text/javascript"
+        src="/javax.faces.resource/jquery/jquery-plugins.js"></script>
+    <script type="text/javascript" src="/javax.faces.resource/core.js"></script>
+    <script type="text/javascript" src="/javax.faces.resource/components.js"></script>
+    <link type="text/css" rel="stylesheet"
+        href="/javax.faces.resource/watermark/watermark.css">
+    <script type="text/javascript"
+        src="/javax.faces.resource/watermark/watermark.js"></script>
+    <link type="text/css" rel="stylesheet"
+        href="/javax.faces.resource/fileupload/fileupload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+    <script type="text/javascript"
+        src="/javax.faces.resource/fileupload/fileupload.js"></script>
+    <script type="text/javascript">if (window.PrimeFaces) { PrimeFaces.settings.locale = 'fr'; }</script>
+    <link href="https://nisade.evoke.jp/template/default/css/base_desk_layout.css" rel="stylesheet" type="text/css">
+
+    <title>Nisade</title>
+
+    <script src="https://nisade.evoke.jp/template/default/js/calendar.js"></script>
+    <script type="text/javascript">
+        function showModal() {
+            PF('statusDialog').show();
+        }
+        function hideModal() {
+            PF('statusDialog').hide();
+        }
+    </script>
+    <link id="customCssUrl" rel="stylesheet" type="text/css"
+        href="//dabb7zy6p4b0z.cloudfront.net/nisade/nisade02.css?v=1.1">
+    <script src="https://nisade.evoke.jp/js/money.min.js"></script>
+    <script src="https://nisade.evoke.jp/js/accounting.min.js"></script>
+    <script src="https://nisade.evoke.jp/js/currency.js"></script>
+    <script type="text/javascript">
+        var label = "Actual";
+        var path = "https://app.roomboss.com";
+        var companyId = "";
+        var actualPriceDisabled = false;
+    </script>
+    <style>
+        .cur-orig-val {
+            font-size: 12px;
+            color: grey;
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script>
+        function next() {
+            PF('wzdWidgetVar').next();
+        }
+        function back() {
+            PF('wzdWidgetVar').back();
+        }
+        function scrollToTop(id) {
+            scrollToTop(id, 500);
+        }
+        function scrollToTopMiddle(id, time) {
+            if ($(id).length) {
+                $('html, body').animate({
+                    scrollTop: $(id).offset().top - $("#growl_container").height()
+                }, time);
+            }
+        }
+        function scrollToTop(id, time) {
+            if ($(id).length) {
+                $('html, body').animate({
+                    scrollTop: $(id).offset().top
+                }, time);
+            }
+        }
+        jQuery(function () {
+            PrimeFaces.changeTheme('omega');
+        });
+        function renderSocialMediaButton() {
+
+        }
+
+        // Logs out before rendering social media buttons
+        function logoutRenderSocialMediaButton() {
+
+        }
+    </script>
+    <script type="text/javascript">(async function () {
+            class ReadwiseElement extends HTMLElement {
+                constructor() {
+                    super();
+
+                    [...this.children].forEach((child) => this.appendChild(child));
+                }
+            }
+
+            try {
+                customElements.define(
+                    "readwise-tooltip-container",
+                    class ReadwiseTooltipContainer extends ReadwiseElement { },
+                    { "extends": "div" },
+                );
+            } catch (e) {
+                if (!e.message.includes("already been defined")
+                    && !e.message.includes("already been used with this registry")) {
+                    console.error("Failed to define custom element", e);
+                    throw e;
+                }
+            }
+        })()</script>
+    <script
+        type="text/javascript">document.body.appendChild(document.createElement("readwise-tooltip-container"));</script>
+    <script type="text/javascript">(async function () {
+            class ReadwiseElement extends HTMLElement {
+                constructor() {
+                    super();
+
+                    [...this.children].forEach((child) => this.appendChild(child));
+                }
+            }
+
+            try {
+                customElements.define(
+                    "rw-highlight",
+                    class ReadwiseHighlight extends ReadwiseElement { },
+                    { "extends": "mark" },
+                );
+            } catch (e) {
+                if (!e.message.includes("already been defined")
+                    && !e.message.includes("already been used with this registry")) {
+                    console.error("Failed to define custom element", e);
+                    throw e;
+                }
+            }
+        })()</script>
+</head>
+
+<body>
+    <div class="rb-header" style="width: 100%; padding-top: 20px; padding-bottom: 20px;">
+        <div class="rb-header-title" style="text-align: center;">
+            Nisade
+        </div>
+        <div class="rb-loc-cur" style="position: absolute; right: 10px; top: 10px;">
+            <form id="locform" name="locform" method="post" action="/public/booking/order02.jsf"
+                enctype="application/x-www-form-urlencoded">
+                <input type="hidden" name="locform" value="locform">
+                <table class="ui-btn-right">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div id="locform:currencySelect"
+                                    class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox"
+                                    aria-haspopup="true" aria-expanded="false" aria-owns="locform:currencySelect_items"
+                                    style="min-width: 63px;">
+                                    <div class="ui-helper-hidden-accessible"><input id="locform:currencySelect_focus"
+                                            name="locform:currencySelect_focus" type="text" autocomplete="off"
+                                            aria-expanded="false" aria-autocomplete="list"
+                                            aria-activedescendant="locform:currencySelect_8"
+                                            aria-describedby="locform:currencySelect_8" aria-disabled="false"
+                                            readonly="readonly"></div>
+                                    <div class="ui-helper-hidden-accessible"><select id="locform:currencySelect_input"
+                                            name="locform:currencySelect_input" tabindex="-1" aria-hidden="true"
+                                            onchange="submit()">
+                                            <option value="AUD">AUD</option>
+                                            <option value="CAD">CAD</option>
+                                            <option value="CNY">CNY</option>
+                                            <option value="EUR">EUR</option>
+                                            <option value="GBP">GBP</option>
+                                            <option value="HKD">HKD</option>
+                                            <option value="IDR">IDR</option>
+                                            <option value="INR">INR</option>
+                                            <option value="JPY" selected="selected">JPY</option>
+                                            <option value="KRW">KRW</option>
+                                            <option value="MYR">MYR</option>
+                                            <option value="NZD">NZD</option>
+                                            <option value="SGD">SGD</option>
+                                            <option value="THB">THB</option>
+                                            <option value="TWD">TWD</option>
+                                            <option value="USD">USD</option>
+                                        </select></div><label id="locform:currencySelect_label"
+                                        class="ui-selectonemenu-label ui-inputfield ui-corner-all">JPY</label>
+                                    <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
+                                            class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="locform:languageSelect"
+                                    class="ui-selectonemenu ui-widget ui-state-default ui-corner-all rb-hide-disabled"
+                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                    aria-owns="locform:languageSelect_items" style="min-width: 105px;">
+                                    <div class="ui-helper-hidden-accessible"><input id="locform:languageSelect_focus"
+                                            name="locform:languageSelect_focus" type="text" autocomplete="off"
+                                            aria-expanded="false" aria-autocomplete="list"
+                                            aria-activedescendant="locform:languageSelect_3"
+                                            aria-describedby="locform:languageSelect_3" aria-disabled="false"
+                                            readonly="readonly"></div>
+                                    <div class="ui-helper-hidden-accessible"><select id="locform:languageSelect_input"
+                                            name="locform:languageSelect_input" tabindex="-1" aria-hidden="true"
+                                            onchange="submit()">
+                                            <option value="en">English</option>
+                                            <option value="ja">日本語</option>
+                                            <option value="ko">한국어</option>
+                                            <option value="fr" selected="selected">Français</option>
+                                            <option value="zh-CN">中文(简体)</option>
+                                            <option value="zh">中文(繁體)</option>
+                                        </select></div><label id="locform:languageSelect_label"
+                                        class="ui-selectonemenu-label ui-inputfield ui-corner-all">Français</label>
+                                    <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
+                                            class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0"
+                    value="8809485131652512396:5374465064913035970" autocomplete="off">
+            </form>
+        </div>
+    </div>
+
+    <div class="rb-body-content">
+        <script src="/js/dialogUtil.js"></script><span id="growl"></span>
+
+
+
+        <form id="orderForm" name="orderForm" method="post" action="/public/booking/order02.jsf"
+            class="rb-widget-f808ad962801a16a0128040975500007" enctype="multipart/form-data">
+            <input type="hidden" name="orderForm" value="orderForm">
+            <div id="orderForm:wzd"
+                class="ui-wizard ui-widget rb-child-cat-2c98902a646c3d0701648239721c417e rb-parent-cat-2c9890f06e421730016e48d9d1170b61 rb-vendor-2c98902a5c50f077015c5205a4210cff public">
+                <div id="orderForm:wzd_content" class="ui-wizard-content">
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            updateCurrency();
+                        });
+                    </script><span id="orderForm:renderSocialMediaButton"></span>
+                    <div class="rb-guest-nav" style="margin-bottom: 10px; text-align: left;"><button
+                            id="orderForm:gcontshop" name="orderForm:gcontshop"
+                            class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left"
+                            onclick="PrimeFaces.ab({s:&quot;orderForm:gcontshop&quot;,p:&quot;orderForm:gcontshop&quot;,onco:function(xhr,status,args){back();;}});return false;"
+                            type="submit" role="button" aria-disabled="false"><span
+                                class="ui-button-icon-left ui-icon ui-c fa fa-fw fa-arrow-left"></span><span
+                                class="ui-button-text ui-c">Go Back</span></button></div><span id="orderForm:guestpg">
+                        <div id="orderForm:vcpnl"
+                            class="ui-panel ui-widget ui-widget-content ui-corner-all rb-unk-guest-panel"
+                            data-widget="widget_orderForm_vcpnl">
+                            <div id="orderForm:vcpnl_content" class="ui-panel-content ui-widget-content">
+                                <div class="rb-email-guest-panel" style="margin-bottom: 30px;">
+                                    <div class="p-grid p-justify-center">
+                                        <div class="p-col-12 align-login-title"><label id="orderForm:existglbl"
+                                                style="font-weight: bold;">Sign in with Email</label>
+                                        </div>
+                                        <div class="p-col-12 align-login-title"><label id="orderForm:signintxt">Already
+                                                signed up with us?</label></div>
+                                    </div>
+                                    <div id="orderForm:vercodepg">
+                                        <div class="p-col-12" style="text-align: center;"><input
+                                                id="orderForm:gvercodemail" name="orderForm:gvercodemail" type="text"
+                                                autocomplete="disabled" aria-required="true"
+                                                class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                                role="textbox" aria-disabled="false" aria-readonly="false"
+                                                placeholder="Email">
+                                        </div>
+                                        <div class="p-col-12" style="text-align: center;"><button
+                                                id="orderForm:sendvercode" name="orderForm:sendvercode"
+                                                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                                onclick="PrimeFaces.ab({s:&quot;orderForm:sendvercode&quot;,p:&quot;orderForm:sendvercode orderForm:gvercodemail&quot;,u:&quot;growl orderForm:vcpnl&quot;,onco:function(xhr,status,args){renderSocialMediaButton();;}});return false;"
+                                                type="submit" role="button" aria-disabled="false"><span
+                                                    class="ui-button-text ui-c">Send me a verification
+                                                    code</span></button>
+                                        </div>
+                                    </div>
+                                </div><span class="p-grid p-justify-center rb-guest-or" style="margin: 20px;">
+                                    <div class="p-col-12" style="text-align: center;"><label id="orderForm:orlbl"
+                                            class="rb-or">OR</label>
+                                    </div>
+                                </span>
+                                <div id="orderForm:newguestpg">
+                                    <div class="p-grid">
+                                        <div class="p-col-12 align-login-title"><label id="orderForm:newguestlbl"
+                                                style="font-weight: bold;">Sign up with Email</label>
+                                        </div>
+                                        <div class="p-col-12 align-login-title"><label id="orderForm:newguesttxt">Please
+                                                fill in your details to proceed:</label></div>
+                                        <div class="p-col-6 p-offset-3 rb-new-guest-form">
+                                            <div class="rb-guest-basic-information">
+                                                <div id="orderForm:titlepgnew" class="flex-container rb-title"
+                                                    style="justify-content: center; margin-top: 10px;">
+                                                    <div class="flex-item" style="align-self: center;"><label
+                                                            id="orderForm:titlelblnew" for="orderForm:titlenew">Title
+                                                        </label>
+                                                    </div>
+                                                    <div class="flex-item" style="">
+                                                        <div id="orderForm:titlenew"
+                                                            class="ui-selectonemenu ui-widget ui-state-default ui-corner-all"
+                                                            role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                            style="min-width: 160px;"
+                                                            aria-owns="orderForm:titlenew_items">
+                                                            <div class="ui-helper-hidden-accessible"><input
+                                                                    id="orderForm:titlenew_focus"
+                                                                    name="orderForm:titlenew_focus" type="text"
+                                                                    autocomplete="off" aria-expanded="false"
+                                                                    aria-autocomplete="list"
+                                                                    aria-activedescendant="orderForm:titlenew_0"
+                                                                    aria-describedby="orderForm:titlenew_0"
+                                                                    aria-disabled="false" readonly="readonly"></div>
+                                                            <div class="ui-helper-hidden-accessible"><select
+                                                                    id="orderForm:titlenew_input"
+                                                                    name="orderForm:titlenew_input" tabindex="-1"
+                                                                    aria-hidden="true">
+                                                                    <option value="" selected="selected"></option>
+                                                                    <option value="MR">MR</option>
+                                                                    <option value="MRS">MRS</option>
+                                                                    <option value="MS">MS</option>
+                                                                    <option value="DR">DR</option>
+                                                                </select></div><label id="orderForm:titlenew_label"
+                                                                class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
+                                                            <div
+                                                                class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
+                                                                <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="orderForm:fnmpgnew" class="flex-container rb-fnm"
+                                                    style="justify-content: center; margin-top: 10px;">
+                                                    <div class="flex-item" style="align-self: center;"><label
+                                                            id="orderForm:fnmlblnew" for="orderForm:fnmnew">First Name
+                                                            *</label>
+                                                    </div>
+                                                    <div class="flex-item" style=""><input id="orderForm:fnmnew"
+                                                            name="orderForm:fnmnew" type="text" aria-required="true"
+                                                            class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                                            role="textbox" aria-disabled="false" aria-readonly="false">
+                                                    </div>
+                                                </div>
+                                                <div id="orderForm:lnmpgnew" class="flex-container rb-lnm"
+                                                    style="justify-content: center; margin-top: 10px;">
+                                                    <div class="flex-item" style="align-self: center;"><label
+                                                            id="orderForm:lnmlblnew" for="orderForm:lnmnew">Last Name
+                                                            *</label>
+                                                    </div>
+                                                    <div class="flex-item" style=""><input id="orderForm:lnmnew"
+                                                            name="orderForm:lnmnew" type="text" aria-required="true"
+                                                            class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                                            role="textbox" aria-disabled="false" aria-readonly="false">
+                                                    </div>
+                                                </div>
+                                                <div id="orderForm:gemailpgnew" class="flex-container rb-gemail"
+                                                    style="justify-content: center; margin-top: 10px;">
+                                                    <div class="flex-item" style="align-self: center;"><label
+                                                            id="orderForm:gemaillblnew"
+                                                            for="orderForm:gemailnew">Contact Email *</label>
+                                                    </div>
+                                                    <div class="flex-item" style=""><input id="orderForm:gemailnew"
+                                                            name="orderForm:gemailnew" type="text" aria-required="true"
+                                                            class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                                            role="textbox" aria-disabled="false" aria-readonly="false">
+                                                    </div>
+                                                </div>
+                                                <div id="orderForm:confgemailpgnew" class="flex-container rb-confgemail"
+                                                    style="justify-content: center; margin-top: 10px;">
+                                                    <div class="flex-item" style="align-self: center;"><label
+                                                            id="orderForm:confgemaillblnew"
+                                                            for="orderForm:confgemailnew">Confirm Contact Email
+                                                            *</label>
+                                                    </div>
+                                                    <div class="flex-item" style="" oncopy="return false;"
+                                                        onpaste="return false;"><input id="orderForm:confgemailnew"
+                                                            name="orderForm:confgemailnew" type="text"
+                                                            autocomplete="disabled" aria-required="true"
+                                                            class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-error"
+                                                            role="textbox" aria-disabled="false" aria-readonly="false">
+                                                    </div>
+                                                </div>
+                                                <div id="orderForm:phonepgnew" class="flex-container rb-phone"
+                                                    style="justify-content: center; margin-top: 10px;">
+                                                    <div class="flex-item" style="align-self: center;"><label
+                                                            id="orderForm:phonelblnew" for="orderForm:phonenew">Contact
+                                                            Phone *</label>
+                                                    </div>
+                                                    <div class="flex-item" style=""><input id="orderForm:phonenew"
+                                                            name="orderForm:phonenew" type="text" aria-required="true"
+                                                            class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                                            role="textbox" aria-disabled="false" aria-readonly="false">
+                                                    </div>
+                                                </div>
+                                                <div id="orderForm:countrypgnew" class="flex-container rb-country"
+                                                    style="justify-content: center; margin-top: 10px;">
+                                                    <div class="flex-item" style="align-self: center;"><label
+                                                            id="orderForm:countrylblnew"
+                                                            for="orderForm:countrynew">Country *</label>
+                                                    </div>
+                                                    <div class="flex-item rb-h-selwrapper" style="">
+                                                        <div id="orderForm:countrynew"
+                                                            class="ui-selectonemenu ui-widget ui-state-default ui-corner-all rb-h-selectonemenu"
+                                                            role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                            style="min-width: 160px;"
+                                                            aria-owns="orderForm:countrynew_items">
+                                                            <div class="ui-helper-hidden-accessible"><input
+                                                                    id="orderForm:countrynew_focus"
+                                                                    name="orderForm:countrynew_focus" type="text"
+                                                                    autocomplete="off" aria-expanded="false"
+                                                                    aria-autocomplete="list"
+                                                                    aria-activedescendant="orderForm:countrynew_0"
+                                                                    aria-describedby="orderForm:countrynew_0"
+                                                                    aria-disabled="false" readonly="readonly"></div>
+                                                            <div class="ui-helper-hidden-accessible"><select
+                                                                    id="orderForm:countrynew_input"
+                                                                    name="orderForm:countrynew_input" tabindex="-1"
+                                                                    aria-hidden="true">
+                                                                    <option value=""></option>
+                                                                    <option value="AF">Afghanistan</option>
+                                                                    <option value="AX">Aland Islands</option>
+                                                                    <option value="AL">Albania</option>
+                                                                    <option value="DZ">Algeria</option>
+                                                                    <option value="AS">American Samoa</option>
+                                                                    <option value="AD">Andorra</option>
+                                                                    <option value="AO">Angola</option>
+                                                                    <option value="AI">Anguilla</option>
+                                                                    <option value="AQ">Antarctica</option>
+                                                                    <option value="AG">Antigua and Barbuda</option>
+                                                                    <option value="AR">Argentina</option>
+                                                                    <option value="AM">Armenia</option>
+                                                                    <option value="AW">Aruba</option>
+                                                                    <option value="AU">Australia</option>
+                                                                    <option value="AT">Austria</option>
+                                                                    <option value="AZ">Azerbaijan</option>
+                                                                    <option value="BS">Bahamas</option>
+                                                                    <option value="BH">Bahrain</option>
+                                                                    <option value="BD">Bangladesh</option>
+                                                                    <option value="BB">Barbados</option>
+                                                                    <option value="BY">Belarus</option>
+                                                                    <option value="BE">Belgium</option>
+                                                                    <option value="BZ">Belize</option>
+                                                                    <option value="BJ">Benin</option>
+                                                                    <option value="BM">Bermuda</option>
+                                                                    <option value="BT">Bhutan</option>
+                                                                    <option value="BO">Bolivia</option>
+                                                                    <option value="BA">Bosnia Herzegovina</option>
+                                                                    <option value="BW">Botswana</option>
+                                                                    <option value="BR">Brazil</option>
+                                                                    <option value="BN">Brunei Darussalam</option>
+                                                                    <option value="BG">Bulgaria</option>
+                                                                    <option value="BF">Burkina Faso</option>
+                                                                    <option value="BI">Burundi</option>
+                                                                    <option value="KH">Cambodia</option>
+                                                                    <option value="CM">Cameroon</option>
+                                                                    <option value="CA">Canada</option>
+                                                                    <option value="CV">Cape Verde</option>
+                                                                    <option value="KY">Cayman Islands</option>
+                                                                    <option value="CF">Central African Republic</option>
+                                                                    <option value="TD">Chad</option>
+                                                                    <option value="CL">Chile</option>
+                                                                    <option value="CN">China</option>
+                                                                    <option value="CX">Christmas Island</option>
+                                                                    <option value="CO">Colombia</option>
+                                                                    <option value="KM">Comoros</option>
+                                                                    <option value="CG">Congo</option>
+                                                                    <option value="CD">Congo, The Democratic Republic of
+                                                                        the</option>
+                                                                    <option value="CK">Cook Islands</option>
+                                                                    <option value="CR">Costa Rica</option>
+                                                                    <option value="CI">Cote d'Ivoire</option>
+                                                                    <option value="HR">Croatia</option>
+                                                                    <option value="CU">Cuba</option>
+                                                                    <option value="CY">Cyprus</option>
+                                                                    <option value="CZ">Czech Republic</option>
+                                                                    <option value="DK">Denmark</option>
+                                                                    <option value="DJ">Djibouti</option>
+                                                                    <option value="DM">Dominica</option>
+                                                                    <option value="DO">Dominican Republic</option>
+                                                                    <option value="EC">Ecuador</option>
+                                                                    <option value="EG">Egypt</option>
+                                                                    <option value="SV">El Salvador</option>
+                                                                    <option value="GQ">Equatorial Guinea</option>
+                                                                    <option value="ER">Eritrea</option>
+                                                                    <option value="EE">Estonia</option>
+                                                                    <option value="ET">Ethiopia</option>
+                                                                    <option value="FK">Falkland Islands</option>
+                                                                    <option value="FJ">Fiji</option>
+                                                                    <option value="FI">Finland</option>
+                                                                    <option value="FR">France</option>
+                                                                    <option value="PF">French Polynesia</option>
+                                                                    <option value="GA">Gabon</option>
+                                                                    <option value="GM">Gambia</option>
+                                                                    <option value="GE">Georgia</option>
+                                                                    <option value="DE">Germany</option>
+                                                                    <option value="GH">Ghana</option>
+                                                                    <option value="GI">Gibraltar</option>
+                                                                    <option value="GR">Greece</option>
+                                                                    <option value="GL">Greenland</option>
+                                                                    <option value="GD">Grenada</option>
+                                                                    <option value="GU">Guam</option>
+                                                                    <option value="GT">Guatemala</option>
+                                                                    <option value="GG">Guernsey</option>
+                                                                    <option value="GN">Guinea</option>
+                                                                    <option value="GW">Guinea-Bissau</option>
+                                                                    <option value="GY">Guyana</option>
+                                                                    <option value="HT">Haiti</option>
+                                                                    <option value="VA">Holy See (Vatican City State)
+                                                                    </option>
+                                                                    <option value="HN">Honduras</option>
+                                                                    <option value="HK">Hong Kong</option>
+                                                                    <option value="HU">Hungary</option>
+                                                                    <option value="IS">Iceland</option>
+                                                                    <option value="IN">India</option>
+                                                                    <option value="ID">Indonesia</option>
+                                                                    <option value="IR">Iran</option>
+                                                                    <option value="IQ">Iraq</option>
+                                                                    <option value="IE">Ireland</option>
+                                                                    <option value="IM">Isle of Man</option>
+                                                                    <option value="IL">Israel</option>
+                                                                    <option value="IT">Italy</option>
+                                                                    <option value="JM">Jamaica</option>
+                                                                    <option value="JP">Japan</option>
+                                                                    <option value="JE">Jersey</option>
+                                                                    <option value="JO">Jordan</option>
+                                                                    <option value="KZ">Kazakhstan</option>
+                                                                    <option value="KE">Kenya</option>
+                                                                    <option value="KI">Kiribati</option>
+                                                                    <option value="KP">Korea, North</option>
+                                                                    <option value="KR">Korea, South</option>
+                                                                    <option value="KW">Kuwait</option>
+                                                                    <option value="KG">Kyrgyzstan</option>
+                                                                    <option value="LA">Lao People's Democratic Republic
+                                                                    </option>
+                                                                    <option value="LV">Latvia</option>
+                                                                    <option value="LB">Lebanon</option>
+                                                                    <option value="LS">Lesotho</option>
+                                                                    <option value="LR">Liberia</option>
+                                                                    <option value="LY">Libya</option>
+                                                                    <option value="LI">Liechtenstein</option>
+                                                                    <option value="LT">Lithuania</option>
+                                                                    <option value="LU">Luxembourg</option>
+                                                                    <option value="MO">Macao</option>
+                                                                    <option value="MK">Macedonia</option>
+                                                                    <option value="MG">Madagascar</option>
+                                                                    <option value="MW">Malawi</option>
+                                                                    <option value="MY">Malaysia</option>
+                                                                    <option value="MV">Maldives</option>
+                                                                    <option value="ML">Mali</option>
+                                                                    <option value="MT">Malta</option>
+                                                                    <option value="MH">Marshall Islands</option>
+                                                                    <option value="MQ">Martinique</option>
+                                                                    <option value="MR">Mauritania</option>
+                                                                    <option value="MU">Mauritius</option>
+                                                                    <option value="MX">Mexico</option>
+                                                                    <option value="FM">Micronesia</option>
+                                                                    <option value="MC">Monaco</option>
+                                                                    <option value="MN">Mongolia</option>
+                                                                    <option value="ME">Montenegro</option>
+                                                                    <option value="MS">Montserrat</option>
+                                                                    <option value="MA">Morocco</option>
+                                                                    <option value="MZ">Mozambique</option>
+                                                                    <option value="MM">Myanmar</option>
+                                                                    <option value="NA">Namibia</option>
+                                                                    <option value="NR">Nauru</option>
+                                                                    <option value="NP">Nepal</option>
+                                                                    <option value="NL">Netherlands</option>
+                                                                    <option value="NC">New Caledonia</option>
+                                                                    <option value="NZ">New Zealand</option>
+                                                                    <option value="NI">Nicaragua</option>
+                                                                    <option value="NE">Niger</option>
+                                                                    <option value="NG">Nigeria</option>
+                                                                    <option value="NU">Niue</option>
+                                                                    <option value="NF">Norfolk Island</option>
+                                                                    <option value="NO">Norway</option>
+                                                                    <option value="OM">Oman</option>
+                                                                    <option value="PK">Pakistan</option>
+                                                                    <option value="PW">Palau</option>
+                                                                    <option value="PS">Palestinian Territory</option>
+                                                                    <option value="PA">Panama</option>
+                                                                    <option value="PG">Papua New Guinea</option>
+                                                                    <option value="PY">Paraguay</option>
+                                                                    <option value="PE">Peru</option>
+                                                                    <option value="PH">Philippines</option>
+                                                                    <option value="PN">Pitcairn</option>
+                                                                    <option value="PL">Poland</option>
+                                                                    <option value="PT">Portugal</option>
+                                                                    <option value="PR">Puerto Rico</option>
+                                                                    <option value="QA">Qatar</option>
+                                                                    <option value="RE">Reunion</option>
+                                                                    <option value="RO">Romania</option>
+                                                                    <option value="RU">Russian Federation</option>
+                                                                    <option value="RW">Rwanda</option>
+                                                                    <option value="SH">Saint Helena</option>
+                                                                    <option value="LC">Saint Lucia</option>
+                                                                    <option value="WS">Samoa</option>
+                                                                    <option value="SM">San Marino</option>
+                                                                    <option value="SA">Saudi Arabia</option>
+                                                                    <option value="SN">Senegal</option>
+                                                                    <option value="RS">Serbia</option>
+                                                                    <option value="SC">Seychelles</option>
+                                                                    <option value="SL">Sierra Leone</option>
+                                                                    <option value="SG">Singapore</option>
+                                                                    <option value="SK">Slovakia</option>
+                                                                    <option value="SI">Slovenia</option>
+                                                                    <option value="SB">Solomon Islands</option>
+                                                                    <option value="SO">Somalia</option>
+                                                                    <option value="ZA">South Africa</option>
+                                                                    <option value="ES">Spain</option>
+                                                                    <option value="LK">Sri Lanka</option>
+                                                                    <option value="SD">Sudan</option>
+                                                                    <option value="SR">Suriname</option>
+                                                                    <option value="SZ">Swaziland</option>
+                                                                    <option value="SE">Sweden</option>
+                                                                    <option value="CH">Switzerland</option>
+                                                                    <option value="SY">Syria</option>
+                                                                    <option value="TW">Taiwan</option>
+                                                                    <option value="TJ">Tajikistan</option>
+                                                                    <option value="TZ">Tanzania</option>
+                                                                    <option value="TH">Thailand</option>
+                                                                    <option value="TL">Timor-Leste</option>
+                                                                    <option value="TG">Togo</option>
+                                                                    <option value="TK">Tokelau</option>
+                                                                    <option value="TO">Tonga</option>
+                                                                    <option value="TT">Trinidad and Tobago</option>
+                                                                    <option value="TN">Tunisia</option>
+                                                                    <option value="TR">Turkey</option>
+                                                                    <option value="TM">Turkmenistan</option>
+                                                                    <option value="TV">Tuvalu</option>
+                                                                    <option value="UG">Uganda</option>
+                                                                    <option value="UA">Ukraine</option>
+                                                                    <option value="AE">United Arab Emirates</option>
+                                                                    <option value="GB">United Kingdom</option>
+                                                                    <option value="US">United States</option>
+                                                                    <option value="UY">Uruguay</option>
+                                                                    <option value="UZ">Uzbekistan</option>
+                                                                    <option value="VU">Vanuatu</option>
+                                                                    <option value="VE">Venezuela</option>
+                                                                    <option value="VN">Vietnam</option>
+                                                                    <option value="VG">Virgin Islands, British</option>
+                                                                    <option value="VI">Virgin Islands, U.S.</option>
+                                                                    <option value="EH">Western Sahara</option>
+                                                                    <option value="YE">Yemen</option>
+                                                                    <option value="ZM">Zambia</option>
+                                                                    <option value="ZW">Zimbabwe</option>
+                                                                </select></div><label id="orderForm:countrynew_label"
+                                                                class="ui-selectonemenu-label ui-inputfield ui-corner-all">&nbsp;</label>
+                                                            <div
+                                                                class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
+                                                                <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="orderForm:languagepgnew" class="flex-container rb-language"
+                                                    style="justify-content: center; margin-top: 10px;">
+                                                    <div class="flex-item" style="align-self: center;"><label
+                                                            id="orderForm:languagelblnew"
+                                                            for="orderForm:languagenew">Language *</label>
+                                                    </div>
+                                                    <div class="flex-item">
+                                                        <div id="orderForm:languagenew"
+                                                            class="ui-selectonemenu ui-widget ui-state-default ui-corner-all"
+                                                            role="combobox" aria-haspopup="true" aria-expanded="false"
+                                                            style="min-width: 160px;"
+                                                            aria-owns="orderForm:languagenew_items">
+                                                            <div class="ui-helper-hidden-accessible"><input
+                                                                    id="orderForm:languagenew_focus"
+                                                                    name="orderForm:languagenew_focus" type="text"
+                                                                    autocomplete="off" aria-expanded="false"
+                                                                    aria-autocomplete="list"
+                                                                    aria-activedescendant="orderForm:languagenew_4"
+                                                                    aria-describedby="orderForm:languagenew_4"
+                                                                    aria-disabled="false" readonly="readonly"></div>
+                                                            <div class="ui-helper-hidden-accessible"><select
+                                                                    id="orderForm:languagenew_input"
+                                                                    name="orderForm:languagenew_input" tabindex="-1"
+                                                                    aria-hidden="true">
+                                                                    <option value=""></option>
+                                                                    <option value="en">Anglais</option>
+                                                                    <option value="ja">Japonais</option>
+                                                                    <option value="ko">Korean</option>
+                                                                    <option value="fr" selected="selected">Français
+                                                                    </option>
+                                                                    <option value="zh-CN">Chinois (simplifié)</option>
+                                                                    <option value="zh">Chinois (traditionnel)</option>
+                                                                </select></div><label id="orderForm:languagenew_label"
+                                                                class="ui-selectonemenu-label ui-inputfield ui-corner-all">Français</label>
+                                                            <div
+                                                                class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
+                                                                <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="orderForm:guestImgWrappernew"></div><span class="flex-container"
+                                                style="justify-content: center; margin-top: 10px;"><button
+                                                    id="orderForm:ngbut" name="orderForm:ngbut"
+                                                    class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                                    onclick="PrimeFaces.ab({s:&quot;orderForm:ngbut&quot;,p:&quot;orderForm:ngbut orderForm:newguestpg&quot;,u:&quot;growl orderForm:guestpg&quot;,onco:function(xhr,status,args){if (!args.validationFailed) {next();};}});return false;"
+                                                    type="submit" role="button" aria-disabled="false"><span
+                                                        class="ui-button-text ui-c">Proceed to
+                                                        Checkout</span></button></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div class="ui-wizard-navbar ui-helper-clearfix"><button id="orderForm:wzd_back"
+                        name="orderForm:wzd_back" type="button"
+                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-wizard-nav-back"
+                        role="button" aria-disabled="false" style="display: inline-block;"><span
+                            class="ui-button-icon-left ui-icon ui-c ui-icon-arrowthick-1-w"></span><span
+                            class="ui-button-text ui-c">Back</span></button><button id="orderForm:wzd_next"
+                        name="orderForm:wzd_next" type="button"
+                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-wizard-nav-next"
+                        role="button" aria-disabled="false" style="display: inline-block;"><span
+                            class="ui-button-icon-left ui-icon ui-c ui-icon-arrowthick-1-e"></span><span
+                            class="ui-button-text ui-c">Next</span></button></div>
+            </div>
+            <div id="orderForm:addbskdlg"
+                class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container rb-add-prod-dialog rb-dl-vendor-2c98902a5c50f077015c5205a4210cff rb-dl-prod-8a80818a83d34cd80183d51b21b45221 rb-dl-parent-cat-2c9890f06e421730016e48d9d1170b61 rb-dl-child-cat-2c98902a646c3d0701648239721c417e ui-draggable"
+                role="dialog" aria-labelledby="orderForm:addbskdlg_title" aria-hidden="true"
+                style="width: auto; height: auto; left: 0px; top: 46.5px; z-index: 1012; display: none;"
+                aria-live="off">
+                <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle">
+                    <span id="orderForm:addbskdlg_title" class="ui-dialog-title">Rental - High Chair</span><a href="#"
+                        class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"
+                        role="button"><span class="ui-icon ui-icon-closethick"></span></a></div>
+                <div class="ui-dialog-content ui-widget-content" style="height: auto;"><input id="orderForm:focusProp"
+                        name="orderForm:focusProp" type="text"
+                        class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox"
+                        aria-disabled="false" aria-readonly="false" style="display: none;">
+                    <div id="orderForm:addbskpg" class="flex-products"><span id="orderForm:showDayScript">
+                            <script>
+                                var rates = {
+
+                                    '2023-11-20': '2024-11-19'
+
+                                };
+                                var newRates = {};
+                                for (var rateKey in rates) {
+                                    var from = convertToDate(rateKey);
+                                    var to = convertToDate(rates[rateKey]);
+                                    newRates[from] = to;
+                                }
+                                var allStopSell = {
+
+                                };
+                                function beforeShowDay(date) {
+                                    // Always available for session user own products.
+
+                                    var key = $.datepicker.formatDate('yy-mm-dd', date);
+                                    var newDate = new Date(date);
+                                    for (var newRateKey in newRates) {
+                                        if (newDate >= new Date(newRateKey) && new Date(newRates[newRateKey]) >= newDate) {
+                                            return allStopSell[key] === undefined ? [true] : [false];
+                                        }
+                                    }
+                                    return [false];
+                                }
+                                function convertToDate(dateString) {
+                                    var parts = dateString.split('-');
+                                    return new Date(parts[0], parts[1] - 1, parts[2]);
+                                }
+                            </script>
+                        </span>
+                        <div id="orderForm:stdtpg" class="flex-option"><label id="orderForm:stdtlbl"
+                                style="font-weight: bold;">Date</label><span id="orderForm:stdtcal"
+                                class="ui-calendar"><input id="orderForm:stdtcal_input" name="orderForm:stdtcal_input"
+                                    type="text" aria-required="true" value="2023/12/15"
+                                    class="ui-inputfield ui-widget ui-state-default ui-corner-all hasDatepicker"
+                                    readonly="readonly" role="textbox" aria-disabled="false"
+                                    aria-readonly="true"></span></div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_0" style="font-weight: bold;">Number of
+                                Days</label>
+                            <div id="orderForm:cbval_0"
+                                class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox"
+                                aria-haspopup="true" aria-expanded="false" aria-owns="orderForm:cbval_0_items"
+                                style="min-width: 64px;">
+                                <div class="ui-helper-hidden-accessible"><input id="orderForm:cbval_0_focus"
+                                        name="orderForm:cbval_0_focus" type="text" autocomplete="off"
+                                        aria-expanded="false" aria-autocomplete="list"
+                                        aria-activedescendant="orderForm:cbval_0_0"
+                                        aria-describedby="orderForm:cbval_0_0" aria-disabled="false"
+                                        readonly="readonly"></div>
+                                <div class="ui-helper-hidden-accessible"><select id="orderForm:cbval_0_input"
+                                        name="orderForm:cbval_0_input" tabindex="-1" aria-hidden="true"
+                                        onchange="PrimeFaces.ab({s:&quot;orderForm:cbval_0&quot;,e:&quot;change&quot;,p:&quot;orderForm:cbval_0&quot;,u:&quot;orderForm:pricepg orderForm:butpg orderForm:nolespg orderForm:stdtpg orderForm:grossprice orderForm:net orderForm:sellprice growl&quot;,onst:function(cfg){showModal();;},onco:function(xhr,status,args){hideModal();updateCurrency();;}});">
+                                        <option value="1" selected="selected">1 Day</option>
+                                        <option value="2">2 Day</option>
+                                        <option value="3">3 Day</option>
+                                        <option value="4">4 Day</option>
+                                        <option value="5">5 Day</option>
+                                        <option value="6">6 Day</option>
+                                        <option value="7">7 Day</option>
+                                        <option value="8">8 Day</option>
+                                        <option value="9">9 Day</option>
+                                        <option value="10">10 Day</option>
+                                        <option value="11">11 Day</option>
+                                        <option value="12">12 Day</option>
+                                        <option value="13">13 Day</option>
+                                        <option value="14">14 Day</option>
+                                        <option value="15">15 Day</option>
+                                        <option value="16">16 Day</option>
+                                        <option value="17">17 Day</option>
+                                        <option value="18">18 Day</option>
+                                        <option value="19">19 Day</option>
+                                        <option value="20">20 Day</option>
+                                        <option value="21">21 Day</option>
+                                        <option value="22">22 Day</option>
+                                        <option value="23">23 Day</option>
+                                        <option value="24">24 Day</option>
+                                        <option value="25">25 Day</option>
+                                        <option value="26">26 Day</option>
+                                        <option value="27">27 Day</option>
+                                        <option value="28">28 Day</option>
+                                        <option value="29">29 Day</option>
+                                        <option value="30">30 Day</option>
+                                    </select></div><label id="orderForm:cbval_0_label"
+                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">1 Day</label>
+                                <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
+                                        class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
+                            </div>
+                        </div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_1" style="font-weight: bold;">Delivery
+                                Area</label>
+                            <div id="orderForm:cbval_1"
+                                class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox"
+                                aria-haspopup="true" aria-expanded="false" aria-owns="orderForm:cbval_1_items"
+                                style="min-width: 214px;">
+                                <div class="ui-helper-hidden-accessible"><input id="orderForm:cbval_1_focus"
+                                        name="orderForm:cbval_1_focus" type="text" autocomplete="off"
+                                        aria-expanded="false" aria-autocomplete="list"
+                                        aria-activedescendant="orderForm:cbval_1_0"
+                                        aria-describedby="orderForm:cbval_1_0" aria-disabled="false"
+                                        readonly="readonly"></div>
+                                <div class="ui-helper-hidden-accessible"><select id="orderForm:cbval_1_input"
+                                        name="orderForm:cbval_1_input" tabindex="-1" aria-hidden="true"
+                                        onchange="PrimeFaces.ab({s:&quot;orderForm:cbval_1&quot;,e:&quot;change&quot;,p:&quot;orderForm:cbval_1&quot;,u:&quot;orderForm:pricepg orderForm:butpg orderForm:nolespg orderForm:stdtpg orderForm:grossprice orderForm:net orderForm:sellprice growl&quot;,onst:function(cfg){showModal();;},onco:function(xhr,status,args){hideModal();updateCurrency();;}});">
+                                        <option value="1" selected="selected">Please Select...</option>
+                                        <option value="2">Hirafu</option>
+                                        <option value="3">Hanazono</option>
+                                        <option value="4">Niseko Village</option>
+                                        <option value="5">Annupuri</option>
+                                        <option value="6">Moiwa</option>
+                                        <option value="7">Kutchan Town</option>
+                                        <option value="8">Kiroro (additional fees apply)</option>
+                                        <option value="9">Rusutsu (additional fees apply)</option>
+                                    </select></div><label id="orderForm:cbval_1_label"
+                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">Please Select...</label>
+                                <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
+                                        class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
+                            </div>
+                        </div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_2"
+                                style="font-weight: bold;">Accommodation Name</label><input id="orderForm:cbtval_2"
+                                name="orderForm:cbtval_2" type="text" value="" maxlength="24" size="24"
+                                class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                role="textbox" aria-disabled="false" aria-readonly="false"></div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_3" style="font-weight: bold;">Room
+                                Number</label><input id="orderForm:cbtval_3" name="orderForm:cbtval_3" type="text"
+                                value="" maxlength="24" size="24"
+                                class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                role="textbox" aria-disabled="false" aria-readonly="false"></div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_4" style="font-weight: bold;">Delivery
+                                Date</label><input id="orderForm:cbtval_4" name="orderForm:cbtval_4" type="text"
+                                value="" maxlength="24" size="24"
+                                class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                role="textbox" aria-disabled="false" aria-readonly="false"></div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_5" style="font-weight: bold;">Delivery
+                                Time </label><input id="orderForm:cbtval_5" name="orderForm:cbtval_5" type="text"
+                                value="" maxlength="24" size="24"
+                                class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                role="textbox" aria-disabled="false" aria-readonly="false"></div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_6" style="font-weight: bold;">Pick-up
+                                Date</label><input id="orderForm:cbtval_6" name="orderForm:cbtval_6" type="text"
+                                value="" maxlength="24" size="24"
+                                class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                role="textbox" aria-disabled="false" aria-readonly="false"></div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_7" style="font-weight: bold;">Pick-up
+                                Time</label><input id="orderForm:cbtval_7" name="orderForm:cbtval_7" type="text"
+                                value="" maxlength="24" size="24"
+                                class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                role="textbox" aria-disabled="false" aria-readonly="false"></div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_8" style="font-weight: bold;">(Internal
+                                Use)</label><span id="orderForm:criterionLabelId_8">00:00</span></div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_9" style="font-weight: bold;">(Internal
+                                Use)</label><span id="orderForm:criterionLabelId_9">23:30</span></div>
+                        <div id="orderForm:pricepg" class="flex-option"><label id="orderForm:grosslbl"
+                                style="font-weight: bold;">Cost</label><label id="orderForm:gross"
+                                class="cur rb-prod-gross-value" original-value-formatted="￥10,500"
+                                original-value="10500" original-value-currency="JPY">￥10,500</label></div>
+                        <div id="orderForm:forcedtmsgpg"></div>
+                        <div id="orderForm:qtypg" class="flex-option"><label id="orderForm:qtylbl"
+                                style="font-weight: bold;">Quantity</label>
+                            <div id="orderForm:qty" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all"
+                                role="combobox" aria-haspopup="true" aria-expanded="false"
+                                aria-owns="orderForm:qty_items" style="min-width: 37px;">
+                                <div class="ui-helper-hidden-accessible"><input id="orderForm:qty_focus"
+                                        name="orderForm:qty_focus" type="text" autocomplete="off" aria-expanded="false"
+                                        aria-autocomplete="list" aria-activedescendant="orderForm:qty_0"
+                                        aria-describedby="orderForm:qty_0" aria-disabled="false" readonly="readonly">
+                                </div>
+                                <div class="ui-helper-hidden-accessible"><select id="orderForm:qty_input"
+                                        name="orderForm:qty_input" tabindex="-1" aria-hidden="true">
+                                        <option value="1" selected="selected">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                    </select></div><label id="orderForm:qty_label"
+                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">1</label>
+                                <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
+                                        class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
+                            </div>
+                        </div>
+                        <div id="orderForm:butpg" class="rb-prod-dialog-but"><button id="orderForm:addbtn"
+                                name="orderForm:addbtn"
+                                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                onclick="PrimeFaces.ab({s:&quot;orderForm:addbtn&quot;,u:&quot;orderForm:bskpgtop orderForm:bskpg orderForm:addbskpg orderForm:chkouttotal orderForm:chkoutbut growl&quot;,onco:function(xhr,status,args){if (!args.validationFailed) {PF('productDialog').hide();updateCurrency();scrollToTop('#bskttop');};}});return false;"
+                                type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Add
+                                    to Shopping Cart</span></button></div>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="javax.faces.ViewState" value="8809485131652512396:5374465064913035970"
+                autocomplete="off">
+        </form>
+        <form id="guestDialogForm" name="guestDialogForm" method="post" action="/public/booking/order02.jsf"
+            class="rb-widget-f808ad962801a16a0128040975500007" enctype="multipart/form-data">
+            <input type="hidden" name="guestDialogForm" value="guestDialogForm">
+            <div id="guestDialogForm:newguestdlg"
+                class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container rb-new-guest-dialog ui-draggable"
+                role="dialog" aria-labelledby="guestDialogForm:newguestdlg_title" aria-hidden="true"
+                style="width: auto; height: auto;">
+                <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle">
+                    <span id="guestDialogForm:newguestdlg_title" class="ui-dialog-title">Add Guest</span><a href="#"
+                        class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"
+                        role="button"><span class="ui-icon ui-icon-closethick"></span></a></div>
+                <div class="ui-dialog-content ui-widget-content" style="height: auto;"></div>
+            </div>
+            <div id="guestDialogForm:editguestdlg"
+                class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container rb-edit-guest-dialog  ui-draggable"
+                role="dialog" aria-labelledby="guestDialogForm:editguestdlg_title" aria-hidden="true"
+                style="width: auto; height: auto;">
+                <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle">
+                    <span id="guestDialogForm:editguestdlg_title" class="ui-dialog-title">Edit Group Member</span><a
+                        href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all"
+                        aria-label="Close" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div>
+                <div class="ui-dialog-content ui-widget-content" style="height: auto;"></div>
+            </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:2"
+                value="8809485131652512396:5374465064913035970" autocomplete="off">
+        </form>
+        <div id="privacypolicydlg"
+            class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container rb-privacy-policy-dialog"
+            role="dialog" aria-labelledby="privacypolicydlg_title" aria-hidden="true" aria-live="off"
+            style="width: auto; height: auto; left: 0px; top: 362px; z-index: 1003; display: none;">
+            <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle"><span
+                    id="privacypolicydlg_title" class="ui-dialog-title"></span></div>
+            <div class="ui-dialog-content ui-widget-content" style="height: auto;">
+                <b>Privacy Notice</b>
+                <p style="text-align: justify;">
+                    We care about your privacy and the security of your personal information.
+                    By using this website and/or related services, you acknowledge and consent to the applicable privacy
+                    policies.
+                </p>
+                <p>For more information, please visit the links below.</p>
+                <div style="display: flex;"><a id="pprb" href="https://www.roomboss.com/privacy"
+                        class="ui-link ui-widget" target="_blank">System Provider Privacy Policy</a><button
+                        id="confirmpolicydlg" name="confirmpolicydlg"
+                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                        onclick="{PF('ppdlg').hide();}" style="margin-left: auto; margin-right: 0;" type="button"
+                        role="button" aria-disabled="false"><span class="ui-button-text ui-c">Dismiss</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="j_idt1151"></div>
+    <div id="ajaxLoader" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"
+        style="background-color: transparent; box-shadow: none; border: none; width: auto; height: auto; left: 175px; top: 426px; z-index: 1019; display: none;"
+        role="dialog" aria-labelledby="ajaxLoader_title" aria-hidden="true" aria-live="off">
+        <div class="ui-dialog-content ui-widget-content" style="height: auto;"><img id="waitImage"
+                src="/template/default/images/ajaxLoader.gif"></div>
+    </div>
+
+    <script>
+        jQuery(document).ready(function () {
+            var currency = { value: "JPY" };
+            updateCurrency(currency);
+        });
+    </script>
+    <script type="text/javascript">$(function () { PF('ppdlg').show(); });</script>
+    <div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div>
+    <div id="locform:currencySelect_panel"
+        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
+        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
+            <ul id="locform:currencySelect_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="locform:currencySelect_8">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="AUD"
+                    tabindex="-1" role="option" id="locform:currencySelect_0">AUD</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="CAD"
+                    tabindex="-1" role="option" id="locform:currencySelect_1">CAD</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="CNY"
+                    tabindex="-1" role="option" id="locform:currencySelect_2">CNY</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="EUR"
+                    tabindex="-1" role="option" id="locform:currencySelect_3">EUR</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="GBP"
+                    tabindex="-1" role="option" id="locform:currencySelect_4">GBP</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="HKD"
+                    tabindex="-1" role="option" id="locform:currencySelect_5">HKD</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="IDR"
+                    tabindex="-1" role="option" id="locform:currencySelect_6">IDR</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="INR"
+                    tabindex="-1" role="option" id="locform:currencySelect_7">INR</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
+                    data-label="JPY" tabindex="-1" role="option" id="locform:currencySelect_8">JPY</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="KRW"
+                    tabindex="-1" role="option" id="locform:currencySelect_9">KRW</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="MYR"
+                    tabindex="-1" role="option" id="locform:currencySelect_10">MYR</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="NZD"
+                    tabindex="-1" role="option" id="locform:currencySelect_11">NZD</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="SGD"
+                    tabindex="-1" role="option" id="locform:currencySelect_12">SGD</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="THB"
+                    tabindex="-1" role="option" id="locform:currencySelect_13">THB</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="TWD"
+                    tabindex="-1" role="option" id="locform:currencySelect_14">TWD</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="USD"
+                    tabindex="-1" role="option" id="locform:currencySelect_15">USD</li>
+            </ul>
+        </div>
+    </div>
+    <div id="locform:languageSelect_panel"
+        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
+        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
+            <ul id="locform:languageSelect_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="locform:languageSelect_3">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="English"
+                    tabindex="-1" role="option" id="locform:languageSelect_0">English</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="日本語"
+                    tabindex="-1" role="option" id="locform:languageSelect_1">日本語</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="한국어"
+                    tabindex="-1" role="option" id="locform:languageSelect_2">한국어</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
+                    data-label="Français" tabindex="-1" role="option" id="locform:languageSelect_3">Français</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="中文(简体)"
+                    tabindex="-1" role="option" id="locform:languageSelect_4">中文(简体)</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="中文(繁體)"
+                    tabindex="-1" role="option" id="locform:languageSelect_5">中文(繁體)</li>
+            </ul>
+        </div>
+    </div>
+    <div id="growl_container" class="ui-growl ui-widget" style="z-index: 1018;"></div>
+    <div class="ui-dialog-docking-zone"></div>
+    <div id="confirmdlg"
+        class="ui-confirm-dialog ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container rb-confirm-dialog"
+        role="dialog" aria-labelledby="confirmdlg_title" aria-hidden="true" style="width: auto; height: auto;">
+        <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle"><span
+                id="confirmdlg_title" class="ui-dialog-title"></span><a href="#"
+                class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"
+                role="button"><span class="ui-icon ui-icon-closethick"></span></a></div>
+        <div class="ui-dialog-content ui-widget-content" style="height: auto;"><span
+                class="ui-icon ui-confirm-dialog-severity"></span><span class="ui-confirm-dialog-message"></span></div>
+        <div class="ui-dialog-buttonpane ui-dialog-footer ui-widget-content ui-helper-clearfix"><button id="cdYes"
+                name="cdYes"
+                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-yes"
+                type="button" role="button" aria-disabled="false"><span
+                    class="ui-button-icon-left ui-icon ui-c ui-icon-check"></span><span
+                    class="ui-button-text ui-c">Yes</span></button><button id="cdNo" name="cdNo"
+                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-no"
+                type="button" role="button" aria-disabled="false"><span
+                    class="ui-button-icon-left ui-icon ui-c ui-icon-close"></span><span
+                    class="ui-button-text ui-c">No</span></button></div>
+    </div><readwise-tooltip-container></readwise-tooltip-container>
+    <div id="forest-ext-shadow-host"></div>
+    <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all">
+    </div>
+    <div id="orderForm:cbval_0_panel"
+        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
+        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
+            <ul id="orderForm:cbval_0_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="orderForm:cbval_0_0">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
+                    data-label="1 Day" tabindex="-1" role="option" id="orderForm:cbval_0_0">1 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="2 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_1">2 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="3 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_2">3 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="4 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_3">4 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="5 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_4">5 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="6 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_5">6 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="7 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_6">7 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="8 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_7">8 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="9 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_8">9 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="10 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_9">10 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="11 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_10">11 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="12 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_11">12 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="13 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_12">13 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="14 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_13">14 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="15 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_14">15 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="16 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_15">16 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="17 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_16">17 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="18 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_17">18 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="19 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_18">19 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="20 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_19">20 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="21 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_20">21 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="22 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_21">22 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="23 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_22">23 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="24 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_23">24 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="25 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_24">25 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="26 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_25">26 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="27 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_26">27 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="28 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_27">28 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="29 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_28">29 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="30 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_29">30 Day</li>
+            </ul>
+        </div>
+    </div>
+    <div id="orderForm:cbval_1_panel"
+        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
+        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
+            <ul id="orderForm:cbval_1_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="orderForm:cbval_1_0">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
+                    data-label="Please Select..." tabindex="-1" role="option" id="orderForm:cbval_1_0">Please Select...
+                </li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Hirafu"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_1">Hirafu</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Hanazono"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_2">Hanazono</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Niseko Village"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_3">Niseko Village</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Annupuri"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_4">Annupuri</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Moiwa"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_5">Moiwa</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Kutchan Town"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_6">Kutchan Town</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Kiroro (additional fees apply)" tabindex="-1" role="option" id="orderForm:cbval_1_7">
+                    Kiroro (additional fees apply)</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Rusutsu (additional fees apply)" tabindex="-1" role="option" id="orderForm:cbval_1_8">
+                    Rusutsu (additional fees apply)</li>
+            </ul>
+        </div>
+    </div>
+    <div id="orderForm:qty_panel"
+        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
+        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
+            <ul id="orderForm:qty_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="orderForm:qty_0">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
+                    data-label="1" tabindex="-1" role="option" id="orderForm:qty_0">1</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="2" tabindex="-1"
+                    role="option" id="orderForm:qty_1">2</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="3" tabindex="-1"
+                    role="option" id="orderForm:qty_2">3</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="4" tabindex="-1"
+                    role="option" id="orderForm:qty_3">4</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="5" tabindex="-1"
+                    role="option" id="orderForm:qty_4">5</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="6" tabindex="-1"
+                    role="option" id="orderForm:qty_5">6</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="7" tabindex="-1"
+                    role="option" id="orderForm:qty_6">7</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="8" tabindex="-1"
+                    role="option" id="orderForm:qty_7">8</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="9" tabindex="-1"
+                    role="option" id="orderForm:qty_8">9</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="10" tabindex="-1"
+                    role="option" id="orderForm:qty_9">10</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="11" tabindex="-1"
+                    role="option" id="orderForm:qty_10">11</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="12" tabindex="-1"
+                    role="option" id="orderForm:qty_11">12</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="13" tabindex="-1"
+                    role="option" id="orderForm:qty_12">13</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="14" tabindex="-1"
+                    role="option" id="orderForm:qty_13">14</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="15" tabindex="-1"
+                    role="option" id="orderForm:qty_14">15</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="16" tabindex="-1"
+                    role="option" id="orderForm:qty_15">16</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="17" tabindex="-1"
+                    role="option" id="orderForm:qty_16">17</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="18" tabindex="-1"
+                    role="option" id="orderForm:qty_17">18</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="19" tabindex="-1"
+                    role="option" id="orderForm:qty_18">19</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="20" tabindex="-1"
+                    role="option" id="orderForm:qty_19">20</li>
+            </ul>
+        </div>
+    </div>
+    <div id="orderForm:itemdtbsk:0:tooltip" class="ui-tooltip ui-widget ui-tooltip-bottom">
+        <div class="ui-tooltip-arrow"></div>
+        <div class="ui-tooltip-text ui-shadow ui-corner-all">
+            Requires confirmation by the vendor
+        </div>
+    </div>
+    <div id="orderForm:titlenew_panel"
+        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
+        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
+            <ul id="orderForm:titlenew_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="orderForm:titlenew_0">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
+                    data-label="&amp;nbsp;" tabindex="-1" role="option" id="orderForm:titlenew_0">&nbsp;</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="MR" tabindex="-1"
+                    role="option" id="orderForm:titlenew_1">MR</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="MRS"
+                    tabindex="-1" role="option" id="orderForm:titlenew_2">MRS</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="MS" tabindex="-1"
+                    role="option" id="orderForm:titlenew_3">MS</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="DR" tabindex="-1"
+                    role="option" id="orderForm:titlenew_4">DR</li>
+            </ul>
+        </div>
+    </div>
+    <div id="orderForm:countrynew_panel"
+        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
+        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
+            <ul id="orderForm:countrynew_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="orderForm:countrynew_0">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
+                    data-label="&amp;nbsp;" tabindex="-1" role="option" id="orderForm:countrynew_0">&nbsp;</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Afghanistan"
+                    tabindex="-1" role="option" id="orderForm:countrynew_1">Afghanistan</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Aland Islands"
+                    tabindex="-1" role="option" id="orderForm:countrynew_2">Aland Islands</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Albania"
+                    tabindex="-1" role="option" id="orderForm:countrynew_3">Albania</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Algeria"
+                    tabindex="-1" role="option" id="orderForm:countrynew_4">Algeria</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="American Samoa"
+                    tabindex="-1" role="option" id="orderForm:countrynew_5">American Samoa</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Andorra"
+                    tabindex="-1" role="option" id="orderForm:countrynew_6">Andorra</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Angola"
+                    tabindex="-1" role="option" id="orderForm:countrynew_7">Angola</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Anguilla"
+                    tabindex="-1" role="option" id="orderForm:countrynew_8">Anguilla</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Antarctica"
+                    tabindex="-1" role="option" id="orderForm:countrynew_9">Antarctica</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Antigua and Barbuda" tabindex="-1" role="option" id="orderForm:countrynew_10">Antigua
+                    and Barbuda</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Argentina"
+                    tabindex="-1" role="option" id="orderForm:countrynew_11">Argentina</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Armenia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_12">Armenia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Aruba"
+                    tabindex="-1" role="option" id="orderForm:countrynew_13">Aruba</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Australia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_14">Australia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Austria"
+                    tabindex="-1" role="option" id="orderForm:countrynew_15">Austria</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Azerbaijan"
+                    tabindex="-1" role="option" id="orderForm:countrynew_16">Azerbaijan</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Bahamas"
+                    tabindex="-1" role="option" id="orderForm:countrynew_17">Bahamas</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Bahrain"
+                    tabindex="-1" role="option" id="orderForm:countrynew_18">Bahrain</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Bangladesh"
+                    tabindex="-1" role="option" id="orderForm:countrynew_19">Bangladesh</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Barbados"
+                    tabindex="-1" role="option" id="orderForm:countrynew_20">Barbados</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Belarus"
+                    tabindex="-1" role="option" id="orderForm:countrynew_21">Belarus</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Belgium"
+                    tabindex="-1" role="option" id="orderForm:countrynew_22">Belgium</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Belize"
+                    tabindex="-1" role="option" id="orderForm:countrynew_23">Belize</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Benin"
+                    tabindex="-1" role="option" id="orderForm:countrynew_24">Benin</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Bermuda"
+                    tabindex="-1" role="option" id="orderForm:countrynew_25">Bermuda</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Bhutan"
+                    tabindex="-1" role="option" id="orderForm:countrynew_26">Bhutan</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Bolivia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_27">Bolivia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Bosnia Herzegovina" tabindex="-1" role="option" id="orderForm:countrynew_28">Bosnia
+                    Herzegovina</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Botswana"
+                    tabindex="-1" role="option" id="orderForm:countrynew_29">Botswana</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Brazil"
+                    tabindex="-1" role="option" id="orderForm:countrynew_30">Brazil</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Brunei Darussalam" tabindex="-1" role="option" id="orderForm:countrynew_31">Brunei
+                    Darussalam</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Bulgaria"
+                    tabindex="-1" role="option" id="orderForm:countrynew_32">Bulgaria</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Burkina Faso"
+                    tabindex="-1" role="option" id="orderForm:countrynew_33">Burkina Faso</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Burundi"
+                    tabindex="-1" role="option" id="orderForm:countrynew_34">Burundi</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Cambodia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_35">Cambodia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Cameroon"
+                    tabindex="-1" role="option" id="orderForm:countrynew_36">Cameroon</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Canada"
+                    tabindex="-1" role="option" id="orderForm:countrynew_37">Canada</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Cape Verde"
+                    tabindex="-1" role="option" id="orderForm:countrynew_38">Cape Verde</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Cayman Islands"
+                    tabindex="-1" role="option" id="orderForm:countrynew_39">Cayman Islands</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Central African Republic" tabindex="-1" role="option" id="orderForm:countrynew_40">
+                    Central African Republic</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Chad"
+                    tabindex="-1" role="option" id="orderForm:countrynew_41">Chad</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Chile"
+                    tabindex="-1" role="option" id="orderForm:countrynew_42">Chile</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="China"
+                    tabindex="-1" role="option" id="orderForm:countrynew_43">China</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Christmas Island"
+                    tabindex="-1" role="option" id="orderForm:countrynew_44">Christmas Island</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Colombia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_45">Colombia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Comoros"
+                    tabindex="-1" role="option" id="orderForm:countrynew_46">Comoros</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Congo"
+                    tabindex="-1" role="option" id="orderForm:countrynew_47">Congo</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Congo, The Democratic Republic of the" tabindex="-1" role="option"
+                    id="orderForm:countrynew_48">Congo, The Democratic Republic of the</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Cook Islands"
+                    tabindex="-1" role="option" id="orderForm:countrynew_49">Cook Islands</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Costa Rica"
+                    tabindex="-1" role="option" id="orderForm:countrynew_50">Costa Rica</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Cote d'Ivoire"
+                    tabindex="-1" role="option" id="orderForm:countrynew_51">Cote d'Ivoire</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Croatia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_52">Croatia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Cuba"
+                    tabindex="-1" role="option" id="orderForm:countrynew_53">Cuba</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Cyprus"
+                    tabindex="-1" role="option" id="orderForm:countrynew_54">Cyprus</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Czech Republic"
+                    tabindex="-1" role="option" id="orderForm:countrynew_55">Czech Republic</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Denmark"
+                    tabindex="-1" role="option" id="orderForm:countrynew_56">Denmark</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Djibouti"
+                    tabindex="-1" role="option" id="orderForm:countrynew_57">Djibouti</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Dominica"
+                    tabindex="-1" role="option" id="orderForm:countrynew_58">Dominica</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Dominican Republic" tabindex="-1" role="option" id="orderForm:countrynew_59">Dominican
+                    Republic</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Ecuador"
+                    tabindex="-1" role="option" id="orderForm:countrynew_60">Ecuador</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Egypt"
+                    tabindex="-1" role="option" id="orderForm:countrynew_61">Egypt</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="El Salvador"
+                    tabindex="-1" role="option" id="orderForm:countrynew_62">El Salvador</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Equatorial Guinea" tabindex="-1" role="option" id="orderForm:countrynew_63">Equatorial
+                    Guinea</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Eritrea"
+                    tabindex="-1" role="option" id="orderForm:countrynew_64">Eritrea</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Estonia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_65">Estonia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Ethiopia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_66">Ethiopia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Falkland Islands"
+                    tabindex="-1" role="option" id="orderForm:countrynew_67">Falkland Islands</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Fiji"
+                    tabindex="-1" role="option" id="orderForm:countrynew_68">Fiji</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Finland"
+                    tabindex="-1" role="option" id="orderForm:countrynew_69">Finland</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="France"
+                    tabindex="-1" role="option" id="orderForm:countrynew_70">France</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="French Polynesia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_71">French Polynesia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Gabon"
+                    tabindex="-1" role="option" id="orderForm:countrynew_72">Gabon</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Gambia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_73">Gambia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Georgia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_74">Georgia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Germany"
+                    tabindex="-1" role="option" id="orderForm:countrynew_75">Germany</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Ghana"
+                    tabindex="-1" role="option" id="orderForm:countrynew_76">Ghana</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Gibraltar"
+                    tabindex="-1" role="option" id="orderForm:countrynew_77">Gibraltar</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Greece"
+                    tabindex="-1" role="option" id="orderForm:countrynew_78">Greece</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Greenland"
+                    tabindex="-1" role="option" id="orderForm:countrynew_79">Greenland</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Grenada"
+                    tabindex="-1" role="option" id="orderForm:countrynew_80">Grenada</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Guam"
+                    tabindex="-1" role="option" id="orderForm:countrynew_81">Guam</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Guatemala"
+                    tabindex="-1" role="option" id="orderForm:countrynew_82">Guatemala</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Guernsey"
+                    tabindex="-1" role="option" id="orderForm:countrynew_83">Guernsey</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Guinea"
+                    tabindex="-1" role="option" id="orderForm:countrynew_84">Guinea</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Guinea-Bissau"
+                    tabindex="-1" role="option" id="orderForm:countrynew_85">Guinea-Bissau</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Guyana"
+                    tabindex="-1" role="option" id="orderForm:countrynew_86">Guyana</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Haiti"
+                    tabindex="-1" role="option" id="orderForm:countrynew_87">Haiti</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Holy See (Vatican City State)" tabindex="-1" role="option" id="orderForm:countrynew_88">
+                    Holy See (Vatican City State)</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Honduras"
+                    tabindex="-1" role="option" id="orderForm:countrynew_89">Honduras</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Hong Kong"
+                    tabindex="-1" role="option" id="orderForm:countrynew_90">Hong Kong</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Hungary"
+                    tabindex="-1" role="option" id="orderForm:countrynew_91">Hungary</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Iceland"
+                    tabindex="-1" role="option" id="orderForm:countrynew_92">Iceland</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="India"
+                    tabindex="-1" role="option" id="orderForm:countrynew_93">India</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Indonesia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_94">Indonesia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Iran"
+                    tabindex="-1" role="option" id="orderForm:countrynew_95">Iran</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Iraq"
+                    tabindex="-1" role="option" id="orderForm:countrynew_96">Iraq</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Ireland"
+                    tabindex="-1" role="option" id="orderForm:countrynew_97">Ireland</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Isle of Man"
+                    tabindex="-1" role="option" id="orderForm:countrynew_98">Isle of Man</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Israel"
+                    tabindex="-1" role="option" id="orderForm:countrynew_99">Israel</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Italy"
+                    tabindex="-1" role="option" id="orderForm:countrynew_100">Italy</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Jamaica"
+                    tabindex="-1" role="option" id="orderForm:countrynew_101">Jamaica</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Japan"
+                    tabindex="-1" role="option" id="orderForm:countrynew_102">Japan</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Jersey"
+                    tabindex="-1" role="option" id="orderForm:countrynew_103">Jersey</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Jordan"
+                    tabindex="-1" role="option" id="orderForm:countrynew_104">Jordan</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Kazakhstan"
+                    tabindex="-1" role="option" id="orderForm:countrynew_105">Kazakhstan</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Kenya"
+                    tabindex="-1" role="option" id="orderForm:countrynew_106">Kenya</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Kiribati"
+                    tabindex="-1" role="option" id="orderForm:countrynew_107">Kiribati</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Korea, North"
+                    tabindex="-1" role="option" id="orderForm:countrynew_108">Korea, North</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Korea, South"
+                    tabindex="-1" role="option" id="orderForm:countrynew_109">Korea, South</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Kuwait"
+                    tabindex="-1" role="option" id="orderForm:countrynew_110">Kuwait</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Kyrgyzstan"
+                    tabindex="-1" role="option" id="orderForm:countrynew_111">Kyrgyzstan</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Lao People's Democratic Republic" tabindex="-1" role="option"
+                    id="orderForm:countrynew_112">Lao People's Democratic Republic</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Latvia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_113">Latvia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Lebanon"
+                    tabindex="-1" role="option" id="orderForm:countrynew_114">Lebanon</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Lesotho"
+                    tabindex="-1" role="option" id="orderForm:countrynew_115">Lesotho</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Liberia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_116">Liberia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Libya"
+                    tabindex="-1" role="option" id="orderForm:countrynew_117">Libya</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Liechtenstein"
+                    tabindex="-1" role="option" id="orderForm:countrynew_118">Liechtenstein</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Lithuania"
+                    tabindex="-1" role="option" id="orderForm:countrynew_119">Lithuania</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Luxembourg"
+                    tabindex="-1" role="option" id="orderForm:countrynew_120">Luxembourg</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Macao"
+                    tabindex="-1" role="option" id="orderForm:countrynew_121">Macao</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Macedonia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_122">Macedonia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Madagascar"
+                    tabindex="-1" role="option" id="orderForm:countrynew_123">Madagascar</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Malawi"
+                    tabindex="-1" role="option" id="orderForm:countrynew_124">Malawi</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Malaysia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_125">Malaysia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Maldives"
+                    tabindex="-1" role="option" id="orderForm:countrynew_126">Maldives</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Mali"
+                    tabindex="-1" role="option" id="orderForm:countrynew_127">Mali</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Malta"
+                    tabindex="-1" role="option" id="orderForm:countrynew_128">Malta</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Marshall Islands"
+                    tabindex="-1" role="option" id="orderForm:countrynew_129">Marshall Islands</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Martinique"
+                    tabindex="-1" role="option" id="orderForm:countrynew_130">Martinique</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Mauritania"
+                    tabindex="-1" role="option" id="orderForm:countrynew_131">Mauritania</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Mauritius"
+                    tabindex="-1" role="option" id="orderForm:countrynew_132">Mauritius</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Mexico"
+                    tabindex="-1" role="option" id="orderForm:countrynew_133">Mexico</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Micronesia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_134">Micronesia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Monaco"
+                    tabindex="-1" role="option" id="orderForm:countrynew_135">Monaco</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Mongolia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_136">Mongolia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Montenegro"
+                    tabindex="-1" role="option" id="orderForm:countrynew_137">Montenegro</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Montserrat"
+                    tabindex="-1" role="option" id="orderForm:countrynew_138">Montserrat</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Morocco"
+                    tabindex="-1" role="option" id="orderForm:countrynew_139">Morocco</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Mozambique"
+                    tabindex="-1" role="option" id="orderForm:countrynew_140">Mozambique</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Myanmar"
+                    tabindex="-1" role="option" id="orderForm:countrynew_141">Myanmar</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Namibia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_142">Namibia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Nauru"
+                    tabindex="-1" role="option" id="orderForm:countrynew_143">Nauru</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Nepal"
+                    tabindex="-1" role="option" id="orderForm:countrynew_144">Nepal</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Netherlands"
+                    tabindex="-1" role="option" id="orderForm:countrynew_145">Netherlands</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="New Caledonia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_146">New Caledonia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="New Zealand"
+                    tabindex="-1" role="option" id="orderForm:countrynew_147">New Zealand</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Nicaragua"
+                    tabindex="-1" role="option" id="orderForm:countrynew_148">Nicaragua</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Niger"
+                    tabindex="-1" role="option" id="orderForm:countrynew_149">Niger</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Nigeria"
+                    tabindex="-1" role="option" id="orderForm:countrynew_150">Nigeria</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Niue"
+                    tabindex="-1" role="option" id="orderForm:countrynew_151">Niue</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Norfolk Island"
+                    tabindex="-1" role="option" id="orderForm:countrynew_152">Norfolk Island</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Norway"
+                    tabindex="-1" role="option" id="orderForm:countrynew_153">Norway</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Oman"
+                    tabindex="-1" role="option" id="orderForm:countrynew_154">Oman</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Pakistan"
+                    tabindex="-1" role="option" id="orderForm:countrynew_155">Pakistan</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Palau"
+                    tabindex="-1" role="option" id="orderForm:countrynew_156">Palau</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Palestinian Territory" tabindex="-1" role="option" id="orderForm:countrynew_157">
+                    Palestinian Territory</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Panama"
+                    tabindex="-1" role="option" id="orderForm:countrynew_158">Panama</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Papua New Guinea"
+                    tabindex="-1" role="option" id="orderForm:countrynew_159">Papua New Guinea</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Paraguay"
+                    tabindex="-1" role="option" id="orderForm:countrynew_160">Paraguay</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Peru"
+                    tabindex="-1" role="option" id="orderForm:countrynew_161">Peru</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Philippines"
+                    tabindex="-1" role="option" id="orderForm:countrynew_162">Philippines</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Pitcairn"
+                    tabindex="-1" role="option" id="orderForm:countrynew_163">Pitcairn</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Poland"
+                    tabindex="-1" role="option" id="orderForm:countrynew_164">Poland</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Portugal"
+                    tabindex="-1" role="option" id="orderForm:countrynew_165">Portugal</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Puerto Rico"
+                    tabindex="-1" role="option" id="orderForm:countrynew_166">Puerto Rico</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Qatar"
+                    tabindex="-1" role="option" id="orderForm:countrynew_167">Qatar</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Reunion"
+                    tabindex="-1" role="option" id="orderForm:countrynew_168">Reunion</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Romania"
+                    tabindex="-1" role="option" id="orderForm:countrynew_169">Romania</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Russian Federation" tabindex="-1" role="option" id="orderForm:countrynew_170">Russian
+                    Federation</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Rwanda"
+                    tabindex="-1" role="option" id="orderForm:countrynew_171">Rwanda</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Saint Helena"
+                    tabindex="-1" role="option" id="orderForm:countrynew_172">Saint Helena</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Saint Lucia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_173">Saint Lucia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Samoa"
+                    tabindex="-1" role="option" id="orderForm:countrynew_174">Samoa</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="San Marino"
+                    tabindex="-1" role="option" id="orderForm:countrynew_175">San Marino</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Saudi Arabia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_176">Saudi Arabia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Senegal"
+                    tabindex="-1" role="option" id="orderForm:countrynew_177">Senegal</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Serbia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_178">Serbia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Seychelles"
+                    tabindex="-1" role="option" id="orderForm:countrynew_179">Seychelles</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Sierra Leone"
+                    tabindex="-1" role="option" id="orderForm:countrynew_180">Sierra Leone</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Singapore"
+                    tabindex="-1" role="option" id="orderForm:countrynew_181">Singapore</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Slovakia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_182">Slovakia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Slovenia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_183">Slovenia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Solomon Islands"
+                    tabindex="-1" role="option" id="orderForm:countrynew_184">Solomon Islands</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Somalia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_185">Somalia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="South Africa"
+                    tabindex="-1" role="option" id="orderForm:countrynew_186">South Africa</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Spain"
+                    tabindex="-1" role="option" id="orderForm:countrynew_187">Spain</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Sri Lanka"
+                    tabindex="-1" role="option" id="orderForm:countrynew_188">Sri Lanka</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Sudan"
+                    tabindex="-1" role="option" id="orderForm:countrynew_189">Sudan</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Suriname"
+                    tabindex="-1" role="option" id="orderForm:countrynew_190">Suriname</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Swaziland"
+                    tabindex="-1" role="option" id="orderForm:countrynew_191">Swaziland</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Sweden"
+                    tabindex="-1" role="option" id="orderForm:countrynew_192">Sweden</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Switzerland"
+                    tabindex="-1" role="option" id="orderForm:countrynew_193">Switzerland</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Syria"
+                    tabindex="-1" role="option" id="orderForm:countrynew_194">Syria</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Taiwan"
+                    tabindex="-1" role="option" id="orderForm:countrynew_195">Taiwan</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Tajikistan"
+                    tabindex="-1" role="option" id="orderForm:countrynew_196">Tajikistan</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Tanzania"
+                    tabindex="-1" role="option" id="orderForm:countrynew_197">Tanzania</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Thailand"
+                    tabindex="-1" role="option" id="orderForm:countrynew_198">Thailand</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Timor-Leste"
+                    tabindex="-1" role="option" id="orderForm:countrynew_199">Timor-Leste</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Togo"
+                    tabindex="-1" role="option" id="orderForm:countrynew_200">Togo</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Tokelau"
+                    tabindex="-1" role="option" id="orderForm:countrynew_201">Tokelau</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Tonga"
+                    tabindex="-1" role="option" id="orderForm:countrynew_202">Tonga</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Trinidad and Tobago" tabindex="-1" role="option" id="orderForm:countrynew_203">Trinidad
+                    and Tobago</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Tunisia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_204">Tunisia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Turkey"
+                    tabindex="-1" role="option" id="orderForm:countrynew_205">Turkey</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Turkmenistan"
+                    tabindex="-1" role="option" id="orderForm:countrynew_206">Turkmenistan</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Tuvalu"
+                    tabindex="-1" role="option" id="orderForm:countrynew_207">Tuvalu</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Uganda"
+                    tabindex="-1" role="option" id="orderForm:countrynew_208">Uganda</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Ukraine"
+                    tabindex="-1" role="option" id="orderForm:countrynew_209">Ukraine</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="United Arab Emirates" tabindex="-1" role="option" id="orderForm:countrynew_210">United
+                    Arab Emirates</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="United Kingdom"
+                    tabindex="-1" role="option" id="orderForm:countrynew_211">United Kingdom</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="United States"
+                    tabindex="-1" role="option" id="orderForm:countrynew_212">United States</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Uruguay"
+                    tabindex="-1" role="option" id="orderForm:countrynew_213">Uruguay</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Uzbekistan"
+                    tabindex="-1" role="option" id="orderForm:countrynew_214">Uzbekistan</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Vanuatu"
+                    tabindex="-1" role="option" id="orderForm:countrynew_215">Vanuatu</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Venezuela"
+                    tabindex="-1" role="option" id="orderForm:countrynew_216">Venezuela</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Vietnam"
+                    tabindex="-1" role="option" id="orderForm:countrynew_217">Vietnam</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Virgin Islands, British" tabindex="-1" role="option" id="orderForm:countrynew_218">
+                    Virgin Islands, British</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Virgin Islands, U.S." tabindex="-1" role="option" id="orderForm:countrynew_219">Virgin
+                    Islands, U.S.</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Western Sahara"
+                    tabindex="-1" role="option" id="orderForm:countrynew_220">Western Sahara</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Yemen"
+                    tabindex="-1" role="option" id="orderForm:countrynew_221">Yemen</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Zambia"
+                    tabindex="-1" role="option" id="orderForm:countrynew_222">Zambia</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Zimbabwe"
+                    tabindex="-1" role="option" id="orderForm:countrynew_223">Zimbabwe</li>
+            </ul>
+        </div>
+    </div>
+    <div id="orderForm:languagenew_panel"
+        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
+        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
+            <ul id="orderForm:languagenew_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="orderForm:languagenew_4">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="&amp;nbsp;"
+                    tabindex="-1" role="option" id="orderForm:languagenew_0">&nbsp;</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Anglais"
+                    tabindex="-1" role="option" id="orderForm:languagenew_1">Anglais</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Japonais"
+                    tabindex="-1" role="option" id="orderForm:languagenew_2">Japonais</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Korean"
+                    tabindex="-1" role="option" id="orderForm:languagenew_3">Korean</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
+                    data-label="Français" tabindex="-1" role="option" id="orderForm:languagenew_4">Français</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Chinois (simplifié)" tabindex="-1" role="option" id="orderForm:languagenew_5">Chinois
+                    (simplifié)</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Chinois (traditionnel)" tabindex="-1" role="option" id="orderForm:languagenew_6">Chinois
+                    (traditionnel)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
