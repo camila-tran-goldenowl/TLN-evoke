@@ -127,6 +127,20 @@ html .ui-corner-all{
 border-radius: 0 !important;
 }
 
+// icon
+.fa-edit:before, 
+.fa-pencil-square-o:before,
+.fa-trash-o::before,
+.fa-info-circle:before,
+.fa-arrow-left:before {
+    font-family: FontAwesome;
+}
+
+.fa-arrow-left:before{
+    @include black-text();
+    font-weight: 400;
+}
+
 /* begin top menu section */
 div#orderForm\:wzd_content,
 div#orderForm\:prtcatpnl,
@@ -421,6 +435,15 @@ form#orderForm{
             margin: 0 !important;
         }
     }
+
+    button#orderForm\:gcontshop{
+
+        .fa-arrow-left{
+            transform: translateY(-50%);
+            margin: 0 !important;
+            height: auto !important;
+        }
+    }
 }
 
 
@@ -558,6 +581,7 @@ button#orderForm\:ngbut,
 button#orderForm\:sendvercode,
 button#orderForm\:gcontshop{
     @include button;
+    @include caption();
 }
 
 .rb-or{
@@ -579,10 +603,10 @@ div#orderForm\:vercodepg{
 
 div#orderForm\:newguestpg{
     .flex-item{
-        input{
+        input, .ui-selectonemenu{
             margin-left: 2rem;
             @include input();
-            min-width: 300px;
+            min-width: 300px !important;
         }
     }
 }
