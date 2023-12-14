@@ -197,6 +197,9 @@ html .ui-selectonemenu .ui-selectonemenu-trigger .ui-icon{
     text-decoration-thickness: 2px;
     text-decoration-color: $secondary-orange-color;
 }
+html .vc-chip-container .chip {
+    @include body-text();
+}
 
 .vc-chip-container .chip {
     @include body-text();
@@ -254,11 +257,20 @@ html[lang="en"] #orderForm:vndcat button{
 
 
 .rb-vendor-description label,
-.rb-child-cat-description label,
+.rb-child-cat-description,
+.rb-child-cat-desc,
+.rb-parent-cat-desc,
 .has-request-msg{
-    @include black-text();
     @include caption();
+    font-weight: 400!important;
 }
+
+.rb-prod-desc-item:nth-child(2) label{
+    @include body-text();
+    font-weight: 400!important;
+    line-height: 26px;
+}
+
 
 // choose item-active
 .rb-vendor-container .rb-vendor-sel a img, 
@@ -283,11 +295,12 @@ img[id*="pdtimg"] {
     box-shadow: none !important;
     
     .rb-prod-desc-item{
-        @include body-text();
+       
         line-height: 26px;
 
         &:first-child{
             label{
+                @include header();
                 font {
                     font-family: Delmon Delicate !important;
                 }
@@ -607,6 +620,31 @@ div#orderForm\:newguestpg{
             margin-left: 2rem;
             @include input();
             min-width: 300px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rb-new-guest-form{
+        margin-left: 0!important;
+        padding: 1rem !important;
+        
+
+        .flex-container{
+            flex-direction: column;
+
+            .flex-item{
+                width: 100%;
+                text-align: left;
+                padding-bottom: 0.5rem !important;
+
+
+                >div, >input{
+                    width: 100%;
+                    margin-left: 0rem !important;
+                }
+            }
+
         }
     }
 }
