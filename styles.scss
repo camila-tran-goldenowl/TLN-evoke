@@ -1,715 +1,695 @@
-// font 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
-@import url('https://fonts.cdnfonts.com/css/delmon-delicate');
-@import url('https://fonts.cdnfonts.com/css/microsoft-yahei');
+// font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+@import url("https://fonts.cdnfonts.com/css/delmon-delicate");
+@import url("https://fonts.cdnfonts.com/css/microsoft-yahei");
 
-$primary-sea-color: #79A2AA;
+$primary-sea-color: #79a2aa;
 $primary-brown-color: #625956;
-$primary-black-color: #18181B;
+$primary-black-color: #18181b;
 
-$secondary-yellow-color: #FFD075;
-$secondary-orange-color: #F89426;
-$secondary-beige-color: #F9F6F0;
-$secondary-white-color: #FFFDFA;
-$secondary-grey-color: #DCDDDE;
-$secondary-light-grey-color: #F4F4F4;
+$secondary-yellow-color: #ffd075;
+$secondary-orange-color: #ff7900;
+$secondary-beige-color: #f9f6f0;
+$secondary-white-color: #fffdfa;
+$secondary-grey-color: #dcddde;
+$secondary-light-grey-color: #f4f4f4;
 
-$success-color:#54AF91;
-$fail-color:#EA5F5F;
-$dark-grey: #66686A;
-$link-color:#3388CC;
+$success-color: #54af91;
+$fail-color: #ea5f5f;
+$dark-grey: #66686a;
+$link-color: #3388cc;
 
-@mixin main-font{
-    font-family: Montserrat !important;
+@mixin main-font {
+  font-family: Montserrat !important;
 }
 
 @mixin small-title {
-    font-size: 6px !important;
-    font-weight: 400;
-    line-height: 15px;
-    letter-spacing: 0.15em;
-    text-align: right;    
+  font-size: 6px !important;
+  font-weight: 400;
+  line-height: 15px;
+  text-align: right;
 }
 
 @mixin header {
-    font-family: Montserrat;
-    font-size: 18px !important;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0em;
+  font-family: Montserrat;
+  font-size: 18px !important;
+  font-weight: 400;
+  line-height: 22px;
 }
 
-@mixin sub-header{
-    font-family: Delmon Delicate !important;
-    font-size: 20px !important;
-    font-weight: 400;
+@mixin sub-header {
+  font-family: Delmon Delicate !important;
+  font-size: 20px !important;
+  font-weight: 400;
 }
 
-@mixin body-text{
-    font-family: Montserrat;
-    font-size: 16px !important;
-    font-weight: 400;
-    line-height: 26px;
+@mixin body-text {
+  font-family: Montserrat;
+  font-size: 16px !important;
+  font-weight: 400;
+  line-height: 26px;
 }
 
-@mixin caption{
-    font-family: Montserrat;
-    font-size: 14px !important;
-    font-weight: 300;
-    line-height: 17px;
+@mixin caption {
+  font-family: Montserrat;
+  font-size: 14px !important;
+  font-weight: 300;
+  line-height: 17px;
 }
 
-@mixin title{
-    font-family: Montserrat;
-    font-size: 12px !important;
-    font-weight: 400;
-    line-height: 17px;
+@mixin title {
+  font-family: Montserrat;
+  font-size: 12px !important;
+  font-weight: 400;
+  line-height: 17px;
 }
 
-@mixin button{
-    border: none !important;
-    padding: 1rem 2.5rem !important;
-	background-color: $secondary-orange-color !important;
-    border-radius: 0 !important;
-    text-transform: uppercase;
+@mixin button {
+  border: none !important;
+  padding: 1rem 2.5rem !important;
+  background-color: $secondary-orange-color !important;
+  border-radius: 0 !important;
+  text-transform: uppercase;
 }
 
-@mixin black-text{
-    color: $primary-black-color !important;
+@mixin black-text {
+  color: $primary-black-color !important;
 }
 
-@mixin hover-underline{
-    background-color: transparent !important;
-    text-decoration: underline;
-    transition: 0.3s;
-    text-underline-offset: 4px;
+@mixin hover-underline {
+  background-color: transparent !important;
+  text-decoration: underline;
+  transition: 0.3s;
+  text-underline-offset: 4px;
 }
-@mixin border{
-    border: 1px solid $secondary-grey-color !important;
-}
-
-@mixin input{
-    @include black-text;
-    @include body-text;
-    @include border;
-    background-color: white;
-    padding: 8px 15px;
+@mixin border {
+  border: 1px solid $secondary-grey-color !important;
 }
 
-*{
-    @include main-font();
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@mixin input {
+  @include black-text;
+  @include body-text;
+  @include border;
+  background-color: white;
+  padding: 8px 15px;
+}
+
+* {
+  @include main-font();
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
-body{
-    background-color: #f9f9f9;
+body {
+  background-color: #f9f9f9;
 }
 
-.rb-body-content{
-    padding-bottom: 15rem;
+.rb-body-content {
+  padding-bottom: 15rem;
 }
 
-// general 
-html .ui-button-text{
-    @include main-font();
-    @include black-text();
-    letter-spacing: 0.15em;
-    font-weight: 400 !important;
+// general
+html .ui-button-text {
+  @include main-font();
+  @include black-text();
+  font-weight: 400 !important;
 }
 
-html .ui-corner-all{
-border-radius: 0 !important;
+html .ui-corner-all {
+  border-radius: 0 !important;
 }
 
 // icon
-.fa-edit:before, 
+.fa-edit:before,
 .fa-pencil-square-o:before,
 .fa-trash-o::before,
 .fa-info-circle:before,
 .fa-arrow-left:before {
-    font-family: FontAwesome;
+  font-family: FontAwesome;
 }
 
-.fa-arrow-left:before{
-    @include black-text();
-    font-weight: 400;
+.fa-arrow-left:before {
+  @include black-text();
+  font-weight: 400;
 }
 
 /* begin top menu section */
 div#orderForm\:wzd_content,
 div#orderForm\:prtcatpnl,
 div#orderForm\:slctpdtpnl,
-div#orderForm\:bskpgtop{
-    margin-top: 4rem !important;
+div#orderForm\:bskpgtop {
+  margin-top: 4rem !important;
 }
 
 // selection
-.ui-btn-right{
-    label{
-        @include body-text();
-    }
-}
-.ui-selectonemenu-items-wrapper{
-    line-height: 26px !important;
-
-    ul{
-        li{
-            @include body-text();
-
-            &::hover{
-                @include hover-underline();
-                background-color: transparent !important;
-            }
-        }
-        
-    }
-}
-
-html .ui-widget-content .ui-state-highlight{
-    color: $primary-black-color !important
-}
-
-.ui-selectonemenu-trigger{
-    padding: 0 !important;
-    .ui-icon{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-}
-
-html .ui-selectonemenu .ui-selectonemenu-trigger .ui-icon{
-    margin: 0 !important;
-}
-
-
-.ui-widget-content .ui-state-highlight{
+.ui-btn-right {
+  label {
     @include body-text();
-    background-color: transparent !important;
-    text-underline-offset: 4px;
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: $secondary-orange-color;
+  }
+}
+.ui-selectonemenu-items-wrapper {
+  line-height: 26px !important;
+
+  ul {
+    li {
+      @include body-text();
+
+      &::hover {
+        @include hover-underline();
+        background-color: transparent !important;
+      }
+    }
+  }
+}
+
+html .ui-widget-content .ui-state-highlight {
+  color: $primary-black-color !important;
+}
+
+.ui-selectonemenu-trigger {
+  padding: 0 !important;
+  .ui-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+html .ui-selectonemenu .ui-selectonemenu-trigger .ui-icon {
+  margin: 0 !important;
+}
+
+.ui-widget-content .ui-state-highlight {
+  @include body-text();
+  background-color: transparent !important;
+  text-underline-offset: 4px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: $secondary-orange-color;
 }
 html .vc-chip-container .chip {
-    @include body-text();
+  @include body-text();
 }
 
 .vc-chip-container .chip {
-    @include body-text();
-    background-color: white !important;    
+  @include body-text();
+  background-color: white !important;
 
-    > .ui-button-text{
-        font-weight: 400!important;
-    }
+  > .ui-button-text {
+    font-weight: 400 !important;
+  }
 }
 /* end top menu section */
-
 
 /* begin menu section */
 
 // category
-.rb-vendor-text, 
+.rb-vendor-text,
 .rb-parent-cat-text,
 .rb-child-cat-text,
 .rb-prod-panel-text,
-.rb-basket-title{
-    @include sub-header();
-    @include black-text();
-    font-size: 22px !important;
+.rb-basket-title {
+  @include sub-header();
+  @include black-text();
+  font-size: 22px !important;
 }
 
-.rb-vendor-title:before, .rb-prod-title:before, .rb-parent-cat-title:before, .rb-child-cat-title:before{
-    @include black-text();
-    @include body-text();
-    line-height: 0 !important;
+.rb-vendor-title:before,
+.rb-prod-title:before,
+.rb-parent-cat-title:before,
+.rb-child-cat-title:before {
+  @include black-text();
+  @include body-text();
+  line-height: 0 !important;
 }
 
-
-html[lang="en"] #orderForm:vndcat button{
-    @include button();
-    @include border;
+html[lang="en"] #orderForm:vndcat button {
+  @include button();
+  @include border;
 }
 /* end menu section */
 
 /* begin list section */
 
 .flex-item {
-    box-sizing: content-box;
-    padding: 0 !important;
-    padding-bottom: 10px !important;
+  box-sizing: content-box;
+  padding: 0 !important;
+  padding-bottom: 10px !important;
 
-    label{
-        @include body-text();
-        font-weight: 500 !important;
-    }
+  label {
+    @include body-text();
+    font-weight: 500 !important;
+  }
 
-    img{
-        border-radius: 0 !important;
-    }
+  img {
+    border-radius: 0 !important;
+  }
 }
-
 
 .rb-vendor-description label,
 .rb-child-cat-description,
 .rb-child-cat-desc,
 .rb-parent-cat-desc,
-.has-request-msg{
-    @include caption();
-    font-weight: 400!important;
+.has-request-msg {
+  @include caption();
+  font-weight: 400 !important;
 }
 
-.rb-prod-desc-item:nth-child(2) label{
-    @include body-text();
-    font-weight: 400!important;
-    line-height: 26px;
+.rb-prod-desc-item:nth-child(2) label {
+  @include body-text();
+  font-weight: 400 !important;
+  line-height: 26px;
 }
-
 
 // choose item-active
-.rb-vendor-container .rb-vendor-sel a img, 
-.rb-vendor-container .rb-vendor-sel .rb-cat-box a, 
-.rb-parent-cat-container .rb-parent-cat-sel a img, 
-.rb-parent-cat-container .rb-parent-cat-sel .rb-cat-box a, 
-.rb-child-cat-container .rb-child-cat-sel a img, 
-.rb-child-cat-container .rb-child-cat-sel .rb-cat-box a{
-    box-shadow: 0 0 0px 4px $secondary-grey-color !important;
+.rb-vendor-container .rb-vendor-sel a img,
+.rb-vendor-container .rb-vendor-sel .rb-cat-box a,
+.rb-parent-cat-container .rb-parent-cat-sel a img,
+.rb-parent-cat-container .rb-parent-cat-sel .rb-cat-box a,
+.rb-child-cat-container .rb-child-cat-sel a img,
+.rb-child-cat-container .rb-child-cat-sel .rb-cat-box a {
+  box-shadow: 0 0 0px 4px $secondary-grey-color !important;
 }
-
 
 // choose product item
 img[id*="pdtimg"] {
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.rb-prod-item-panel >.ui-panel-content.ui-widget-content{
-    @include border;
-    background-color: $secondary-white-color;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    
-    .rb-prod-desc-item{
-       
-        line-height: 26px;
+.rb-prod-item-panel > .ui-panel-content.ui-widget-content {
+  @include border;
+  background-color: $secondary-white-color;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 
-        &:first-child{
-            label{
-                @include header();
-                font {
-                    font-family: Delmon Delicate !important;
-                }
-            }
-        }
+  .rb-prod-desc-item {
+    line-height: 26px;
 
-        button{
-            background-color: $secondary-orange-color !important;
-            border: none;
-            padding: 13.5px 20px;
-            font-weight: 400!important;
-
-            span{
-                @include caption;
-            }
+    &:first-child {
+      label {
+        @include header();
+        font {
+          font-family: Delmon Delicate !important;
         }
-        span.ui-button-text.ui-c{
-            padding: 0 !important;
-        }
+      }
     }
+
+    button {
+      background-color: $secondary-orange-color !important;
+      border: none;
+      padding: 13.5px 20px;
+      font-weight: 400 !important;
+
+      span {
+        @include caption;
+      }
+    }
+    span.ui-button-text.ui-c {
+      padding: 0 !important;
+    }
+  }
 }
 
-.rb-scroll-top-panel .ui-panel-content{
-    @include caption();
-    background-color: white !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    padding: 0.5rem !important;
-
+.rb-scroll-top-panel .ui-panel-content {
+  @include caption();
+  background-color: white !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0.5rem !important;
 }
 /* end list section */
 
 /* begin cart section */
 //list
-html #orderForm\:itemdtbsk_data tr.ui-widget-content>td:nth-child(1){
-    padding-top: 2rem !important;
+html #orderForm\:itemdtbsk_data tr.ui-widget-content > td:nth-child(1) {
+  padding-top: 0.5rem !important;
 }
 
-div#orderForm\:itemdtbsk{
-    @include border;
-    margin-top: 2rem;
-    box-shadow: none !important;
+div#orderForm\:itemdtbsk {
+  @include border;
+  margin-top: 2rem;
+  box-shadow: none !important;
 
-    thead{
-       
+  thead {
+    .ui-state-default {
+      padding: 1.6rem 1rem;
+      background-color: $secondary-grey-color !important;
+      text-align: left !important;
 
-        .ui-state-default{
-            padding: 1.6rem 1rem;
-            background-color: $secondary-grey-color !important;
-            text-align: left !important;
-            
-
-            .ui-column-title{
-                @include black-text();
-                @include title(); 
-                font-weight: 500;
-                text-transform: uppercase;
-                line-height: 19px;
-                letter-spacing: 0.15em;
-            }
-        }
-        
+      .ui-column-title {
+        @include black-text();
+        @include title();
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 19px;
+      }
     }
+  }
 
-    tbody{
-        td{
-            text-align: left !important;
-            padding: 2rem 1rem !important;
+  tbody {
+    td {
+      text-align: left !important;
+      padding: 2rem 1rem !important;
 
-            label[id$=":itempdt"]{
-                @include title;
-                border-radius: 0!important;
-                text-transform: uppercase;
-            }
+      label[id$=":itempdt"] {
+        @include title;
+        border-radius: 0 !important;
+        text-transform: uppercase;
+      }
 
-            .status-pill{
-                margin: 0.5rem;
-            }
+      .status-pill {
+        margin: 0.5rem;
+      }
 
-
-            .item, > label{
-                font-size: 15px;
-                font-family: Montserrat;
-                line-height: 26px;
-
-            }
-        }
+      .item,
+      > label {
+        font-size: 15px;
+        font-family: Montserrat;
+        line-height: 26px;
+      }
     }
+  }
 }
 
-table tbody tr:nth-child(odd) td, table tbody tr:nth-child(odd) td{
-    background: $secondary-light-grey-color !important;
+table tbody tr:nth-child(odd) td,
+table tbody tr:nth-child(odd) td {
+  background: $secondary-light-grey-color !important;
 }
-table tbody tr:nth-child(even) td, table tbody tr:nth-child(even) td{
-    background: $secondary-grey-color !important;
+table tbody tr:nth-child(even) td,
+table tbody tr:nth-child(even) td {
+  background: $secondary-grey-color !important;
 }
 
 // checkout
 
-input#orderForm\:disCode{
-   @include input();
-    min-width: 250px;
+input#orderForm\:disCode {
+  @include input();
+  min-width: 250px;
 }
 ::placeholder {
-    @include body-text;
+  @include body-text;
 }
 
-div#orderForm\:bskpnl_footer{
-    @include header;
+div#orderForm\:bskpnl_footer {
+  @include header;
 }
 
 button#orderForm\:apply,
-button#orderForm\:next{
-    @include button();
-    @include caption();
+button#orderForm\:next {
+  @include button();
+  @include caption();
 
-    span{
-        padding: 0 !important;
-    }
+  span {
+    padding: 0 !important;
+  }
 }
 /* ennd cart section */
 
 /* begin dialog section */
-form#orderForm{
-    display: flex;
-    justify-content: center;
-    // align-items: center;
+form#orderForm {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
 
-    .ui-dialog{
-        width: 40vw !important;
-        left: auto !important;
-        top: 50% !important;
-        transform: translateY(-50%);
+  .ui-dialog {
+    width: 40vw !important;
+    left: auto !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+  }
+
+  // header
+  .ui-dialog-titlebar {
+    background-color: $secondary-grey-color !important;
+    padding-top: 1.2rem !important;
+    padding-bottom: 1.2rem !important;
+    border-bottom: 0 !important;
+
+    .ui-dialog-title {
+      @include black-text();
+      margin: 0 !important;
     }
+  }
 
-    // header
-    .ui-dialog-titlebar{
-        background-color: $secondary-grey-color !important;
-        padding-top: 1.2rem !important;
-        padding-bottom: 1.2rem !important;
-        border-bottom: 0!important;
-
-        .ui-dialog-title{
-            @include black-text();
-            margin: 0 !important;
-        }
+  button#orderForm\:gcontshop {
+    .fa-arrow-left {
+      transform: translateY(-50%);
+      margin: 0 !important;
+      height: auto !important;
     }
-
-    button#orderForm\:gcontshop{
-
-        .fa-arrow-left{
-            transform: translateY(-50%);
-            margin: 0 !important;
-            height: auto !important;
-        }
-    }
+  }
 }
-
-
 
 // warning + success + error messages
-.ui-state-error{
-    background-color: $fail-color;
+.ui-state-error {
+  background-color: $fail-color;
 }
 
-.ui-growl-info{
-    background-color: $success-color;
+.ui-growl-info {
+  background-color: $success-color;
 }
-.ui-growl-item-container{
-    opacity: 1;
-}
-
-.ui-growl-info, .ui-messages .ui-messages-info, .ui-message.ui-message-info{
-    border: none !important;
-    box-shadow: none !important;
+.ui-growl-item-container {
+  opacity: 1;
 }
 
-.ui-growl-item{
-    display: flex;
-    align-items: center;
+.ui-growl-info,
+.ui-messages .ui-messages-info,
+.ui-message.ui-message-info {
+  border: none !important;
+  box-shadow: none !important;
 }
 
-.ui-growl-message{
-    padding: 0 0 0 0.5rem !important;
-
-    span{
-        padding: 0 !important;
-    }
-
-    p{
-        @include caption();
-        @include black-text();
-        font-weight: 500;
-    }
+.ui-growl-item {
+  display: flex;
+  align-items: center;
 }
 
-.rb-prod-dialog-but{
-    margin-top: 2rem;
+.ui-growl-message {
+  padding: 0 0 0 0.5rem !important;
+
+  span {
+    padding: 0 !important;
+  }
+
+  p {
+    @include caption();
+    @include black-text();
+    font-weight: 500;
+  }
+}
+
+.rb-prod-dialog-but {
+  margin-top: 2rem;
+  background-color: $secondary-orange-color;
+  padding: 13px 0 !important;
+
+  #orderForm\:butpg {
+    padding: 0 !important;
+  }
+
+  .button#orderForm\:addbtn {
+    padding: 0 !important;
+  }
+
+  .ui-button-text {
+    @include title();
+    @include black-text();
+    padding: 0 !important;
     background-color: $secondary-orange-color;
-    padding: 13px 0 !important; 
+    font-weight: 400 !important;
+  }
 
-    #orderForm\:butpg{
-        padding: 0 !important; 
-    }
-
-    .button#orderForm\:addbtn{
-        padding: 0 !important;
-    }
-
-    .ui-button-text{
-        @include title();
-        @include black-text();
-        padding: 0 !important;
-        background-color: $secondary-orange-color;
-        font-weight: 400 !important;
-    }
-
-    .ui-button.ui-widget.ui-state-default{
-        background-color: $secondary-orange-color !important;
-        border: 0;
-    }
+  .ui-button.ui-widget.ui-state-default {
+    background-color: $secondary-orange-color !important;
+    border: 0;
+  }
 }
-
 
 // form
-.flex-option{
-    label{
-        @include caption();
-    }
+.flex-option {
+  label {
+    @include caption();
+  }
 
-    input, 
-    .ui-selectonemenu,
-    input#orderForm\:stdtcal_input{
-        @include border;
-        padding: 1rem 1.5rem;
-        caret-color: $primary-black-color;
-    }
+  input,
+  .ui-selectonemenu,
+  input#orderForm\:stdtcal_input {
+    @include border;
+    padding: 1rem 1.5rem;
+    caret-color: $primary-black-color;
+  }
 
-    .rb-prod-gross-value,
-    input{
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        @include caption();
-        @include black-text();
-        
-    }
+  .rb-prod-gross-value,
+  input {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    @include caption();
+    @include black-text();
+  }
 }
 /* end dialog section */
 
+@media (max-width: 640px) {
+  .rb-prod-desc-container .rb-prod-desc-item:nth-child(2) {
+    text-align: left !important;
+  }
 
-
-@media (max-width: 640px){
-    .rb-prod-desc-container .rb-prod-desc-item:nth-child(2){
-        text-align: left !important;
+  form#orderForm {
+    .ui-dialog {
+      width: 90vw !important;
     }
+  }
 
-    form#orderForm{
-        .ui-dialog{
-            width: 90vw !important;
-        }
+  .flex-option {
+    padding: 8px 4px;
 
+    label {
+      text-align: left !important;
     }
+  }
 
-    .flex-option{
-        padding: 8px 4px;
-
-        label{
-            text-align: left !important;
-        }
-    }
-
-    button#orderForm\:apply{
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
+  button#orderForm\:apply {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 }
 
 // calendar
-html .ui-datepicker{
-    box-shadow: 2px 2px 4px 0px #00000021;
+html .ui-datepicker {
+  box-shadow: 2px 2px 4px 0px #00000021;
 
-    tbody {
-        background: white;
-    }
-    
-    table tbody tr:nth-child(odd) td, 
-    table tbody tr:nth-child(odd) td, 
-    table tbody tr:nth-child(even) td, 
-    table tbody tr:nth-child(even) td{
-        background: white !important;
-    }
+  tbody {
+    background: white;
+  }
 
-    th{
-        @include black-text();
-        @include body-text();
-        background: white !important;
-        text-shadow: none!important;
-        background-color: white !important;
-        box-shadow: none!important;
-        padding: 0.5rem 1.5rem !important;
-        border: none !important;
-    }
+  table tbody tr:nth-child(odd) td,
+  table tbody tr:nth-child(odd) td,
+  table tbody tr:nth-child(even) td,
+  table tbody tr:nth-child(even) td {
+    background: white !important;
+  }
 
-    td{
-        width: 4rem;
-        height: 4rem;
-        padding: 0 !important;
-        margin: auto;
-    }
+  th {
+    @include black-text();
+    @include body-text();
+    background: white !important;
+    text-shadow: none !important;
+    background-color: white !important;
+    box-shadow: none !important;
+    padding: 0.5rem 1.5rem !important;
+    border: none !important;
+  }
 
-    td.ui-datepicker-week-end.ui-datepicker-days-cell-over.undefined.ui-datepicker-current-day:has(a.ui-state-active){
-        background-color: $secondary-orange-color !important;
-    }
+  td {
+    width: 4rem;
+    height: 4rem;
+    padding: 0 !important;
+    margin: auto;
+  }
 
-    .ui-state-default{
-        @include body-text();
-        @include black-text();
-        font-weight: 400!important;
-        line-height: 0 !important;
-        background: transparent !important;
-        box-shadow: none !important;
-    }
+  td.ui-datepicker-week-end.ui-datepicker-days-cell-over.undefined.ui-datepicker-current-day:has(
+      a.ui-state-active
+    ) {
+    background-color: $secondary-orange-color !important;
+  }
+
+  .ui-state-default {
+    @include body-text();
+    @include black-text();
+    font-weight: 400 !important;
+    line-height: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
 }
 
-#ui-datepicker-div{
-    border: 0 !important;
-    width: fit-content;
+#ui-datepicker-div {
+  border: 0 !important;
+  width: fit-content;
 
-    .ui-datepicker-header{
-        padding: 1.2em 0;
-        background-color: $secondary-orange-color !important;
-        border: none !important;
+  .ui-datepicker-header {
+    padding: 1.2em 0;
+    background-color: $secondary-orange-color !important;
+    border: none !important;
 
-        .ui-datepicker-title{
-            > select{
-                @include body-text();
-                padding: 1rem 0.5rem;
-                margin-right: 2px;
-            }
-        }
+    .ui-datepicker-title {
+      > select {
+        @include body-text();
+        padding: 1rem 0.5rem;
+        margin-right: 2px;
+      }
     }
+  }
 }
 
 /*=================== SIGN IN PAGE ===================*/
 label#orderForm\:existglbl,
-label#orderForm\:newguestlbl{
-    @include sub-header();
+label#orderForm\:newguestlbl {
+  @include sub-header();
 }
 
 label#orderForm\:newguesttxt,
-label#orderForm\:signintxt{
-    @include caption();
+label#orderForm\:signintxt {
+  @include caption();
 }
 
 button#orderForm\:ngbut,
 button#orderForm\:sendvercode,
-button#orderForm\:gcontshop{
-    @include button;
-    @include caption();
+button#orderForm\:gcontshop {
+  @include button;
+  @include caption();
 }
 
-.rb-or{
-    @include caption;
+.rb-or {
+  @include caption;
 }
 
+div#orderForm\:vercodepg {
+  input {
+    @include input();
+    min-width: 300px;
+  }
 
-div#orderForm\:vercodepg{
+  button#orderForm\:sendvercode {
+    margin-top: 0.5rem;
+  }
+}
 
-    input{
-        @include input();
-        min-width: 300px;
+div#orderForm\:newguestpg {
+  .flex-item {
+    input,
+    .ui-selectonemenu {
+      margin-left: 2rem;
+      @include input();
+      min-width: 300px !important;
     }
-
-    button#orderForm\:sendvercode{
-        margin-top: 0.5rem;
-    }   
-}
-
-div#orderForm\:newguestpg{
-    .flex-item{
-        input, .ui-selectonemenu{
-            margin-left: 2rem;
-            @include input();
-            min-width: 300px !important;
-        }
-    }
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .rb-new-guest-form{
-        margin-left: 0!important;
-        padding: 1rem !important;
-        
+  .rb-new-guest-form {
+    margin-left: 0 !important;
+    padding: 1rem !important;
 
-        .flex-container{
-            flex-direction: column;
+    .flex-container {
+      flex-direction: column;
 
-            .flex-item{
-                width: 100%;
-                text-align: left;
-                padding-bottom: 0.5rem !important;
+      .flex-item {
+        width: 100%;
+        text-align: left;
+        padding-bottom: 0.5rem !important;
 
-
-                >div, >input{
-                    width: 100%;
-                    margin-left: 0rem !important;
-                }
-            }
-
+        > div,
+        > input {
+          width: 100%;
+          margin-left: 0rem !important;
         }
+      }
     }
+  }
 }
