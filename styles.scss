@@ -426,6 +426,9 @@ button#orderForm\:apply,
 button#orderForm\:next{
     @include button();
     @include caption();
+    padding: 1rem 0 !important;
+    width: 12rem;
+    margin: auto !important;
 
     span{
         padding: 0 !important;
