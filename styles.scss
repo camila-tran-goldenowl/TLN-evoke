@@ -392,8 +392,7 @@ div#orderForm\:itemdtbsk{
 
             .item, label{
                 font-size: 15px;
-                font-family: Montserrat;
-                line-height: 26px;
+                @include main-font();
                 font-weight: 500!important;
 
             }
