@@ -333,7 +333,11 @@ img[id*="pdtimg"] {
     border-radius: 0 !important;
     box-shadow: none !important;
     padding: 0.5rem !important;
+}
 
+label#orderForm\:scrolltop{
+    @include title();
+    @include black-text();
 }
 /* end list section */
 
@@ -435,8 +439,11 @@ form#orderForm{
     justify-content: center;
     // align-items: center;
 
+    .ui-dialog-content.ui-widget-content{
+        padding: 1.2em !important;
+    }
+
     .ui-dialog{
-        width: 40vw !important;
         left: auto !important;
         top: 50% !important;
         transform: translateY(-50%);
@@ -445,8 +452,7 @@ form#orderForm{
     // header
     .ui-dialog-titlebar{
         background-color: $secondary-grey-color !important;
-        padding-top: 1.2rem !important;
-        padding-bottom: 1.2rem !important;
+        padding: 1.2rem calc(1rem - 1px) 1.2rem 1rem !important;
         border-bottom: 0!important;
 
         .ui-dialog-title{
@@ -533,6 +539,8 @@ form#orderForm{
 
 // form
 .flex-option{
+    padding: 4px 0 !important;
+
     label{
         @include caption();
     }
@@ -541,9 +549,13 @@ form#orderForm{
     .ui-selectonemenu,
     input#orderForm\:stdtcal_input{
         @include border;
-        padding: 1rem 1.5rem;
+        // padding: 1rem 1.5rem;
         caret-color: $primary-black-color;
     }
+
+    // > span[id^='orderForm:criterionLabelId_']{
+    //     padding-left: calc(1.5rem + 1px);
+    // }
 
     .rb-prod-gross-value,
     span,
@@ -559,8 +571,12 @@ form#orderForm{
 div#orderForm\:addbskpg{
     margin: 0;
 }
+
 /* end dialog section */
 
+.orderForm:chdcatpnl{
+    margin-top: 4rem !important;
+}
 
 
 @media (max-width: 640px){
@@ -673,6 +689,14 @@ button#orderForm\:gcontshop{
     @include caption();
 }
 
+button#orderForm\:gcontshop {
+    padding: 1rem 0 1rem 1rem !important;
+    
+    .ui-button-text-icon-left .ui-button-text {
+        padding: 0.3em 1em;
+    }
+}
+
 .rb-or{
     @include caption;
 }
@@ -700,6 +724,11 @@ div#orderForm\:newguestpg{
     }
 }
 
+.ui-selectonemenu{
+    &.ui-state-error{
+        border: 1px solid $fail-color !important;
+    }
+}
 
 .ui-inputfield{
 
