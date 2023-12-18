@@ -91,6 +91,7 @@ html .ui-widget-content .ui-state-highlight {
 
 .ui-selectonemenu.ui-widget.ui-state-focus {
   border: 1px solid #F89426 !important;
+  background: white !important;
 }
 
 html .ui-selectonemenu .ui-selectonemenu-trigger .ui-icon {
