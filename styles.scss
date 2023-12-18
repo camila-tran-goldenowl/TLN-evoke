@@ -91,7 +91,7 @@ $link-color:#3388CC;
 @mixin input{
     @include black-text;
     @include body-text;
-    @include border;
+    border: 1px solid $secondary-grey-color;
     background-color: white;
     padding: 8px 15px;
 }
@@ -578,7 +578,7 @@ form#orderForm{
     }
 }
 
-// calendar
+// calendar$
 html .ui-datepicker{
     box-shadow: 2px 2px 4px 0px #00000021;
 
@@ -687,6 +687,11 @@ div#orderForm\:newguestpg{
             min-width: 300px !important;
         }
     }
+}
+
+
+.ui-inputfield.ui-state-error{
+    border: 1px solid $fail-color !important;
 }
 
 @media screen and (max-width: 480px) {
