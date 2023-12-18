@@ -184,6 +184,10 @@ html .ui-widget-content .ui-state-highlight{
     }
 }
 
+.ui-selectonemenu.ui-widget.ui-state-focus{
+    border: 1px solid $secondary-orange-color !important;
+}
+
 html .ui-selectonemenu .ui-selectonemenu-trigger .ui-icon{
     margin: 0 !important;
 }
@@ -381,15 +385,17 @@ div#orderForm\:itemdtbsk{
             }
 
 
-            .item, > label{
+            .item, label{
                 font-size: 15px;
                 font-family: Montserrat;
                 line-height: 26px;
+                font-weight: 500!important;
 
             }
         }
     }
 }
+
 
 table tbody tr:nth-child(odd) td, table tbody tr:nth-child(odd) td{
     background: $secondary-light-grey-color !important;
@@ -540,13 +546,18 @@ form#orderForm{
     }
 
     .rb-prod-gross-value,
+    span,
     input{
         padding-top: 1rem;
         padding-bottom: 1rem;
         @include caption();
         @include black-text();
-        
+        font-weight: 400 !important;
     }
+}
+
+div#orderForm\:addbskpg{
+    margin: 0;
 }
 /* end dialog section */
 
@@ -690,8 +701,16 @@ div#orderForm\:newguestpg{
 }
 
 
-.ui-inputfield.ui-state-error{
-    border: 1px solid $fail-color !important;
+.ui-inputfield{
+
+    &.ui-state-error{
+        border: 1px solid $fail-color !important;
+    }
+   
+    &.ui-state-focus{
+        border: 1px solid $secondary-orange-color !important;
+        box-shadow: none !important;
+    }
 }
 
 @media screen and (max-width: 480px) {
