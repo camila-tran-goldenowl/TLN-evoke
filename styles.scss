@@ -544,6 +544,10 @@ form#orderForm{
 
 
 // form
+.ui-state-focus, .ui-widget-content .ui-state-focus{
+    background-color: transparent !important;
+}
+
 .flex-option{
     padding: 4px 0 !important;
 
@@ -620,7 +624,7 @@ div#orderForm\:addbskpg{
     
 }
 
-calendar
+// calendar
 html .ui-datepicker{
     box-shadow: 2px 2px 4px 0px #00000021;
 
