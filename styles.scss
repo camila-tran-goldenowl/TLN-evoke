@@ -100,19 +100,10 @@ $link-color:#3388CC;
     @include main-font();
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 62.5%;
 }
 
 body{
     background-color: #f9f9f9;
-}
-
-.rb-body-content{
-    padding-bottom: 15rem;
 }
 
 // general 
@@ -169,6 +160,14 @@ div#orderForm\:bskpgtop{
             }
         }
         
+    }
+}
+
+form#locform{
+    .ui-btn-right{
+        td{
+            margin-left: 1rem;
+        }
     }
 }
 
@@ -434,6 +433,10 @@ button#orderForm\:next{
         padding: 0 !important;
     }
 }
+
+.rb-body-content {
+    padding-bottom: 0 !important; 
+}
 /* ennd cart section */
 
 /* begin dialog section */
@@ -455,7 +458,7 @@ form#orderForm{
     // header
     .ui-dialog-titlebar{
         background-color: $secondary-grey-color !important;
-        padding: 1.2rem calc(1rem - 1px) 1.2rem 1rem !important;
+        padding: 0.8rem calc(1rem - 1px) 0.8rem 1rem !important;
         border-bottom: 0!important;
 
         .ui-dialog-title{
@@ -563,8 +566,6 @@ form#orderForm{
     .rb-prod-gross-value,
     span,
     input{
-        padding-top: 1rem;
-        padding-bottom: 1rem;
         @include caption();
         @include black-text();
         font-weight: 400 !important;
@@ -581,6 +582,11 @@ div#orderForm\:addbskpg{
     margin-top: 4rem !important;
 }
 
+@media (max-width: 820px){
+    #orderForm\:orderNav {
+        text-align: right !important;
+    }
+}
 
 @media (max-width: 640px){
     .rb-prod-desc-container .rb-prod-desc-item:nth-child(2){
@@ -606,9 +612,15 @@ div#orderForm\:addbskpg{
         margin-top: 1rem;
         margin-bottom: 1rem;
     }
+
+    input#orderForm\:disCode{
+        margin-right: 0!important;
+        margin-bottom: 1rem;
+    }
+    
 }
 
-// calendar$
+calendar
 html .ui-datepicker{
     box-shadow: 2px 2px 4px 0px #00000021;
 
@@ -630,15 +642,7 @@ html .ui-datepicker{
         text-shadow: none!important;
         background-color: white !important;
         box-shadow: none!important;
-        padding: 0.5rem 1.5rem !important;
         border: none !important;
-    }
-
-    td{
-        width: 4rem;
-        height: 4rem;
-        padding: 0 !important;
-        margin: auto;
     }
 
     td.ui-datepicker-week-end.ui-datepicker-days-cell-over.undefined.ui-datepicker-current-day:has(a.ui-state-active){
@@ -649,30 +653,25 @@ html .ui-datepicker{
         @include body-text();
         @include black-text();
         font-weight: 400!important;
-        line-height: 0 !important;
         background: transparent !important;
         box-shadow: none !important;
     }
 }
 
-#ui-datepicker-div{
-    border: 0 !important;
-    width: fit-content;
+// #ui-datepicker-div{
+//     border: 0 !important;
 
-    .ui-datepicker-header{
-        padding: 1.2em 0;
-        background-color: $secondary-orange-color !important;
-        border: none !important;
+//     .ui-datepicker-header{
+//         background-color: $secondary-orange-color !important;
+//         border: none !important;
 
-        .ui-datepicker-title{
-            > select{
-                @include body-text();
-                padding: 1rem 0.5rem;
-                margin-right: 2px;
-            }
-        }
-    }
-}
+//         .ui-datepicker-title{
+//             > select{
+//                 @include body-text();
+//             }
+//         }
+//     }
+// }
 
 /*=================== SIGN IN PAGE ===================*/
 label#orderForm\:existglbl,
