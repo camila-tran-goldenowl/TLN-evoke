@@ -204,10 +204,14 @@ html .ui-selectonemenu .ui-selectonemenu-trigger .ui-icon{
 html .vc-chip-container .chip {
     @include body-text();
 }
+.chip.selected{
+    > span{
+        color: white !important;
+    }
+}
 
 .vc-chip-container .chip {
-    @include body-text();
-    background-color: white !important;    
+    @include body-text();  
 
     > .ui-button-text{
         font-weight: 400!important;
