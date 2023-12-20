@@ -455,8 +455,9 @@ button#orderForm\:next{
 
 /* begin dialog section */
 .ui-dialog-buttonpane{
-    button#cdYes, button#cdNo{
-        padding-right: 0 !important;
+    button{
+        border: none !important;
+        padding: .3em 0 0.3em 0.5em;
 
         .ui-button-text.ui-c{
             background-color: $secondary-orange-color;
@@ -773,6 +774,18 @@ div#orderForm\:newguestpg{
 @media screen and (max-width: 480px) {
     html button.ui-button{
         padding: 1rem 1.5rem !important;
+    }
+    
+    .ui-dialog-buttonpane{
+        button#cdYes, button#cdNo{
+            padding-right: 0 !important;
+
+            .ui-button-text.ui-c{
+                background-color: $secondary-orange-color;
+                color: white !important;
+            }
+            
+        }
     }
 
     .rb-prod-dialog-but{
