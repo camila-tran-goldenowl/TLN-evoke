@@ -467,6 +467,15 @@ button#orderForm\:next{
     }
 }
 
+div#orderForm\:butpg{
+    background: transparent !important;
+
+    button#orderForm\:confirmedititem,
+    button#orderForm\:canceledititem{
+        @include button();
+    }
+}
+
 form#orderForm,
 div#confirmdlg{
     display: flex;
