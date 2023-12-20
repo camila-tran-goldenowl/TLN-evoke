@@ -68,7 +68,7 @@ $link-color:#3388CC;
 
 @mixin button{
     border: none !important;
-    padding: 1rem 2.5rem;
+    padding: 0.8rem 1.5rem;
 	background-color: $secondary-orange-color !important;
     border-radius: 0 !important;
     text-transform: uppercase;
@@ -104,6 +104,12 @@ $link-color:#3388CC;
 
 body{
     background-color: #f9f9f9;
+}
+
+button.ui-state-default{
+    .span.ui-button-text.ui-c{
+        color: white !important;
+    }
 }
 
 // general 
@@ -161,6 +167,10 @@ div#orderForm\:bskpgtop{
         }
         
     }
+}
+
+.vc-chip-container .ui-button.ui-widget.chip{
+    padding: 0.5rem 1rem;
 }
 
 form#locform{
@@ -603,13 +613,8 @@ div#confirmdlg{
     .ui-selectonemenu,
     input#orderForm\:stdtcal_input{
         @include border;
-        // padding: 1rem 1.5rem;
         caret-color: $primary-black-color;
     }
-
-    // > span[id^='orderForm:criterionLabelId_']{
-    //     padding-left: calc(1.5rem + 1px);
-    // }
 
     .rb-prod-gross-value,
     span,
@@ -780,11 +785,7 @@ div#orderForm\:newguestpg{
     }
 }
 
-@media screen and (max-width: 480px) {
-    html button.ui-button{
-        padding: 1rem 1.5rem !important;
-    }
-    
+@media screen and (max-width: 480px) {    
     .ui-dialog-buttonpane{
         button#cdYes, button#cdNo{
             padding-right: 0 !important;
