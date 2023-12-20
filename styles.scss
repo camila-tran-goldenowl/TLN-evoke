@@ -537,6 +537,11 @@ div#confirmdlg{
 
 
 // warning + success + error messages
+.ui-growl{
+    left: 50%;
+    transform: translateX(-50%) !important;
+}
+
 .ui-state-error{
     background-color: $fail-color;
 }
@@ -770,6 +775,10 @@ div#orderForm\:newguestpg{
 
     &.ui-state-error{
         border: 1px solid $fail-color !important;
+    }
+
+    .ui-selectonemenu-label{
+        width: auto!important;
     }
 }
 
