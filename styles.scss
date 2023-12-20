@@ -68,7 +68,7 @@ $link-color:#3388CC;
 
 @mixin button{
     border: none !important;
-    padding: 1rem 2.5rem !important;
+    padding: 1rem 2.5rem;
 	background-color: $secondary-orange-color !important;
     border-radius: 0 !important;
     text-transform: uppercase;
@@ -204,10 +204,16 @@ html .ui-selectonemenu .ui-selectonemenu-trigger .ui-icon{
 html .vc-chip-container .chip {
     @include body-text();
 }
+
 .chip.selected{
     > span{
         color: white !important;
     }
+}
+
+.ui-button.ui-widget.ui-state-default {
+    background:$secondary-orange-color !important;
+    color: white !important;
 }
 
 .vc-chip-container .chip {
@@ -251,7 +257,6 @@ html[lang="en"] #orderForm:vndcat button{
 .flex-item {
     box-sizing: content-box;
     padding: 0 !important;
-    padding-bottom: 10px !important;
 
     label{
         @include body-text();
@@ -263,6 +268,21 @@ html[lang="en"] #orderForm:vndcat button{
     }
 }
 
+html .rb-h-selwrapper {
+    height: auto !important;
+}
+
+.flex-item > .ui-inputfield, .flex-item > .ui-selectonemenu{
+    margin-bottom: 10px !important;
+}
+
+.flex-item > .ui-selectonemenu{
+    width: calc(200px - 34px) !important;
+}
+
+.flex-item > div#orderForm\:countrynew.ui-selectonemenu {
+    width: calc(200px - 24px) !important;
+}
 
 .rb-vendor-description label,
 .rb-child-cat-description,
@@ -318,7 +338,7 @@ img[id*="pdtimg"] {
         button{
             background-color: $secondary-orange-color !important;
             border: none;
-            padding: 13.5px 20px;
+            padding: 13.5px 20px !important;
             font-weight: 400!important;
 
             span{
@@ -362,7 +382,6 @@ div#orderForm\:itemdtbsk{
         .ui-state-default{
             padding: 1.6rem 1rem;
             background-color: $secondary-grey-color !important;
-            text-align: left !important;
             
 
             .ui-column-title{
@@ -379,7 +398,6 @@ div#orderForm\:itemdtbsk{
 
     tbody{
         td{
-            text-align: left !important;
             padding: 2rem 1rem !important;
 
             label[id$=":itempdt"]{
@@ -387,11 +405,6 @@ div#orderForm\:itemdtbsk{
                 border-radius: 0!important;
                 text-transform: uppercase;
             }
-
-            .status-pill{
-                margin: 0.5rem;
-            }
-
 
             .item, label{
                 font-size: 15px;
@@ -415,7 +428,7 @@ table tbody tr:nth-child(even) td, table tbody tr:nth-child(even) td{
 
 input#orderForm\:disCode{
    @include input();
-    min-width: 250px;
+   min-width: 150px;
 }
 ::placeholder {
     @include body-text;
@@ -429,9 +442,6 @@ button#orderForm\:apply,
 button#orderForm\:next{
     @include button();
     @include caption();
-    padding: 1rem 0 !important;
-    width: 12rem;
-    margin: auto !important;
 
     span{
         padding: 0 !important;
@@ -597,33 +607,15 @@ div#orderForm\:addbskpg{
 }
 
 @media (max-width: 640px){
-    .rb-prod-desc-container .rb-prod-desc-item:nth-child(2){
-        text-align: left !important;
-    }
+    // form#orderForm{
+    //     .ui-dialog{
+    //         width: 90vw !important;
+    //     }
 
-    form#orderForm{
-        .ui-dialog{
-            width: 90vw !important;
-        }
-
-    }
+    // }
 
     .flex-option{
         padding: 8px 4px;
-
-        label{
-            text-align: left !important;
-        }
-    }
-
-    button#orderForm\:apply{
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    input#orderForm\:disCode{
-        margin-right: 0!important;
-        margin-bottom: 1rem;
     }
     
 }
@@ -682,6 +674,12 @@ html .ui-datepicker{
 // }
 
 /*=================== SIGN IN PAGE ===================*/
+.ui-button-text-icon-left .ui-button-text {
+    padding: 0 1em 0 1em;
+}
+.ui-button-text-only .ui-button-text{
+    padding: 0 !important;
+}
 label#orderForm\:existglbl,
 label#orderForm\:newguestlbl{
     @include sub-header();
@@ -716,7 +714,6 @@ div#orderForm\:vercodepg{
 
     input{
         @include input();
-        min-width: 300px;
     }
 
     button#orderForm\:sendvercode{
@@ -729,12 +726,13 @@ div#orderForm\:newguestpg{
         input, .ui-selectonemenu{
             margin-left: 2rem;
             @include input();
-            min-width: 300px !important;
         }
     }
 }
 
 .ui-selectonemenu{
+    padding-right: 1em !important;
+
     &.ui-state-error{
         border: 1px solid $fail-color !important;
     }
@@ -753,22 +751,22 @@ div#orderForm\:newguestpg{
 }
 
 @media screen and (max-width: 480px) {
+    html button.ui-button{
+        padding: 1rem 1.5rem !important;
+    }
+
+    .rb-prod-dialog-but{
+        padding: 0 !important;
+    }
+
     .rb-new-guest-form{
-        margin-left: 0!important;
-        padding: 1rem !important;
-        
 
         .flex-container{
-            flex-direction: column;
 
             .flex-item{
-                width: 100%;
-                text-align: left;
-                padding-bottom: 0.5rem !important;
 
 
                 >div, >input{
-                    width: 100%;
                     margin-left: 0rem !important;
                 }
             }

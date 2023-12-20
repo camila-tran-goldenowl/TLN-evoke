@@ -1,0 +1,1543 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head id="j_idt2">
+    <link type="text/css" rel="stylesheet" href="/javax.faces.resource/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/javax.faces.resource/primeflex.css">
+    <link type="text/css" rel="stylesheet" href="/javax.faces.resource/order02.css">
+    <link type="text/css" rel="stylesheet" href="/javax.faces.resource/components.css">
+    <script type="text/javascript" src="/javax.faces.resource/jquery/jquery.js"></script>
+    <link id="custom" type="text/css" rel="stylesheet" href="./styles.css" />
+    <!-- <link type="text/css" rel="stylesheet" href="https://tln-web-widget-git-main-camila-tran-goldenowl.vercel.app/public.css"> -->
+
+
+    <script type="text/javascript" src="/javax.faces.resource/jquery/jquery-plugins.js"></script>
+    <script type="text/javascript" src="/javax.faces.resource/core.js"></script>
+    <script type="text/javascript" src="/javax.faces.resource/components.js"></script>
+    <link type="text/css" rel="stylesheet" href="/javax.faces.resource/watermark/watermark.css">
+    <script type="text/javascript" src="/javax.faces.resource/watermark/watermark.js"></script>
+    <link type="text/css" rel="stylesheet" href="/javax.faces.resource/fileupload/fileupload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="/javax.faces.resource/fileupload/fileupload.js"></script>
+    <script type="text/javascript">if (window.PrimeFaces) { PrimeFaces.settings.locale = 'fr'; }</script>
+    <link href="https://nisade.evoke.jp/template/default/css/base_desk_layout.css" rel="stylesheet" type="text/css">
+
+    <title>Nisade</title>
+
+    <script src="https://nisade.evoke.jp/template/default/js/calendar.js"></script>
+    <script type="text/javascript">
+        function showModal() {
+            PF('statusDialog').show();
+        }
+        function hideModal() {
+            PF('statusDialog').hide();
+        }
+    </script>
+    <link id="customCssUrl" rel="stylesheet" type="text/css"
+        href="//dabb7zy6p4b0z.cloudfront.net/nisade/nisade02.css?v=1.1">
+    <script src="https://nisade.evoke.jp/js/money.min.js"></script>
+    <script src="https://nisade.evoke.jp/js/accounting.min.js"></script>
+    <script src="https://nisade.evoke.jp/js/currency.js"></script>
+    <script type="text/javascript">
+        var label = "Actual";
+        var path = "https://app.roomboss.com";
+        var companyId = "";
+        var actualPriceDisabled = false;
+    </script>
+    <style>
+        .cur-orig-val {
+            font-size: 12px;
+            color: grey;
+        }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <script>
+        function next() {
+            PF('wzdWidgetVar').next();
+        }
+        function back() {
+            PF('wzdWidgetVar').back();
+        }
+        function scrollToTop(id) {
+            scrollToTop(id, 500);
+        }
+        function scrollToTopMiddle(id, time) {
+            if ($(id).length) {
+                $('html, body').animate({
+                    scrollTop: $(id).offset().top - $("#growl_container").height()
+                }, time);
+            }
+        }
+        function scrollToTop(id, time) {
+            if ($(id).length) {
+                $('html, body').animate({
+                    scrollTop: $(id).offset().top
+                }, time);
+            }
+        }
+        jQuery(function () {
+            PrimeFaces.changeTheme('omega');
+        });
+        function renderSocialMediaButton() {
+
+        }
+
+        // Logs out before rendering social media buttons
+        function logoutRenderSocialMediaButton() {
+
+        }
+    </script>
+    <script type="text/javascript">(async function () {
+            class ReadwiseElement extends HTMLElement {
+                constructor() {
+                    super();
+
+                    [...this.children].forEach((child) => this.appendChild(child));
+                }
+            }
+
+            try {
+                customElements.define(
+                    "readwise-tooltip-container",
+                    class ReadwiseTooltipContainer extends ReadwiseElement { },
+                    { "extends": "div" },
+                );
+            } catch (e) {
+                if (!e.message.includes("already been defined")
+                    && !e.message.includes("already been used with this registry")) {
+                    console.error("Failed to define custom element", e);
+                    throw e;
+                }
+            }
+        })()</script>
+    <script
+        type="text/javascript">document.body.appendChild(document.createElement("readwise-tooltip-container"));</script>
+    <script type="text/javascript">(async function () {
+            class ReadwiseElement extends HTMLElement {
+                constructor() {
+                    super();
+
+                    [...this.children].forEach((child) => this.appendChild(child));
+                }
+            }
+
+            try {
+                customElements.define(
+                    "rw-highlight",
+                    class ReadwiseHighlight extends ReadwiseElement { },
+                    { "extends": "mark" },
+                );
+            } catch (e) {
+                if (!e.message.includes("already been defined")
+                    && !e.message.includes("already been used with this registry")) {
+                    console.error("Failed to define custom element", e);
+                    throw e;
+                }
+            }
+        })()</script>
+</head>
+
+<body>
+    <div class="rb-header" style="width: 100%; padding-top: 20px; padding-bottom: 20px;">
+        <div class="rb-header-title" style="text-align: center;">
+            Nisade
+        </div>
+        <div class="rb-loc-cur" style="position: absolute; right: 10px; top: 10px;">
+            <form id="locform" name="locform" method="post" action="/public/booking/order02.jsf"
+                enctype="application/x-www-form-urlencoded">
+                <input type="hidden" name="locform" value="locform">
+                <table class="ui-btn-right">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div id="locform:currencySelect"
+                                    class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox"
+                                    aria-haspopup="true" aria-expanded="false" aria-owns="locform:currencySelect_items"
+                                    style="min-width: 63px;">
+                                    <div class="ui-helper-hidden-accessible"><input id="locform:currencySelect_focus"
+                                            name="locform:currencySelect_focus" type="text" autocomplete="off"
+                                            aria-expanded="false" aria-autocomplete="list"
+                                            aria-activedescendant="locform:currencySelect_8"
+                                            aria-describedby="locform:currencySelect_8" aria-disabled="false"
+                                            readonly="readonly"></div>
+                                    <div class="ui-helper-hidden-accessible"><select id="locform:currencySelect_input"
+                                            name="locform:currencySelect_input" tabindex="-1" aria-hidden="true"
+                                            onchange="submit()">
+                                            <option value="AUD">AUD</option>
+                                            <option value="CAD">CAD</option>
+                                            <option value="CNY">CNY</option>
+                                            <option value="EUR">EUR</option>
+                                            <option value="GBP">GBP</option>
+                                            <option value="HKD">HKD</option>
+                                            <option value="IDR">IDR</option>
+                                            <option value="INR">INR</option>
+                                            <option value="JPY" selected="selected">JPY</option>
+                                            <option value="KRW">KRW</option>
+                                            <option value="MYR">MYR</option>
+                                            <option value="NZD">NZD</option>
+                                            <option value="SGD">SGD</option>
+                                            <option value="THB">THB</option>
+                                            <option value="TWD">TWD</option>
+                                            <option value="USD">USD</option>
+                                        </select></div><label id="locform:currencySelect_label"
+                                        class="ui-selectonemenu-label ui-inputfield ui-corner-all">JPY</label>
+                                    <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
+                                            class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
+                                </div>
+                            </td>
+                            <td>
+                                <div id="locform:languageSelect"
+                                    class="ui-selectonemenu ui-widget ui-state-default ui-corner-all rb-hide-disabled"
+                                    role="combobox" aria-haspopup="true" aria-expanded="false"
+                                    aria-owns="locform:languageSelect_items" style="min-width: 105px;">
+                                    <div class="ui-helper-hidden-accessible"><input id="locform:languageSelect_focus"
+                                            name="locform:languageSelect_focus" type="text" autocomplete="off"
+                                            aria-expanded="false" aria-autocomplete="list"
+                                            aria-activedescendant="locform:languageSelect_0"
+                                            aria-describedby="locform:languageSelect_0" aria-disabled="false"
+                                            readonly="readonly"></div>
+                                    <div class="ui-helper-hidden-accessible"><select id="locform:languageSelect_input"
+                                            name="locform:languageSelect_input" tabindex="-1" aria-hidden="true"
+                                            onchange="submit()">
+                                            <option value="en" selected="selected">English</option>
+                                            <option value="ja">日本語</option>
+                                            <option value="ko">한국어</option>
+                                            <option value="fr">Français</option>
+                                            <option value="zh-CN">中文(简体)</option>
+                                            <option value="zh">中文(繁體)</option>
+                                        </select></div><label id="locform:languageSelect_label"
+                                        class="ui-selectonemenu-label ui-inputfield ui-corner-all">English</label>
+                                    <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
+                                            class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0"
+                    value="1979285714588236754:8489719170731439337" autocomplete="off">
+            </form>
+        </div>
+    </div>
+
+    <div class="rb-body-content">
+        <script src="/js/dialogUtil.js"></script><span id="growl"></span>
+
+
+
+
+        <form id="orderForm" name="orderForm" method="post" action="/public/booking/order02.jsf"
+            class="rb-widget-f808ad962801a16a0128040975500007" enctype="multipart/form-data">
+            <input type="hidden" name="orderForm" value="orderForm">
+            <div id="orderForm:wzd"
+                class="ui-wizard ui-widget rb-child-cat-2c98902a646c3d0701648235a5394113 rb-parent-cat-2c9890f06e421730016e48ad40a571b1 rb-vendor-2c98902a5c50f077015c5205a4210cff public">
+                <div id="orderForm:wzd_content" class="ui-wizard-content">
+                    <script type="text/javascript">
+                        $(document).ready(function () {
+                            updateCurrency();
+                        });
+                    </script>
+
+
+                    <div id="slvidtop"></div>
+                    <div id="orderForm:vndpnl"
+                        class="ui-panel ui-widget ui-widget-content ui-corner-all rb-vendor-panel"
+                        style="text-align: center;" data-widget="widget_orderForm_vndpnl">
+                        <div id="orderForm:vndpnl_content" class="ui-panel-content ui-widget-content"><label
+                                class="rb-vendor-title">
+                                <span class="rb-vendor-text">Choose a Vendor</span></label>
+                            <div id="orderForm:vndcat" class="vc-chip-container"><button id="orderForm:vndcatbut_0"
+                                    name="orderForm:vndcatbut_0"
+                                    class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only chip selected"
+                                    onclick="PrimeFaces.ab({s:&quot;orderForm:vndcatbut_0&quot;,p:&quot;orderForm:vndcatbut_0&quot;,u:&quot;orderForm growl&quot;});return false;"
+                                    type="submit" role="button" aria-disabled="false"><span
+                                        class="ui-button-text ui-c">All</span></button><button
+                                    id="orderForm:vndcatbut_1" name="orderForm:vndcatbut_1"
+                                    class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only chip "
+                                    onclick="PrimeFaces.ab({s:&quot;orderForm:vndcatbut_1&quot;,p:&quot;orderForm:vndcatbut_1&quot;,u:&quot;orderForm growl&quot;});return false;"
+                                    type="submit" role="button" aria-disabled="false"><span
+                                        class="ui-button-text ui-c">Activities</span></button><button
+                                    id="orderForm:vndcatbut_2" name="orderForm:vndcatbut_2"
+                                    class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only chip "
+                                    onclick="PrimeFaces.ab({s:&quot;orderForm:vndcatbut_2&quot;,p:&quot;orderForm:vndcatbut_2&quot;,u:&quot;orderForm growl&quot;});return false;"
+                                    type="submit" role="button" aria-disabled="false"><span
+                                        class="ui-button-text ui-c">Ski Schools and Guiding</span></button><button
+                                    id="orderForm:vndcatbut_3" name="orderForm:vndcatbut_3"
+                                    class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only chip "
+                                    onclick="PrimeFaces.ab({s:&quot;orderForm:vndcatbut_3&quot;,p:&quot;orderForm:vndcatbut_3&quot;,u:&quot;orderForm growl&quot;});return false;"
+                                    type="submit" role="button" aria-disabled="false"><span
+                                        class="ui-button-text ui-c">Transportation and Tours</span></button><button
+                                    id="orderForm:vndcatbut_4" name="orderForm:vndcatbut_4"
+                                    class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only chip "
+                                    onclick="PrimeFaces.ab({s:&quot;orderForm:vndcatbut_4&quot;,p:&quot;orderForm:vndcatbut_4&quot;,u:&quot;orderForm growl&quot;});return false;"
+                                    type="submit" role="button" aria-disabled="false"><span
+                                        class="ui-button-text ui-c">Other</span></button></div>
+
+                            <div class="flex-container rb-vendor-container" style="justify-content: center;">
+                                <div class="flex-item rb-vendor-item " style="padding: 10px;max-width: 150px;">
+                                    <div id="orderForm:vndrpt:0:vndpg"><a id="orderForm:vndrpt:0:vndimglnk" href="#"
+                                            class="ui-commandlink ui-widget"
+                                            onclick="PrimeFaces.ab({s:&quot;orderForm:vndrpt:0:vndimglnk&quot;,p:&quot;orderForm:vndrpt:0:vndimglnk&quot;,u:&quot;orderForm growl&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#vendortop');;}});return false;"><img
+                                                src="https://dh1msuk8kbcis.cloudfront.net/0_img/vdr/thumb/hanazono_summer_niseko_280025.jpg"
+                                                alt="" height="150" width="150"></a><label
+                                            id="orderForm:vndrpt:0:vendornm">Hanazono Summer</label></div>
+                                </div>
+                                <div class="flex-item rb-vendor-item " style="padding: 10px;max-width: 150px;">
+                                    <div id="orderForm:vndrpt:1:vndpg"><a id="orderForm:vndrpt:1:vndimglnk" href="#"
+                                            class="ui-commandlink ui-widget"
+                                            onclick="PrimeFaces.ab({s:&quot;orderForm:vndrpt:1:vndimglnk&quot;,p:&quot;orderForm:vndrpt:1:vndimglnk&quot;,u:&quot;orderForm growl&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#vendortop');;}});return false;"><img
+                                                src="https://dh1msuk8kbcis.cloudfront.net/0_img/vdr/thumb/hokkaido_ski_club_niseko_298425.jpg"
+                                                alt="" height="150" width="150"></a><label
+                                            id="orderForm:vndrpt:1:vendornm">Hokkaido Ski Club</label></div>
+                                </div>
+                                <div class="flex-item rb-vendor-item " style="padding: 10px;max-width: 150px;">
+                                    <div id="orderForm:vndrpt:2:vndpg"><a id="orderForm:vndrpt:2:vndimglnk" href="#"
+                                            class="ui-commandlink ui-widget"
+                                            onclick="PrimeFaces.ab({s:&quot;orderForm:vndrpt:2:vndimglnk&quot;,p:&quot;orderForm:vndrpt:2:vndimglnk&quot;,u:&quot;orderForm growl&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#vendortop');;}});return false;"><img
+                                                src="https://dh1msuk8kbcis.cloudfront.net/0_img/vdr/thumb/markone_niseko_726807.jpg"
+                                                alt="" height="150" width="150"></a><label
+                                            id="orderForm:vndrpt:2:vendornm">MarkOne Private Transfers</label></div>
+                                </div>
+                                <div class="flex-item rb-vendor-item " style="padding: 10px;max-width: 150px;">
+                                    <div id="orderForm:vndrpt:3:vndpg"><a id="orderForm:vndrpt:3:vndimglnk" href="#"
+                                            class="ui-commandlink ui-widget"
+                                            onclick="PrimeFaces.ab({s:&quot;orderForm:vndrpt:3:vndimglnk&quot;,p:&quot;orderForm:vndrpt:3:vndimglnk&quot;,u:&quot;orderForm growl&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#vendortop');;}});return false;"><img
+                                                src="https://dh1msuk8kbcis.cloudfront.net/0_img/vdr/thumb/2c9890f06e0f1fda016e0facf7aa13ad_niseko_952051.jpg"
+                                                alt="" height="150" width="150"></a><label
+                                            id="orderForm:vndrpt:3:vendornm">MnK Summer Guest Experiences</label></div>
+                                </div>
+                                <div class="flex-item rb-vendor-item " style="padding: 10px;max-width: 150px;">
+                                    <div id="orderForm:vndrpt:4:vndpg"><a id="orderForm:vndrpt:4:vndimglnk" href="#"
+                                            class="ui-commandlink ui-widget"
+                                            onclick="PrimeFaces.ab({s:&quot;orderForm:vndrpt:4:vndimglnk&quot;,p:&quot;orderForm:vndrpt:4:vndimglnk&quot;,u:&quot;orderForm growl&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#vendortop');;}});return false;"><img
+                                                src="https://dh1msuk8kbcis.cloudfront.net/0_img/vdr/thumb/nac_summer_activity_niseko_834946.jpg"
+                                                alt="" height="150" width="150"></a><label
+                                            id="orderForm:vndrpt:4:vendornm">NAC Summer Activity</label></div>
+                                </div>
+                                <div class="flex-item rb-vendor-item rb-vendor-sel"
+                                    style="padding: 10px;max-width: 150px;">
+                                    <div id="orderForm:vndrpt:5:vndpg"><a id="orderForm:vndrpt:5:vndimglnk" href="#"
+                                            class="ui-commandlink ui-widget"
+                                            onclick="PrimeFaces.ab({s:&quot;orderForm:vndrpt:5:vndimglnk&quot;,p:&quot;orderForm:vndrpt:5:vndimglnk&quot;,u:&quot;orderForm growl&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#vendortop');;}});return false;"><img
+                                                src="https://dh1msuk8kbcis.cloudfront.net/0_img/vdr/thumb/2c98902a5c50f077015c5205a4210cff_niseko_12126.jpg"
+                                                alt="" height="150" width="150"></a><label
+                                            id="orderForm:vndrpt:5:vendornm">Niseko Kids Club - Childcare Centre</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="vendortop"></div>
+                            <div class="rb-cat-desc rb-vendor-description"><label id="orderForm:vnddesc"
+                                    class="rb-vendor-desc">Your trusted source for all of your childcare needs in Niseko
+                                    and the surrounding areas. Our services include on-call babysitting, daycare, and
+                                    childcare equipment rental. The childcare center is located in Hanazono 308 and is
+                                    open daily from 2023 December 2nd to 2024 April 5th. Babysitting and rentals are
+                                    available year-round. We care for kids of all ages from infants to school-aged
+                                    children.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="slpcidtop"></div>
+                    <div id="orderForm:prtcatpnl"
+                        class="ui-panel ui-widget ui-widget-content ui-corner-all rb-parent-cat-panel"
+                        style="text-align: center;" data-widget="widget_orderForm_prtcatpnl">
+                        <div id="orderForm:prtcatpnl_content" class="ui-panel-content ui-widget-content"><label
+                                class="rb-parent-cat-title">
+                                <span class="rb-parent-cat-text">Choose a Category</span></label>
+                            <div class="flex-container rb-parent-cat-container" style="justify-content: center;">
+                                <div class="flex-item rb-parent-cat-item rb-parent-cat-sel"
+                                    style="padding: 10px;max-width: 150px;">
+                                    <div id="orderForm:prtcatrpt:0:prtcatpg">
+                                        <div class=""><a id="orderForm:prtcatrpt:0:prtcatimglnk" href="#"
+                                                class="ui-commandlink ui-widget"
+                                                onclick="PrimeFaces.ab({s:&quot;orderForm:prtcatrpt:0:prtcatimglnk&quot;,p:&quot;orderForm:prtcatrpt:0:prtcatimglnk&quot;,u:&quot;orderForm&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#parentcattop');;}});return false;"><img
+                                                    src="https://dh1msuk8kbcis.cloudfront.net/2c9890f06e421730016e48ad40a571b1_946776.jpg"
+                                                    alt="" height="150" width="150"></a></div><label
+                                            id="orderForm:prtcatrpt:0:parentcatnm">Babysitting</label>
+                                    </div>
+                                </div>
+                                <div class="flex-item rb-parent-cat-item " style="padding: 10px;max-width: 150px;">
+                                    <div id="orderForm:prtcatrpt:1:prtcatpg">
+                                        <div class=""><a id="orderForm:prtcatrpt:1:prtcatimglnk" href="#"
+                                                class="ui-commandlink ui-widget"
+                                                onclick="PrimeFaces.ab({s:&quot;orderForm:prtcatrpt:1:prtcatimglnk&quot;,p:&quot;orderForm:prtcatrpt:1:prtcatimglnk&quot;,u:&quot;orderForm&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#parentcattop');;}});return false;"><img
+                                                    src="https://dh1msuk8kbcis.cloudfront.net/2c99901874d171ab0174d35d15592f9a_803909.jpg"
+                                                    alt="" height="150" width="150"></a></div><label
+                                            id="orderForm:prtcatrpt:1:parentcatnm">Daycare</label>
+                                    </div>
+                                </div>
+                                <div class="flex-item rb-parent-cat-item " style="padding: 10px;max-width: 150px;">
+                                    <div id="orderForm:prtcatrpt:2:prtcatpg">
+                                        <div class=""><a id="orderForm:prtcatrpt:2:prtcatimglnk" href="#"
+                                                class="ui-commandlink ui-widget"
+                                                onclick="PrimeFaces.ab({s:&quot;orderForm:prtcatrpt:2:prtcatimglnk&quot;,p:&quot;orderForm:prtcatrpt:2:prtcatimglnk&quot;,u:&quot;orderForm&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#parentcattop');;}});return false;"><img
+                                                    src="https://dh1msuk8kbcis.cloudfront.net/2c9890f06e421730016e48d9d1170b61_125246.jpg"
+                                                    alt="" height="150" width="150"></a></div><label
+                                            id="orderForm:prtcatrpt:2:parentcatnm">Rentals</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="parentcattop"></div>
+                            <div class="rb-cat-desc rb-parent-cat-description"><label id="orderForm:catdesc"
+                                    class="rb-parent-cat-desc"></label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="slccidtop"></div>
+                    <div id="orderForm:chdcatpnl"
+                        class="ui-panel ui-widget ui-widget-content ui-corner-all rb-child-cat-panel"
+                        style="text-align: center;margin-top: 10px;" data-widget="widget_orderForm_chdcatpnl">
+                        <div id="orderForm:chdcatpnl_content" class="ui-panel-content ui-widget-content"><label
+                                class="rb-child-cat-title">
+                                <span class="rb-child-cat-text">Choose a Type</span></label>
+                            <div class="flex-container rb-child-cat-container" style="justify-content: center;">
+                                <div class="flex-item rb-child-cat-item rb-child-cat-sel"
+                                    style="padding: 10px;max-width: 150px;">
+                                    <div class=""><a id="orderForm:chdcatrpt:0:chdcatimglnk" href="#"
+                                            class="ui-commandlink ui-widget"
+                                            onclick="PrimeFaces.ab({s:&quot;orderForm:chdcatrpt:0:chdcatimglnk&quot;,p:&quot;orderForm:chdcatrpt:0:chdcatimglnk&quot;,u:&quot;orderForm&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#childcattop');;}});return false;"><img
+                                                src="https://dh1msuk8kbcis.cloudfront.net/2c98902a646c3d0701648235a5394113_506083.jpg"
+                                                alt="" height="150"></a></div><label
+                                        id="orderForm:chdcatrpt:0:childcatnm">Babysitting</label>
+                                </div>
+                            </div>
+                            <div id="childcattop"></div>
+                            <div class="rb-cat-desc rb-child-cat-description"><label id="orderForm:childcatdesc"
+                                    class="rb-child-cat-desc">Enjoy an adult only evening out while our Babysitters
+                                    entertain and keep your child(ren) safe. Our experienced Babysitters are screened,
+                                    English speaking and have First Aid and CPR certifications. We are dedicated to
+                                    making sure your children enjoy the snow of Niseko just as much as you! </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="orderForm:slctpdtpnl"
+                        class="ui-panel ui-widget ui-widget-content ui-corner-all rb-prod-panel"
+                        style="text-align: center;margin-top: 10px;" data-widget="widget_orderForm_slctpdtpnl">
+                        <div id="orderForm:slctpdtpnl_content" class="ui-panel-content ui-widget-content"><label
+                                class="rb-prod-title">
+                                <span class="rb-prod-panel-text">Choose a Product</span></label>
+                            <div id="2c98902a6457c42d016469753baf6430"></div>
+                            <div id="orderForm:pdtrpt:0:pdtpnl"
+                                class="ui-panel ui-widget ui-widget-content ui-corner-all rb-prod-item-panel rb-prod-2c98902a6457c42d016469753baf6430"
+                                style="margin: 5px;" data-widget="widget_orderForm_pdtrpt_0_pdtpnl">
+                                <div id="orderForm:pdtrpt:0:pdtpnl_content" class="ui-panel-content ui-widget-content">
+                                    <div id="orderForm:pdtrpt:0:pdtpg"
+                                        class="ui-panelgrid ui-widget ui-panelgrid-blank">
+                                        <div id="orderForm:pdtrpt:0:pdtpg_content"
+                                            class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                            <div class="ui-g">
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div id="orderForm:pdtrpt:0:pdtimgpg" style="padding: 5px;"><a
+                                                            id="orderForm:pdtrpt:0:pdtimgpglnk" href="#"
+                                                            class="ui-commandlink ui-widget"
+                                                            onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:0:pdtimgpglnk&quot;,p:&quot;orderForm:pdtrpt:0:pdtimgpglnk&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"><img
+                                                                id="orderForm:pdtrpt:0:pdtimg"
+                                                                src="https://dh1msuk8kbcis.cloudfront.net/2c98902a6457c42d016469753baf6430_84783.jpg"
+                                                                alt="" height="150"></a></div>
+                                                </div>
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div class="container rb-prod-desc-container">
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:0:slctpdtnm"
+                                                                style="font-weight: bold;">Babysitting - 1 Child</label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:0:slctpdtdesc">Hire a professional
+                                                                and experienced caregiver to entertain and keep your
+                                                                little ones safe. Our caregivers are available 24 hours
+                                                                a day, 7-days a week for temporary, on-call, occasional
+                                                                short-term, or last-minute requests to your home or
+                                                                hotel. We travel to your location and come prepared with
+                                                                a range of age-related activities. We care for kids of
+                                                                all ages, from infants to school-aged children.
+                                                            </label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item "><button
+                                                                id="orderForm:pdtrpt:0:pdtbtn"
+                                                                name="orderForm:pdtrpt:0:pdtbtn"
+                                                                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                                                onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:0:pdtbtn&quot;,p:&quot;orderForm:pdtrpt:0:pdtbtn&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"
+                                                                type="submit" role="button" aria-disabled="false"><span
+                                                                    class="ui-button-text ui-c">Select
+                                                                    Item</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="2c98902a646c3d0701648341d37e642a"></div>
+                            <div id="orderForm:pdtrpt:1:pdtpnl"
+                                class="ui-panel ui-widget ui-widget-content ui-corner-all rb-prod-item-panel rb-prod-2c98902a646c3d0701648341d37e642a"
+                                style="margin: 5px;" data-widget="widget_orderForm_pdtrpt_1_pdtpnl">
+                                <div id="orderForm:pdtrpt:1:pdtpnl_content" class="ui-panel-content ui-widget-content">
+                                    <div id="orderForm:pdtrpt:1:pdtpg"
+                                        class="ui-panelgrid ui-widget ui-panelgrid-blank">
+                                        <div id="orderForm:pdtrpt:1:pdtpg_content"
+                                            class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                            <div class="ui-g">
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div id="orderForm:pdtrpt:1:pdtimgpg" style="padding: 5px;"><a
+                                                            id="orderForm:pdtrpt:1:pdtimgpglnk" href="#"
+                                                            class="ui-commandlink ui-widget"
+                                                            onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:1:pdtimgpglnk&quot;,p:&quot;orderForm:pdtrpt:1:pdtimgpglnk&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"><img
+                                                                id="orderForm:pdtrpt:1:pdtimg"
+                                                                src="https://dh1msuk8kbcis.cloudfront.net/2c98902a646c3d0701648341d37e642a_73195.jpg"
+                                                                alt="" height="150"></a></div>
+                                                </div>
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div class="container rb-prod-desc-container">
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:1:slctpdtnm"
+                                                                style="font-weight: bold;">Babysitting - 2
+                                                                Children</label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:1:slctpdtdesc">Hire a professional
+                                                                and experienced caregiver to entertain and keep your
+                                                                little ones safe. Our caregivers are available 24 hours
+                                                                a day, 7-days a week for temporary, on-call, occasional
+                                                                short-term, or last-minute requests to your home or
+                                                                hotel. We travel to your location and come prepared with
+                                                                a range of age-related activities. We care for kids of
+                                                                all ages, from infants to school-aged children.
+                                                            </label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item "><button
+                                                                id="orderForm:pdtrpt:1:pdtbtn"
+                                                                name="orderForm:pdtrpt:1:pdtbtn"
+                                                                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                                                onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:1:pdtbtn&quot;,p:&quot;orderForm:pdtrpt:1:pdtbtn&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"
+                                                                type="submit" role="button" aria-disabled="false"><span
+                                                                    class="ui-button-text ui-c">Select
+                                                                    Item</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="2c98902a67cd97240167ce1efc88165c"></div>
+                            <div id="orderForm:pdtrpt:2:pdtpnl"
+                                class="ui-panel ui-widget ui-widget-content ui-corner-all rb-prod-item-panel rb-prod-2c98902a67cd97240167ce1efc88165c"
+                                style="margin: 5px;" data-widget="widget_orderForm_pdtrpt_2_pdtpnl">
+                                <div id="orderForm:pdtrpt:2:pdtpnl_content" class="ui-panel-content ui-widget-content">
+                                    <div id="orderForm:pdtrpt:2:pdtpg"
+                                        class="ui-panelgrid ui-widget ui-panelgrid-blank">
+                                        <div id="orderForm:pdtrpt:2:pdtpg_content"
+                                            class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                            <div class="ui-g">
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div id="orderForm:pdtrpt:2:pdtimgpg" style="padding: 5px;"><a
+                                                            id="orderForm:pdtrpt:2:pdtimgpglnk" href="#"
+                                                            class="ui-commandlink ui-widget"
+                                                            onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:2:pdtimgpglnk&quot;,p:&quot;orderForm:pdtrpt:2:pdtimgpglnk&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"><img
+                                                                id="orderForm:pdtrpt:2:pdtimg"
+                                                                src="https://dh1msuk8kbcis.cloudfront.net/2c98902a67cd97240167ce1efc88165c_691502.jpg"
+                                                                alt="" height="150"></a></div>
+                                                </div>
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div class="container rb-prod-desc-container">
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:2:slctpdtnm"
+                                                                style="font-weight: bold;">Babysitting - 3
+                                                                Children</label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:2:slctpdtdesc">Hire a professional
+                                                                and experienced caregiver to entertain and keep your
+                                                                little ones safe. Our caregivers are available 24 hours
+                                                                a day, 7-days a week for temporary, on-call, occasional
+                                                                short-term, or last-minute requests to your home or
+                                                                hotel. We travel to your location and come prepared with
+                                                                a range of age-related activities. We care for kids of
+                                                                all ages, from infants to school-aged children.
+                                                            </label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item "><button
+                                                                id="orderForm:pdtrpt:2:pdtbtn"
+                                                                name="orderForm:pdtrpt:2:pdtbtn"
+                                                                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                                                onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:2:pdtbtn&quot;,p:&quot;orderForm:pdtrpt:2:pdtbtn&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"
+                                                                type="submit" role="button" aria-disabled="false"><span
+                                                                    class="ui-button-text ui-c">Select
+                                                                    Item</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="2c98902a646c3d0701648346e7c4648f"></div>
+                            <div id="orderForm:pdtrpt:3:pdtpnl"
+                                class="ui-panel ui-widget ui-widget-content ui-corner-all rb-prod-item-panel rb-prod-2c98902a646c3d0701648346e7c4648f"
+                                style="margin: 5px;" data-widget="widget_orderForm_pdtrpt_3_pdtpnl">
+                                <div id="orderForm:pdtrpt:3:pdtpnl_content" class="ui-panel-content ui-widget-content">
+                                    <div id="orderForm:pdtrpt:3:pdtpg"
+                                        class="ui-panelgrid ui-widget ui-panelgrid-blank">
+                                        <div id="orderForm:pdtrpt:3:pdtpg_content"
+                                            class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                            <div class="ui-g">
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div id="orderForm:pdtrpt:3:pdtimgpg" style="padding: 5px;"><a
+                                                            id="orderForm:pdtrpt:3:pdtimgpglnk" href="#"
+                                                            class="ui-commandlink ui-widget"
+                                                            onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:3:pdtimgpglnk&quot;,p:&quot;orderForm:pdtrpt:3:pdtimgpglnk&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"><img
+                                                                id="orderForm:pdtrpt:3:pdtimg"
+                                                                src="https://dh1msuk8kbcis.cloudfront.net/2c98902a646c3d0701648346e7c4648f_129848.jpg"
+                                                                alt="" height="150"></a></div>
+                                                </div>
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div class="container rb-prod-desc-container">
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:3:slctpdtnm"
+                                                                style="font-weight: bold;">Babysitting - 4
+                                                                Children</label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:3:slctpdtdesc">Hire a professional
+                                                                and experienced caregiver to entertain and keep your
+                                                                little ones safe. Our caregivers are available 24 hours
+                                                                a day, 7-days a week for temporary, on-call, occasional
+                                                                short term, or last-minute requests to your home or
+                                                                hotel. We travel to your location and come prepared with
+                                                                a range of age-related activities. We care for kids of
+                                                                all ages, from infants to school-aged children.</label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item "><button
+                                                                id="orderForm:pdtrpt:3:pdtbtn"
+                                                                name="orderForm:pdtrpt:3:pdtbtn"
+                                                                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                                                onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:3:pdtbtn&quot;,p:&quot;orderForm:pdtrpt:3:pdtbtn&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"
+                                                                type="submit" role="button" aria-disabled="false"><span
+                                                                    class="ui-button-text ui-c">Select
+                                                                    Item</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="2c98902a64aa262c0164b0aaf7321f60"></div>
+                            <div id="orderForm:pdtrpt:4:pdtpnl"
+                                class="ui-panel ui-widget ui-widget-content ui-corner-all rb-prod-item-panel rb-prod-2c98902a64aa262c0164b0aaf7321f60"
+                                style="margin: 5px;" data-widget="widget_orderForm_pdtrpt_4_pdtpnl">
+                                <div id="orderForm:pdtrpt:4:pdtpnl_content" class="ui-panel-content ui-widget-content">
+                                    <div id="orderForm:pdtrpt:4:pdtpg"
+                                        class="ui-panelgrid ui-widget ui-panelgrid-blank">
+                                        <div id="orderForm:pdtrpt:4:pdtpg_content"
+                                            class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                            <div class="ui-g">
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div id="orderForm:pdtrpt:4:pdtimgpg" style="padding: 5px;"><a
+                                                            id="orderForm:pdtrpt:4:pdtimgpglnk" href="#"
+                                                            class="ui-commandlink ui-widget"
+                                                            onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:4:pdtimgpglnk&quot;,p:&quot;orderForm:pdtrpt:4:pdtimgpglnk&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"><img
+                                                                id="orderForm:pdtrpt:4:pdtimg"
+                                                                src="https://dh1msuk8kbcis.cloudfront.net/2c98902a64aa262c0164b0aaf7321f60_653018.jpg"
+                                                                alt="" height="150"></a></div>
+                                                </div>
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div class="container rb-prod-desc-container">
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:4:slctpdtnm"
+                                                                style="font-weight: bold;">Activity (Add-on) - Cookie
+                                                                Decorating</label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:4:slctpdtdesc">The Cookie
+                                                                Decorating experience is available as an add-on option
+                                                                when you book a babysitter. Show your creative side with
+                                                                this cookie decorating option. Children will have the
+                                                                ability to decorate with icing sugar and use their own
+                                                                creativity. &ZeroWidthSpace;Niseko Kids Club babysitters
+                                                                provide all the sprinkles and frosting you could
+                                                                imagine, as well as our pre-baked cookies, making each
+                                                                cookie unique!</label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item "><button
+                                                                id="orderForm:pdtrpt:4:pdtbtn"
+                                                                name="orderForm:pdtrpt:4:pdtbtn"
+                                                                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                                                onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:4:pdtbtn&quot;,p:&quot;orderForm:pdtrpt:4:pdtbtn&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"
+                                                                type="submit" role="button" aria-disabled="false"><span
+                                                                    class="ui-button-text ui-c">Select
+                                                                    Item</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="2c98902a64aa262c0164b0be2f112063"></div>
+                            <div id="orderForm:pdtrpt:5:pdtpnl"
+                                class="ui-panel ui-widget ui-widget-content ui-corner-all rb-prod-item-panel rb-prod-2c98902a64aa262c0164b0be2f112063"
+                                style="margin: 5px;" data-widget="widget_orderForm_pdtrpt_5_pdtpnl">
+                                <div id="orderForm:pdtrpt:5:pdtpnl_content" class="ui-panel-content ui-widget-content">
+                                    <div id="orderForm:pdtrpt:5:pdtpg"
+                                        class="ui-panelgrid ui-widget ui-panelgrid-blank">
+                                        <div id="orderForm:pdtrpt:5:pdtpg_content"
+                                            class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                            <div class="ui-g">
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div id="orderForm:pdtrpt:5:pdtimgpg" style="padding: 5px;"><span
+                                                            id="orderForm:pdtrpt:5:pdtimgpglnk"
+                                                            class="ui-commandlink ui-widget ui-state-disabled"><img
+                                                                id="orderForm:pdtrpt:5:pdtimg"
+                                                                src="https://dh1msuk8kbcis.cloudfront.net/2c98902a64aa262c0164b0be2f112063_505210.jpg"
+                                                                alt="" height="150"></span></div>
+                                                </div>
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div class="container rb-prod-desc-container">
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:5:slctpdtnm"
+                                                                style="font-weight: bold;">Activity (Add-on) - Snowman
+                                                                Kit</label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:5:slctpdtdesc">Not available for
+                                                                the 2022-2023 winter season. </label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item rb-prod-not-avail"><button
+                                                                id="orderForm:pdtrpt:5:pdtbtn"
+                                                                name="orderForm:pdtrpt:5:pdtbtn"
+                                                                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only ui-state-disabled"
+                                                                onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:5:pdtbtn&quot;,p:&quot;orderForm:pdtrpt:5:pdtbtn&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"
+                                                                type="submit" disabled="disabled" role="button"
+                                                                aria-disabled="true"><span
+                                                                    class="ui-button-text ui-c">Select
+                                                                    Item</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div onclick="scrollToTop('body');" style="cursor: pointer">
+                                <div id="orderForm:j_idt174"
+                                    class="ui-panel ui-widget ui-widget-content ui-corner-all rb-scroll-top-panel"
+                                    data-widget="widget_orderForm_j_idt174">
+                                    <div id="orderForm:j_idt174_content" class="ui-panel-content ui-widget-content">
+                                        <label id="orderForm:scrolltop" style="cursor: pointer">Looking for something
+                                            else? Select from a different category.</label></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="bskttop"></div>
+                    <div id="orderForm:bskpgtop"></div>
+                </div>
+                <div class="ui-wizard-navbar ui-helper-clearfix"><button id="orderForm:wzd_back"
+                        name="orderForm:wzd_back" type="button"
+                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-wizard-nav-back"
+                        role="button" aria-disabled="false"><span
+                            class="ui-button-icon-left ui-icon ui-c ui-icon-arrowthick-1-w"></span><span
+                            class="ui-button-text ui-c">Back</span></button><button id="orderForm:wzd_next"
+                        name="orderForm:wzd_next" type="button"
+                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-wizard-nav-next"
+                        role="button" aria-disabled="false"><span
+                            class="ui-button-icon-left ui-icon ui-c ui-icon-arrowthick-1-e"></span><span
+                            class="ui-button-text ui-c">Next</span></button></div>
+            </div>
+            <div id="orderForm:addbskdlg"
+                class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container rb-add-prod-dialog rb-dl-vendor-2c98902a5c50f077015c5205a4210cff rb-dl-prod-2c98902a6457c42d016469753baf6430 rb-dl-parent-cat-2c9890f06e421730016e48ad40a571b1 rb-dl-child-cat-2c98902a646c3d0701648235a5394113 ui-draggable"
+                role="dialog" aria-labelledby="orderForm:addbskdlg_title" aria-hidden="false"
+                style="width: auto; height: auto; left: 0px; top: 42px; z-index: 1013; display: block;"
+                aria-live="polite">
+                <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle">
+                    <span id="orderForm:addbskdlg_title" class="ui-dialog-title">Babysitting - 1 Child</span><a href="#"
+                        class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"
+                        role="button"><span class="ui-icon ui-icon-closethick"></span></a></div>
+                <div class="ui-dialog-content ui-widget-content" style="height: auto;"><input id="orderForm:focusProp"
+                        name="orderForm:focusProp" type="text"
+                        class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox"
+                        aria-disabled="false" aria-readonly="false" style="display: none;">
+                    <div id="orderForm:addbskpg" class="flex-products"><span id="orderForm:showDayScript">
+                            <script>
+                                var rates = {
+
+                                    '2023-11-20': '2024-04-30',
+
+                                    '2024-05-01': '2024-11-19'
+
+                                };
+                                var newRates = {};
+                                for (var rateKey in rates) {
+                                    var from = convertToDate(rateKey);
+                                    var to = convertToDate(rates[rateKey]);
+                                    newRates[from] = to;
+                                }
+                                var allStopSell = {
+
+                                };
+                                function beforeShowDay(date) {
+                                    // Always available for session user own products.
+
+                                    var key = $.datepicker.formatDate('yy-mm-dd', date);
+                                    var newDate = new Date(date);
+                                    for (var newRateKey in newRates) {
+                                        if (newDate >= new Date(newRateKey) && new Date(newRates[newRateKey]) >= newDate) {
+                                            return allStopSell[key] === undefined ? [true] : [false];
+                                        }
+                                    }
+                                    return [false];
+                                }
+                                function convertToDate(dateString) {
+                                    var parts = dateString.split('-');
+                                    return new Date(parts[0], parts[1] - 1, parts[2]);
+                                }
+                            </script>
+                        </span>
+                        <div id="orderForm:stdtpg" class="flex-option"><label id="orderForm:stdtlbl"
+                                style="font-weight: bold;">Date</label><span id="orderForm:stdtcal"
+                                class="ui-calendar"><input id="orderForm:stdtcal_input" name="orderForm:stdtcal_input"
+                                    type="text" aria-required="true" value="2023/12/22"
+                                    class="ui-inputfield ui-widget ui-state-default ui-corner-all hasDatepicker ui-state-hover"
+                                    readonly="readonly" role="textbox" aria-disabled="false"
+                                    aria-readonly="true"></span></div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_0" style="font-weight: bold;">Duration
+                                (Hours)</label>
+                            <div id="orderForm:cbval_0"
+                                class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox"
+                                aria-haspopup="true" aria-expanded="false" aria-owns="orderForm:cbval_0_items"
+                                style="min-width: 56px;">
+                                <div class="ui-helper-hidden-accessible"><input id="orderForm:cbval_0_focus"
+                                        name="orderForm:cbval_0_focus" type="text" autocomplete="off"
+                                        aria-expanded="false" aria-autocomplete="list"
+                                        aria-activedescendant="orderForm:cbval_0_0"
+                                        aria-describedby="orderForm:cbval_0_0" aria-disabled="false"
+                                        readonly="readonly"></div>
+                                <div class="ui-helper-hidden-accessible"><select id="orderForm:cbval_0_input"
+                                        name="orderForm:cbval_0_input" tabindex="-1" aria-hidden="true"
+                                        onchange="PrimeFaces.ab({s:&quot;orderForm:cbval_0&quot;,e:&quot;change&quot;,p:&quot;orderForm:cbval_0&quot;,u:&quot;orderForm:pricepg orderForm:butpg orderForm:nolespg orderForm:stdtpg orderForm:grossprice orderForm:net orderForm:sellprice growl&quot;,onst:function(cfg){showModal();;},onco:function(xhr,status,args){hideModal();updateCurrency();;}});">
+                                        <option value="1">03:00</option>
+                                        <option value="2">03:30</option>
+                                        <option value="3">04:00</option>
+                                        <option value="4">04:30</option>
+                                        <option value="5">05:00</option>
+                                        <option value="6">05:30</option>
+                                        <option value="7">06:00</option>
+                                        <option value="8">06:30</option>
+                                        <option value="9">07:00</option>
+                                        <option value="10">07:30</option>
+                                        <option value="11">08:00</option>
+                                        <option value="12">08:30</option>
+                                        <option value="13">09:00</option>
+                                        <option value="14">09:30</option>
+                                        <option value="15">10:00</option>
+                                        <option value="16">10:30</option>
+                                        <option value="17">11:00</option>
+                                        <option value="18">11:30</option>
+                                        <option value="19">12:00</option>
+                                    </select></div><label id="orderForm:cbval_0_label"
+                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">03:00</label>
+                                <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
+                                        class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
+                            </div>
+                        </div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_1" style="font-weight: bold;">Start
+                                Time</label>
+                            <div id="orderForm:cbval_1"
+                                class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox"
+                                aria-haspopup="true" aria-expanded="false" aria-owns="orderForm:cbval_1_items"
+                                style="min-width: 56px;">
+                                <div class="ui-helper-hidden-accessible"><input id="orderForm:cbval_1_focus"
+                                        name="orderForm:cbval_1_focus" type="text" autocomplete="off"
+                                        aria-expanded="false" aria-autocomplete="list"
+                                        aria-activedescendant="orderForm:cbval_1_0"
+                                        aria-describedby="orderForm:cbval_1_0" aria-disabled="false"
+                                        readonly="readonly"></div>
+                                <div class="ui-helper-hidden-accessible"><select id="orderForm:cbval_1_input"
+                                        name="orderForm:cbval_1_input" tabindex="-1" aria-hidden="true"
+                                        onchange="PrimeFaces.ab({s:&quot;orderForm:cbval_1&quot;,e:&quot;change&quot;,p:&quot;orderForm:cbval_1&quot;,u:&quot;orderForm:pricepg orderForm:butpg orderForm:nolespg orderForm:stdtpg orderForm:grossprice orderForm:net orderForm:sellprice growl&quot;,onst:function(cfg){showModal();;},onco:function(xhr,status,args){hideModal();updateCurrency();;}});">
+                                        <option value="00:00">00:00</option>
+                                        <option value="00:30">00:30</option>
+                                        <option value="01:00">01:00</option>
+                                        <option value="01:30">01:30</option>
+                                        <option value="02:00">02:00</option>
+                                        <option value="02:30">02:30</option>
+                                        <option value="03:00">03:00</option>
+                                        <option value="03:30">03:30</option>
+                                        <option value="04:00">04:00</option>
+                                        <option value="04:30">04:30</option>
+                                        <option value="05:00">05:00</option>
+                                        <option value="05:30">05:30</option>
+                                        <option value="06:00">06:00</option>
+                                        <option value="06:30">06:30</option>
+                                        <option value="07:00">07:00</option>
+                                        <option value="07:30">07:30</option>
+                                        <option value="08:00">08:00</option>
+                                        <option value="08:30">08:30</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="09:30">09:30</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="10:30">10:30</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="11:30">11:30</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="12:30">12:30</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="13:30">13:30</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="14:30">14:30</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="15:30">15:30</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="16:30">16:30</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="17:30">17:30</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="18:30">18:30</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="19:30">19:30</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="20:30">20:30</option>
+                                        <option value="21:00">21:00</option>
+                                        <option value="21:30">21:30</option>
+                                        <option value="22:00">22:00</option>
+                                        <option value="22:30">22:30</option>
+                                        <option value="23:00">23:00</option>
+                                        <option value="23:30">23:30</option>
+                                    </select></div><label id="orderForm:cbval_1_label"
+                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">00:00</label>
+                                <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
+                                        class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
+                            </div>
+                        </div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_2" style="font-weight: bold;">Child 1 -
+                                Name &amp; Age</label><input id="orderForm:cbtval_2" name="orderForm:cbtval_2"
+                                type="text" maxlength="24" size="24"
+                                class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                role="textbox" aria-disabled="false" aria-readonly="false"></div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_3"
+                                style="font-weight: bold;">Area</label>
+                            <div id="orderForm:cbval_3"
+                                class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox"
+                                aria-haspopup="true" aria-expanded="false" aria-owns="orderForm:cbval_3_items"
+                                style="min-width: 111px;">
+                                <div class="ui-helper-hidden-accessible"><input id="orderForm:cbval_3_focus"
+                                        name="orderForm:cbval_3_focus" type="text" autocomplete="off"
+                                        aria-expanded="false" aria-autocomplete="list"
+                                        aria-activedescendant="orderForm:cbval_3_0"
+                                        aria-describedby="orderForm:cbval_3_0" aria-disabled="false"
+                                        readonly="readonly"></div>
+                                <div class="ui-helper-hidden-accessible"><select id="orderForm:cbval_3_input"
+                                        name="orderForm:cbval_3_input" tabindex="-1" aria-hidden="true"
+                                        onchange="PrimeFaces.ab({s:&quot;orderForm:cbval_3&quot;,e:&quot;change&quot;,p:&quot;orderForm:cbval_3&quot;,u:&quot;orderForm:pricepg orderForm:butpg orderForm:nolespg orderForm:stdtpg orderForm:grossprice orderForm:net orderForm:sellprice growl&quot;,onst:function(cfg){showModal();;},onco:function(xhr,status,args){hideModal();updateCurrency();;}});">
+                                        <option value="1">Hirafu</option>
+                                        <option value="2">Hanazono</option>
+                                        <option value="3">Annupuri</option>
+                                        <option value="4">Niseko Village</option>
+                                        <option value="5">Moiwa</option>
+                                        <option value="6">Kutchan Town</option>
+                                        <option value="7">Kiroro</option>
+                                        <option value="8">Rusutsu</option>
+                                        <option value="9">Kabayama</option>
+                                        <option value="10">Other</option>
+                                    </select></div><label id="orderForm:cbval_3_label"
+                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">Hirafu</label>
+                                <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
+                                        class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
+                            </div>
+                        </div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_4"
+                                style="font-weight: bold;">Accommodation Name</label><input id="orderForm:cbtval_4"
+                                name="orderForm:cbtval_4" type="text" maxlength="24" size="24"
+                                class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                role="textbox" aria-disabled="false" aria-readonly="false"></div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_5" style="font-weight: bold;">Room
+                                Number</label><input id="orderForm:cbtval_5" name="orderForm:cbtval_5" type="text"
+                                maxlength="24" size="24"
+                                class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                role="textbox" aria-disabled="false" aria-readonly="false"></div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_6"
+                                style="font-weight: bold;">-</label><input id="orderForm:cbtval_6"
+                                name="orderForm:cbtval_6" type="text" maxlength="24" size="24"
+                                class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                role="textbox" aria-disabled="false" aria-readonly="false"></div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_7"
+                                style="font-weight: bold;">-</label><input id="orderForm:cbtval_7"
+                                name="orderForm:cbtval_7" type="text" maxlength="24" size="24"
+                                class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                role="textbox" aria-disabled="false" aria-readonly="false"></div>
+                        <div id="orderForm:pricepg" class="flex-option"><label id="orderForm:grosslbl"
+                                style="font-weight: bold;">Cost</label><label id="orderForm:gross"
+                                class="cur rb-prod-gross-value" original-value-formatted="￥18,150"
+                                original-value="18150" original-value-currency="JPY">￥18,150</label></div>
+                        <div id="orderForm:forcedtmsgpg"></div>
+                        <div id="orderForm:qtypg" class="flex-option"><label id="orderForm:qtylbl"
+                                style="font-weight: bold;">Quantity</label>
+                            <div id="orderForm:qty" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all"
+                                role="combobox" aria-haspopup="true" aria-expanded="false"
+                                aria-owns="orderForm:qty_items" style="min-width: 37px;">
+                                <div class="ui-helper-hidden-accessible"><input id="orderForm:qty_focus"
+                                        name="orderForm:qty_focus" type="text" autocomplete="off" aria-expanded="false"
+                                        aria-autocomplete="list" aria-activedescendant="orderForm:qty_0"
+                                        aria-describedby="orderForm:qty_0" aria-disabled="false" readonly="readonly">
+                                </div>
+                                <div class="ui-helper-hidden-accessible"><select id="orderForm:qty_input"
+                                        name="orderForm:qty_input" tabindex="-1" aria-hidden="true">
+                                        <option value="1" selected="selected">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                    </select></div><label id="orderForm:qty_label"
+                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">1</label>
+                                <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
+                                        class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
+                            </div>
+                        </div>
+                        <div id="orderForm:butpg" class="rb-prod-dialog-but"><button id="orderForm:addbtn"
+                                name="orderForm:addbtn"
+                                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                onclick="PrimeFaces.ab({s:&quot;orderForm:addbtn&quot;,u:&quot;orderForm:bskpgtop orderForm:bskpg orderForm:addbskpg orderForm:chkouttotal orderForm:chkoutbut growl&quot;,onco:function(xhr,status,args){if (!args.validationFailed) {PF('productDialog').hide();updateCurrency();scrollToTop('#bskttop');};}});return false;"
+                                type="submit" role="button" aria-disabled="false"><span class="ui-button-text ui-c">Add
+                                    to Shopping Cart</span></button></div>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="javax.faces.ViewState" value="1979285714588236754:8489719170731439337"
+                autocomplete="off">
+        </form>
+        <form id="guestDialogForm" name="guestDialogForm" method="post" action="/public/booking/order02.jsf"
+            class="rb-widget-f808ad962801a16a0128040975500007" enctype="multipart/form-data">
+            <input type="hidden" name="guestDialogForm" value="guestDialogForm">
+            <div id="guestDialogForm:newguestdlg"
+                class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container rb-new-guest-dialog ui-draggable"
+                role="dialog" aria-labelledby="guestDialogForm:newguestdlg_title" aria-hidden="true"
+                style="width: auto; height: auto;">
+                <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle">
+                    <span id="guestDialogForm:newguestdlg_title" class="ui-dialog-title">Add Guest</span><a href="#"
+                        class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"
+                        role="button"><span class="ui-icon ui-icon-closethick"></span></a></div>
+                <div class="ui-dialog-content ui-widget-content" style="height: auto;"></div>
+            </div>
+            <div id="guestDialogForm:editguestdlg"
+                class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container rb-edit-guest-dialog  ui-draggable"
+                role="dialog" aria-labelledby="guestDialogForm:editguestdlg_title" aria-hidden="true"
+                style="width: auto; height: auto;">
+                <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle">
+                    <span id="guestDialogForm:editguestdlg_title" class="ui-dialog-title">Edit Group Member</span><a
+                        href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all"
+                        aria-label="Close" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div>
+                <div class="ui-dialog-content ui-widget-content" style="height: auto;"></div>
+            </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:2"
+                value="1979285714588236754:8489719170731439337" autocomplete="off">
+        </form>
+        <div id="privacypolicydlg"
+            class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container rb-privacy-policy-dialog"
+            role="dialog" aria-labelledby="privacypolicydlg_title" aria-hidden="true" aria-live="off"
+            style="width: auto; height: auto; left: 0px; top: 308.5px; z-index: 1003; display: none;">
+            <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle"><span
+                    id="privacypolicydlg_title" class="ui-dialog-title"></span></div>
+            <div class="ui-dialog-content ui-widget-content" style="height: auto;">
+                <b>Privacy Notice</b>
+                <p style="text-align: justify;">
+                    We care about your privacy and the security of your personal information.
+                    By using this website and/or related services, you acknowledge and consent to the applicable privacy
+                    policies.
+                </p>
+                <p>For more information, please visit the links below.</p>
+                <div style="display: flex;"><a id="pprb" href="https://www.roomboss.com/privacy"
+                        class="ui-link ui-widget" target="_blank">System Provider Privacy Policy</a><button
+                        id="confirmpolicydlg" name="confirmpolicydlg"
+                        class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                        onclick="{PF('ppdlg').hide();}" style="margin-left: auto; margin-right: 0;" type="button"
+                        role="button" aria-disabled="false"><span class="ui-button-text ui-c">Dismiss</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="j_idt1383"></div>
+    <div id="ajaxLoader" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"
+        style="background-color: transparent; box-shadow: none; border: none; width: auto; height: auto; left: 155px; top: 382px; z-index: 1012; display: none;"
+        role="dialog" aria-labelledby="ajaxLoader_title" aria-hidden="true" aria-live="off">
+        <div class="ui-dialog-content ui-widget-content" style="height: auto;"><img id="waitImage"
+                src="/template/default/images/ajaxLoader.gif"></div>
+    </div>
+
+    <script>
+        jQuery(document).ready(function () {
+            var currency = { value: "JPY" };
+            updateCurrency(currency);
+        });
+    </script>
+    <script type="text/javascript">$(function () { PF('ppdlg').show(); });</script>
+    <div id="textarea_simulator" style="position: absolute; top: 0px; left: 0px; visibility: hidden;"></div>
+    <div id="locform:currencySelect_panel"
+        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
+        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
+            <ul id="locform:currencySelect_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="locform:currencySelect_8">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="AUD"
+                    tabindex="-1" role="option" id="locform:currencySelect_0">AUD</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="CAD"
+                    tabindex="-1" role="option" id="locform:currencySelect_1">CAD</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="CNY"
+                    tabindex="-1" role="option" id="locform:currencySelect_2">CNY</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="EUR"
+                    tabindex="-1" role="option" id="locform:currencySelect_3">EUR</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="GBP"
+                    tabindex="-1" role="option" id="locform:currencySelect_4">GBP</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="HKD"
+                    tabindex="-1" role="option" id="locform:currencySelect_5">HKD</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="IDR"
+                    tabindex="-1" role="option" id="locform:currencySelect_6">IDR</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="INR"
+                    tabindex="-1" role="option" id="locform:currencySelect_7">INR</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
+                    data-label="JPY" tabindex="-1" role="option" id="locform:currencySelect_8">JPY</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="KRW"
+                    tabindex="-1" role="option" id="locform:currencySelect_9">KRW</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="MYR"
+                    tabindex="-1" role="option" id="locform:currencySelect_10">MYR</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="NZD"
+                    tabindex="-1" role="option" id="locform:currencySelect_11">NZD</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="SGD"
+                    tabindex="-1" role="option" id="locform:currencySelect_12">SGD</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="THB"
+                    tabindex="-1" role="option" id="locform:currencySelect_13">THB</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="TWD"
+                    tabindex="-1" role="option" id="locform:currencySelect_14">TWD</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="USD"
+                    tabindex="-1" role="option" id="locform:currencySelect_15">USD</li>
+            </ul>
+        </div>
+    </div>
+    <div id="locform:languageSelect_panel"
+        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
+        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
+            <ul id="locform:languageSelect_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="locform:languageSelect_0">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
+                    data-label="English" tabindex="-1" role="option" id="locform:languageSelect_0">English</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="日本語"
+                    tabindex="-1" role="option" id="locform:languageSelect_1">日本語</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="한국어"
+                    tabindex="-1" role="option" id="locform:languageSelect_2">한국어</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Français"
+                    tabindex="-1" role="option" id="locform:languageSelect_3">Français</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="中文(简体)"
+                    tabindex="-1" role="option" id="locform:languageSelect_4">中文(简体)</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="中文(繁體)"
+                    tabindex="-1" role="option" id="locform:languageSelect_5">中文(繁體)</li>
+            </ul>
+        </div>
+    </div>
+    <div id="growl_container" class="ui-growl ui-widget" style="z-index: 1011;"></div>
+    <div class="ui-dialog-docking-zone"></div>
+    <div id="confirmdlg"
+        class="ui-confirm-dialog ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container rb-confirm-dialog"
+        role="dialog" aria-labelledby="confirmdlg_title" aria-hidden="true" style="width: auto; height: auto;">
+        <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle"><span
+                id="confirmdlg_title" class="ui-dialog-title"></span><a href="#"
+                class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"
+                role="button"><span class="ui-icon ui-icon-closethick"></span></a></div>
+        <div class="ui-dialog-content ui-widget-content" style="height: auto;"><span
+                class="ui-icon ui-confirm-dialog-severity"></span><span class="ui-confirm-dialog-message"></span></div>
+        <div class="ui-dialog-buttonpane ui-dialog-footer ui-widget-content ui-helper-clearfix"><button id="cdYes"
+                name="cdYes"
+                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-yes"
+                type="button" role="button" aria-disabled="false"><span
+                    class="ui-button-icon-left ui-icon ui-c ui-icon-check"></span><span
+                    class="ui-button-text ui-c">Yes</span></button><button id="cdNo" name="cdNo"
+                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-left ui-confirmdialog-no"
+                type="button" role="button" aria-disabled="false"><span
+                    class="ui-button-icon-left ui-icon ui-c ui-icon-close"></span><span
+                    class="ui-button-text ui-c">No</span></button></div>
+    </div><readwise-tooltip-container></readwise-tooltip-container>
+    <div id="forest-ext-shadow-host"></div>
+    <div id="ui-datepicker-div"
+        class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-input-overlay"
+        style="position: fixed; top: 169.797px; left: 20px; display: block; z-index: 1014;">
+        <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a
+                class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="Prev"><span
+                    class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a class="ui-datepicker-next ui-corner-all"
+                data-handler="next" data-event="click" title="Next"><span
+                    class="ui-icon ui-icon-circle-triangle-e">Next</span></a>
+            <div class="ui-datepicker-title"><select class="ui-datepicker-year" data-handler="selectYear"
+                    data-event="change" aria-label="select year">
+                    <option value="2023" selected="selected">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                </select><select class="ui-datepicker-month" data-handler="selectMonth" data-event="change"
+                    aria-label="select month">
+                    <option value="11" selected="selected">Dec</option>
+                </select></div>
+        </div>
+        <table class="ui-datepicker-calendar">
+            <thead>
+                <tr>
+                    <th scope="col" class="ui-datepicker-week-end"><span title="Sunday">Su</span></th>
+                    <th scope="col"><span title="Monday">Mo</span></th>
+                    <th scope="col"><span title="Tuesday">Tu</span></th>
+                    <th scope="col"><span title="Wednesday">We</span></th>
+                    <th scope="col"><span title="Thursday">Th</span></th>
+                    <th scope="col"><span title="Friday">Fr</span></th>
+                    <th scope="col" class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td
+                        class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+                        &nbsp;</td>
+                    <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                    <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                    <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                    <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">1</span></td>
+                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">2</span></td>
+                </tr>
+                <tr>
+                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">3</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">4</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">5</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">6</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">7</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">8</span></td>
+                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">9</span></td>
+                </tr>
+                <tr>
+                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">10</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">11</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">12</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">13</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">14</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">15</span></td>
+                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">16</span></td>
+                </tr>
+                <tr>
+                    <td class=" ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">17</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">18</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">19</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled undefined ui-datepicker-today"><span
+                            class="ui-state-default">20</span></td>
+                    <td class=" ui-datepicker-unselectable ui-state-disabled undefined"><span
+                            class="ui-state-default">21</span></td>
+                    <td class=" ui-datepicker-days-cell-over undefined ui-datepicker-current-day"
+                        data-handler="selectDay" data-event="click" data-month="11" data-year="2023"><a
+                            class="ui-state-default ui-state-active" href="#">22</a></td>
+                    <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click"
+                        data-month="11" data-year="2023"><a class="ui-state-default" href="#">23</a></td>
+                </tr>
+                <tr>
+                    <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click"
+                        data-month="11" data-year="2023"><a class="ui-state-default" href="#">24</a></td>
+                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2023">
+                        <a class="ui-state-default" href="#">25</a></td>
+                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2023">
+                        <a class="ui-state-default" href="#">26</a></td>
+                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2023">
+                        <a class="ui-state-default" href="#">27</a></td>
+                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2023">
+                        <a class="ui-state-default" href="#">28</a></td>
+                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="11" data-year="2023">
+                        <a class="ui-state-default" href="#">29</a></td>
+                    <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click"
+                        data-month="11" data-year="2023"><a class="ui-state-default" href="#">30</a></td>
+                </tr>
+                <tr>
+                    <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click"
+                        data-month="11" data-year="2023"><a class="ui-state-default" href="#">31</a></td>
+                    <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                    <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                    <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                    <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                    <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                    <td
+                        class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
+                        &nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="orderForm:cbval_0_panel"
+        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
+        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
+            <ul id="orderForm:cbval_0_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="orderForm:cbval_0_0">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
+                    data-label="03:00" tabindex="-1" role="option" id="orderForm:cbval_0_0">03:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="03:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_1">03:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="04:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_2">04:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="04:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_3">04:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="05:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_4">05:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="05:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_5">05:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="06:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_6">06:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="06:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_7">06:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="07:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_8">07:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="07:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_9">07:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="08:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_10">08:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="08:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_11">08:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="09:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_12">09:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="09:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_13">09:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="10:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_14">10:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="10:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_15">10:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="11:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_16">11:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="11:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_17">11:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="12:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_18">12:00</li>
+            </ul>
+        </div>
+    </div>
+    <div id="orderForm:cbval_1_panel"
+        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
+        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
+            <ul id="orderForm:cbval_1_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="orderForm:cbval_1_0">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
+                    data-label="00:00" tabindex="-1" role="option" id="orderForm:cbval_1_0">00:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="00:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_1">00:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="01:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_2">01:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="01:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_3">01:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="02:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_4">02:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="02:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_5">02:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="03:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_6">03:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="03:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_7">03:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="04:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_8">04:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="04:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_9">04:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="05:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_10">05:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="05:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_11">05:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="06:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_12">06:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="06:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_13">06:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="07:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_14">07:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="07:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_15">07:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="08:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_16">08:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="08:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_17">08:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="09:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_18">09:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="09:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_19">09:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="10:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_20">10:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="10:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_21">10:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="11:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_22">11:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="11:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_23">11:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="12:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_24">12:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="12:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_25">12:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="13:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_26">13:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="13:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_27">13:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="14:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_28">14:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="14:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_29">14:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="15:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_30">15:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="15:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_31">15:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="16:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_32">16:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="16:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_33">16:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="17:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_34">17:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="17:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_35">17:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="18:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_36">18:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="18:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_37">18:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="19:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_38">19:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="19:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_39">19:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="20:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_40">20:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="20:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_41">20:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="21:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_42">21:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="21:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_43">21:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="22:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_44">22:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="22:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_45">22:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="23:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_46">23:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="23:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_47">23:30</li>
+            </ul>
+        </div>
+    </div>
+    <div id="orderForm:cbval_3_panel"
+        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
+        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
+            <ul id="orderForm:cbval_3_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="orderForm:cbval_3_0">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
+                    data-label="Hirafu" tabindex="-1" role="option" id="orderForm:cbval_3_0">Hirafu</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Hanazono"
+                    tabindex="-1" role="option" id="orderForm:cbval_3_1">Hanazono</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Annupuri"
+                    tabindex="-1" role="option" id="orderForm:cbval_3_2">Annupuri</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Niseko Village"
+                    tabindex="-1" role="option" id="orderForm:cbval_3_3">Niseko Village</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Moiwa"
+                    tabindex="-1" role="option" id="orderForm:cbval_3_4">Moiwa</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Kutchan Town"
+                    tabindex="-1" role="option" id="orderForm:cbval_3_5">Kutchan Town</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Kiroro"
+                    tabindex="-1" role="option" id="orderForm:cbval_3_6">Kiroro</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Rusutsu"
+                    tabindex="-1" role="option" id="orderForm:cbval_3_7">Rusutsu</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Kabayama"
+                    tabindex="-1" role="option" id="orderForm:cbval_3_8">Kabayama</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Other"
+                    tabindex="-1" role="option" id="orderForm:cbval_3_9">Other</li>
+            </ul>
+        </div>
+    </div>
+    <div id="orderForm:qty_panel"
+        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
+        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
+            <ul id="orderForm:qty_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="orderForm:qty_0">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
+                    data-label="1" tabindex="-1" role="option" id="orderForm:qty_0">1</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="2" tabindex="-1"
+                    role="option" id="orderForm:qty_1">2</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="3" tabindex="-1"
+                    role="option" id="orderForm:qty_2">3</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="4" tabindex="-1"
+                    role="option" id="orderForm:qty_3">4</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="5" tabindex="-1"
+                    role="option" id="orderForm:qty_4">5</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="6" tabindex="-1"
+                    role="option" id="orderForm:qty_5">6</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="7" tabindex="-1"
+                    role="option" id="orderForm:qty_6">7</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="8" tabindex="-1"
+                    role="option" id="orderForm:qty_7">8</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="9" tabindex="-1"
+                    role="option" id="orderForm:qty_8">9</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="10" tabindex="-1"
+                    role="option" id="orderForm:qty_9">10</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="11" tabindex="-1"
+                    role="option" id="orderForm:qty_10">11</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="12" tabindex="-1"
+                    role="option" id="orderForm:qty_11">12</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="13" tabindex="-1"
+                    role="option" id="orderForm:qty_12">13</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="14" tabindex="-1"
+                    role="option" id="orderForm:qty_13">14</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="15" tabindex="-1"
+                    role="option" id="orderForm:qty_14">15</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="16" tabindex="-1"
+                    role="option" id="orderForm:qty_15">16</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="17" tabindex="-1"
+                    role="option" id="orderForm:qty_16">17</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="18" tabindex="-1"
+                    role="option" id="orderForm:qty_17">18</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="19" tabindex="-1"
+                    role="option" id="orderForm:qty_18">19</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="20" tabindex="-1"
+                    role="option" id="orderForm:qty_19">20</li>
+            </ul>
+        </div>
+    </div>
+    <div id="orderForm:addbskdlg_modal" class="ui-widget-overlay ui-dialog-mask" style="z-index: 1012;"></div>
+</body>
+
+</html>
