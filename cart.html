@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head id="j_idt2">
     <link type="text/css" rel="stylesheet" href="/javax.faces.resource/theme.css">
@@ -8,8 +8,6 @@
     <link type="text/css" rel="stylesheet" href="/javax.faces.resource/components.css">
     <script type="text/javascript" src="/javax.faces.resource/jquery/jquery.js"></script>
     <link id="custom" type="text/css" rel="stylesheet" href="./styles.css" />
-    <!-- <link type="text/css" rel="stylesheet" href="https://tln-web-widget-git-main-camila-tran-goldenowl.vercel.app/public.css"> -->
-
 
     <script type="text/javascript" src="/javax.faces.resource/jquery/jquery-plugins.js"></script>
     <script type="text/javascript" src="/javax.faces.resource/core.js"></script>
@@ -160,7 +158,8 @@
                                             name="locform:currencySelect_focus" type="text" autocomplete="off"
                                             aria-expanded="false" aria-autocomplete="list"
                                             aria-activedescendant="locform:currencySelect_8"
-                                            aria-describedby="locform:currencySelect_8" aria-disabled="false"></div>
+                                            aria-describedby="locform:currencySelect_8" aria-disabled="false"
+                                            readonly="readonly"></div>
                                     <div class="ui-helper-hidden-accessible"><select id="locform:currencySelect_input"
                                             name="locform:currencySelect_input" tabindex="-1" aria-hidden="true"
                                             onchange="submit()">
@@ -194,19 +193,20 @@
                                     <div class="ui-helper-hidden-accessible"><input id="locform:languageSelect_focus"
                                             name="locform:languageSelect_focus" type="text" autocomplete="off"
                                             aria-expanded="false" aria-autocomplete="list"
-                                            aria-activedescendant="locform:languageSelect_3"
-                                            aria-describedby="locform:languageSelect_3" aria-disabled="false"></div>
+                                            aria-activedescendant="locform:languageSelect_0"
+                                            aria-describedby="locform:languageSelect_0" aria-disabled="false"
+                                            readonly="readonly"></div>
                                     <div class="ui-helper-hidden-accessible"><select id="locform:languageSelect_input"
                                             name="locform:languageSelect_input" tabindex="-1" aria-hidden="true"
                                             onchange="submit()">
-                                            <option value="en">English</option>
+                                            <option value="en" selected="selected">English</option>
                                             <option value="ja">日本語</option>
                                             <option value="ko">한국어</option>
-                                            <option value="fr" selected="selected">Français</option>
+                                            <option value="fr">Français</option>
                                             <option value="zh-CN">中文(简体)</option>
                                             <option value="zh">中文(繁體)</option>
                                         </select></div><label id="locform:languageSelect_label"
-                                        class="ui-selectonemenu-label ui-inputfield ui-corner-all">Français</label>
+                                        class="ui-selectonemenu-label ui-inputfield ui-corner-all">English</label>
                                     <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
                                             class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
                                 </div>
@@ -215,7 +215,7 @@
                     </tbody>
                 </table>
                 <input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:0"
-                    value="8796544282263150045:-5104376069406621512" autocomplete="off">
+                    value="6720358719199196926:3096729588393620054" autocomplete="off">
             </form>
         </div>
     </div>
@@ -226,11 +226,15 @@
 
 
 
+
+
+
+
         <form id="orderForm" name="orderForm" method="post" action="/public/booking/order02.jsf"
             class="rb-widget-f808ad962801a16a0128040975500007" enctype="multipart/form-data">
             <input type="hidden" name="orderForm" value="orderForm">
             <div id="orderForm:wzd"
-                class="ui-wizard ui-widget rb-child-cat-2c999018746fa9a20174953c237676df rb-parent-cat-2c999018746fa9a2017475f2323b743c rb-vendor-2c999018742b39e401744c4ab8d257d2 public">
+                class="ui-wizard ui-widget rb-child-cat-2c98902a579b022101579cf7067810b4 rb-parent-cat-2c9890f06d7ee72a016d809b0f327840 rb-vendor-2c98902a579b022101579cdef3ef0f93 public">
                 <div id="orderForm:wzd_content" class="ui-wizard-content">
                     <script type="text/javascript">
                         $(document).ready(function () {
@@ -282,7 +286,8 @@
                                                 alt="" height="150" width="150"></a><label
                                             id="orderForm:vndrpt:0:vendornm">Hanazono Summer</label></div>
                                 </div>
-                                <div class="flex-item rb-vendor-item " style="padding: 10px;max-width: 150px;">
+                                <div class="flex-item rb-vendor-item rb-vendor-sel"
+                                    style="padding: 10px;max-width: 150px;">
                                     <div id="orderForm:vndrpt:1:vndpg"><a id="orderForm:vndrpt:1:vndimglnk" href="#"
                                             class="ui-commandlink ui-widget"
                                             onclick="PrimeFaces.ab({s:&quot;orderForm:vndrpt:1:vndimglnk&quot;,p:&quot;orderForm:vndrpt:1:vndimglnk&quot;,u:&quot;orderForm growl&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#vendortop');;}});return false;"><img
@@ -290,8 +295,7 @@
                                                 alt="" height="150" width="150"></a><label
                                             id="orderForm:vndrpt:1:vendornm">Hokkaido Ski Club</label></div>
                                 </div>
-                                <div class="flex-item rb-vendor-item rb-vendor-sel"
-                                    style="padding: 10px;max-width: 150px;">
+                                <div class="flex-item rb-vendor-item " style="padding: 10px;max-width: 150px;">
                                     <div id="orderForm:vndrpt:2:vndpg"><a id="orderForm:vndrpt:2:vndimglnk" href="#"
                                             class="ui-commandlink ui-widget"
                                             onclick="PrimeFaces.ab({s:&quot;orderForm:vndrpt:2:vndimglnk&quot;,p:&quot;orderForm:vndrpt:2:vndimglnk&quot;,u:&quot;orderForm growl&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#vendortop');;}});return false;"><img
@@ -327,11 +331,13 @@
                             </div>
                             <div id="vendortop"></div>
                             <div class="rb-cat-desc rb-vendor-description"><label id="orderForm:vnddesc"
-                                    class="rb-vendor-desc">Travel in comfort and ease with a private transfer! Suitable
-                                    for between 2 – 7 guests, MarkOne can get you to your holiday destination safely.
-                                    The driver will meet all guests in the arrivals lobby with a sign with the lead
-                                    guest’s name. Tolls are not included in the price and are payable by the guest in
-                                    cash on the day.</label>
+                                    class="rb-vendor-desc">Nobody should feel they are not good enough to ski or
+                                    snowboard the mountains of Hokkaido. From children to adults, first timers to
+                                    seasonal experts, we guide you through customised programs designed for your
+                                    learning needs. We will bring out the best in you.
+                                    私たちのチームは、スノースポーツ、教育、観光客や観光業界での長年培ってきた知識と経験を持っています。 モットーは、
+                                    あなたの中にしかない最高のものを引き出すこと、そのことに情熱を注いでいます。
+                                    お持ちの疑問や不確実性を打ち砕き、あなたを情熱的で技術の伴う探検家へと変身させます。</label>
                             </div>
                         </div>
                     </div>
@@ -343,14 +349,15 @@
                                 class="rb-parent-cat-title">
                                 <span class="rb-parent-cat-text">Choose a Category</span></label>
                             <div class="flex-container rb-parent-cat-container" style="justify-content: center;">
-                                <div class="flex-item rb-parent-cat-item " style="padding: 10px;max-width: 150px;">
+                                <div class="flex-item rb-parent-cat-item rb-parent-cat-sel"
+                                    style="padding: 10px;max-width: 150px;">
                                     <div id="orderForm:prtcatrpt:0:prtcatpg">
                                         <div class=""><a id="orderForm:prtcatrpt:0:prtcatimglnk" href="#"
                                                 class="ui-commandlink ui-widget"
                                                 onclick="PrimeFaces.ab({s:&quot;orderForm:prtcatrpt:0:prtcatimglnk&quot;,p:&quot;orderForm:prtcatrpt:0:prtcatimglnk&quot;,u:&quot;orderForm&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#parentcattop');;}});return false;"><img
-                                                    src="https://dh1msuk8kbcis.cloudfront.net/2c999018746fa9a2017475f195be7435_380163.jpg"
+                                                    src="https://dh1msuk8kbcis.cloudfront.net/2c9890f06d7ee72a016d809b0f327840_984627.jpg"
                                                     alt="" height="150" width="150"></a></div><label
-                                            id="orderForm:prtcatrpt:0:parentcatnm">From CTS</label>
+                                            id="orderForm:prtcatrpt:0:parentcatnm">Private Lessons</label>
                                     </div>
                                 </div>
                                 <div class="flex-item rb-parent-cat-item " style="padding: 10px;max-width: 150px;">
@@ -358,20 +365,20 @@
                                         <div class=""><a id="orderForm:prtcatrpt:1:prtcatimglnk" href="#"
                                                 class="ui-commandlink ui-widget"
                                                 onclick="PrimeFaces.ab({s:&quot;orderForm:prtcatrpt:1:prtcatimglnk&quot;,p:&quot;orderForm:prtcatrpt:1:prtcatimglnk&quot;,u:&quot;orderForm&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#parentcattop');;}});return false;"><img
-                                                    src="https://dh1msuk8kbcis.cloudfront.net/2c999018746fa9a2017475f1c2df7438_541318.jpg"
+                                                    src="https://dh1msuk8kbcis.cloudfront.net/2c9890f06d7ee72a016d809b60477851_309711.jpg"
                                                     alt="" height="150" width="150"></a></div><label
-                                            id="orderForm:prtcatrpt:1:parentcatnm">From Niseko</label>
+                                            id="orderForm:prtcatrpt:1:parentcatnm">Other Services</label>
                                     </div>
                                 </div>
-                                <div class="flex-item rb-parent-cat-item rb-parent-cat-sel"
-                                    style="padding: 10px;max-width: 150px;">
+                                <div class="flex-item rb-parent-cat-item " style="padding: 10px;max-width: 150px;">
                                     <div id="orderForm:prtcatrpt:2:prtcatpg">
                                         <div class=""><a id="orderForm:prtcatrpt:2:prtcatimglnk" href="#"
                                                 class="ui-commandlink ui-widget"
                                                 onclick="PrimeFaces.ab({s:&quot;orderForm:prtcatrpt:2:prtcatimglnk&quot;,p:&quot;orderForm:prtcatrpt:2:prtcatimglnk&quot;,u:&quot;orderForm&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#parentcattop');;}});return false;"><img
-                                                    src="https://dh1msuk8kbcis.cloudfront.net/2c999018746fa9a2017475f2323b743c_50309.jpg"
+                                                    src="https://dh1msuk8kbcis.cloudfront.net/2c99901876e3de650176e60b86fd21fc_451971.jpg"
                                                     alt="" height="150" width="150"></a></div><label
-                                            id="orderForm:prtcatrpt:2:parentcatnm">From Rusutsu</label>
+                                            id="orderForm:prtcatrpt:2:parentcatnm">Kids Ski Club (8 Jan-14 Apr
+                                            24)</label>
                                     </div>
                                 </div>
                                 <div class="flex-item rb-parent-cat-item " style="padding: 10px;max-width: 150px;">
@@ -379,26 +386,24 @@
                                         <div class=""><a id="orderForm:prtcatrpt:3:prtcatimglnk" href="#"
                                                 class="ui-commandlink ui-widget"
                                                 onclick="PrimeFaces.ab({s:&quot;orderForm:prtcatrpt:3:prtcatimglnk&quot;,p:&quot;orderForm:prtcatrpt:3:prtcatimglnk&quot;,u:&quot;orderForm&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#parentcattop');;}});return false;"><img
-                                                    src="https://dh1msuk8kbcis.cloudfront.net/2c999018746fa9a201749537f9937673_679935.jpg"
+                                                    src="https://dh1msuk8kbcis.cloudfront.net/2c9890f06da8158d016daedb76a273a8_551977.jpg"
                                                     alt="" height="150" width="150"></a></div><label
-                                            id="orderForm:prtcatrpt:3:parentcatnm">From Furano</label>
+                                            id="orderForm:prtcatrpt:3:parentcatnm">Photography and Videography</label>
                                     </div>
                                 </div>
                                 <div class="flex-item rb-parent-cat-item " style="padding: 10px;max-width: 150px;">
                                     <div id="orderForm:prtcatrpt:4:prtcatpg">
-                                        <div class=""><a id="orderForm:prtcatrpt:4:prtcatimglnk" href="#"
-                                                class="ui-commandlink ui-widget"
-                                                onclick="PrimeFaces.ab({s:&quot;orderForm:prtcatrpt:4:prtcatimglnk&quot;,p:&quot;orderForm:prtcatrpt:4:prtcatimglnk&quot;,u:&quot;orderForm&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#parentcattop');;}});return false;"><img
-                                                    src="https://dh1msuk8kbcis.cloudfront.net/8a80818a78e6e98b0178f8000b9b5988_175814.jpg"
-                                                    alt="" height="150" width="150"></a></div><label
-                                            id="orderForm:prtcatrpt:4:parentcatnm">Extras</label>
+                                        <div class="rb-cat-not-avail"><span id="orderForm:prtcatrpt:4:prtcatimglnk"
+                                                class="ui-commandlink ui-widget ui-state-disabled"><img
+                                                    src="https://dh1msuk8kbcis.cloudfront.net/8a80818a79a05cf10179a648236a2d4c_537040.jpg"
+                                                    alt="" height="150" width="150"></span></div><label
+                                            id="orderForm:prtcatrpt:4:parentcatnm">Green Season</label>
                                     </div>
                                 </div>
                             </div>
                             <div id="parentcattop"></div>
                             <div class="rb-cat-desc rb-parent-cat-description"><label id="orderForm:catdesc"
-                                    class="rb-parent-cat-desc">For guests departing from the Rusutsu area for New
-                                    Chitose International Airport.</label>
+                                    class="rb-parent-cat-desc"></label>
                             </div>
                         </div>
                     </div>
@@ -412,20 +417,37 @@
                                 class="rb-child-cat-title">
                                 <span class="rb-child-cat-text">Choose a Type</span></label>
                             <div class="flex-container rb-child-cat-container" style="justify-content: center;">
-                                <div class="flex-item rb-child-cat-item rb-child-cat-sel"
-                                    style="padding: 10px;max-width: 150px;">
+                                <div class="flex-item rb-child-cat-item " style="padding: 10px;max-width: 150px;">
                                     <div class=""><a id="orderForm:chdcatrpt:0:chdcatimglnk" href="#"
                                             class="ui-commandlink ui-widget"
                                             onclick="PrimeFaces.ab({s:&quot;orderForm:chdcatrpt:0:chdcatimglnk&quot;,p:&quot;orderForm:chdcatrpt:0:chdcatimglnk&quot;,u:&quot;orderForm&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#childcattop');;}});return false;"><img
-                                                src="https://dh1msuk8kbcis.cloudfront.net/2c999018746fa9a20174953c237676df_959214.jpg"
+                                                src="https://dh1msuk8kbcis.cloudfront.net/2c98902a579b022101579cf6d1e0106f_617644.jpg"
                                                 alt="" height="150"></a></div><label
-                                        id="orderForm:chdcatrpt:0:childcatnm">Rusutsu → CTS </label>
+                                        id="orderForm:chdcatrpt:0:childcatnm">Private Ski Lesson</label>
+                                </div>
+                                <div class="flex-item rb-child-cat-item rb-child-cat-sel"
+                                    style="padding: 10px;max-width: 150px;">
+                                    <div class=""><a id="orderForm:chdcatrpt:1:chdcatimglnk" href="#"
+                                            class="ui-commandlink ui-widget"
+                                            onclick="PrimeFaces.ab({s:&quot;orderForm:chdcatrpt:1:chdcatimglnk&quot;,p:&quot;orderForm:chdcatrpt:1:chdcatimglnk&quot;,u:&quot;orderForm&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#childcattop');;}});return false;"><img
+                                                src="https://dh1msuk8kbcis.cloudfront.net/2c98902a579b022101579cf7067810b4_850288.jpg"
+                                                alt="" height="150"></a></div><label
+                                        id="orderForm:chdcatrpt:1:childcatnm">Private Snowboard Lesson</label>
+                                </div>
+                                <div class="flex-item rb-child-cat-item " style="padding: 10px;max-width: 150px;">
+                                    <div class=""><a id="orderForm:chdcatrpt:2:chdcatimglnk" href="#"
+                                            class="ui-commandlink ui-widget"
+                                            onclick="PrimeFaces.ab({s:&quot;orderForm:chdcatrpt:2:chdcatimglnk&quot;,p:&quot;orderForm:chdcatrpt:2:chdcatimglnk&quot;,u:&quot;orderForm&quot;,onco:function(xhr,status,args){updateCurrency();scrollToTop('#childcattop');;}});return false;"><img
+                                                src="https://dh1msuk8kbcis.cloudfront.net/2c98902a579b022101579f7c9f8728d0_136261.jpg"
+                                                alt="" height="150"></a></div><label
+                                        id="orderForm:chdcatrpt:2:childcatnm">Private Telemark Lesson</label>
                                 </div>
                             </div>
                             <div id="childcattop"></div>
                             <div class="rb-cat-desc rb-child-cat-description"><label id="orderForm:childcatdesc"
-                                    class="rb-child-cat-desc">Route for guests traveling from Rusutsu area accommodation
-                                    to New Chitose International Airport. </label>
+                                    class="rb-child-cat-desc">Private snowboard lessons are all about you. Just decide
+                                    how much time you want to spend on the slopes and your expert coach will take care
+                                    of the rest.</label>
                             </div>
                         </div>
                     </div>
@@ -435,9 +457,9 @@
                         <div id="orderForm:slctpdtpnl_content" class="ui-panel-content ui-widget-content"><label
                                 class="rb-prod-title">
                                 <span class="rb-prod-panel-text">Choose a Product</span></label>
-                            <div id="2c999018746a856101746bc65e5a1931"></div>
+                            <div id="2c9890f06da8158d016dae88c3855ea3"></div>
                             <div id="orderForm:pdtrpt:0:pdtpnl"
-                                class="ui-panel ui-widget ui-widget-content ui-corner-all rb-prod-item-panel rb-prod-2c999018746a856101746bc65e5a1931"
+                                class="ui-panel ui-widget ui-widget-content ui-corner-all rb-prod-item-panel rb-prod-2c9890f06da8158d016dae88c3855ea3"
                                 style="margin: 5px;" data-widget="widget_orderForm_pdtrpt_0_pdtpnl">
                                 <div id="orderForm:pdtrpt:0:pdtpnl_content" class="ui-panel-content ui-widget-content">
                                     <div id="orderForm:pdtrpt:0:pdtpg"
@@ -451,23 +473,26 @@
                                                             class="ui-commandlink ui-widget"
                                                             onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:0:pdtimgpglnk&quot;,p:&quot;orderForm:pdtrpt:0:pdtimgpglnk&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"><img
                                                                 id="orderForm:pdtrpt:0:pdtimg"
-                                                                src="https://dh1msuk8kbcis.cloudfront.net/2c999018746a856101746bc65e5a1931_351299.jpg"
+                                                                src="https://dh1msuk8kbcis.cloudfront.net/2c9890f06da8158d016dae88c3855ea3_279197.jpg"
                                                                 alt="" height="150"></a></div>
                                                 </div>
                                                 <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
                                                     <div class="container rb-prod-desc-container">
                                                         <div class="item rb-prod-desc-item"><label
                                                                 id="orderForm:pdtrpt:0:slctpdtnm"
-                                                                style="font-weight: bold;">Rusutsu → CTS </label>
+                                                                style="font-weight: bold;">FULL DAY 6 HOURS
+                                                                (BOARD)</label>
                                                         </div>
                                                         <div class="item rb-prod-desc-item"><label
-                                                                id="orderForm:pdtrpt:0:slctpdtdesc">The vehicle will
-                                                                depart 3 hours prior to departure for domestic flights
-                                                                and 4 hours prior to departure for international flights
-                                                                to ensure sufficient time for check-in. Child seats and
-                                                                stopovers are possible with advance reservation.
-                                                                Additional out of hours (22:00 – 05:00) fees may
-                                                                apply.</label>
+                                                                id="orderForm:pdtrpt:0:slctpdtdesc">Our most popular
+                                                                service where you can learn at your own pace and enjoy
+                                                                the mountains. A 6-hour lesson gives you both the
+                                                                flexibility and time you need. Start the morning at your
+                                                                chosen time from 8:30-10am. Your instructor will meet
+                                                                you at your ski-in ski-out hotel or on the mountain. For
+                                                                a Pick-up and Drop-off Service from your accommodation
+                                                                to the slope, select this under "Other
+                                                                Services".</label>
                                                         </div>
                                                         <div class="item rb-prod-desc-item "><button
                                                                 id="orderForm:pdtrpt:0:pdtbtn"
@@ -485,11 +510,220 @@
                                     </div>
                                 </div>
                             </div>
+                            <div id="2c9890f06db1e51e016db366164a4857"></div>
+                            <div id="orderForm:pdtrpt:1:pdtpnl"
+                                class="ui-panel ui-widget ui-widget-content ui-corner-all rb-prod-item-panel rb-prod-2c9890f06db1e51e016db366164a4857"
+                                style="margin: 5px;" data-widget="widget_orderForm_pdtrpt_1_pdtpnl">
+                                <div id="orderForm:pdtrpt:1:pdtpnl_content" class="ui-panel-content ui-widget-content">
+                                    <div id="orderForm:pdtrpt:1:pdtpg"
+                                        class="ui-panelgrid ui-widget ui-panelgrid-blank">
+                                        <div id="orderForm:pdtrpt:1:pdtpg_content"
+                                            class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                            <div class="ui-g">
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div id="orderForm:pdtrpt:1:pdtimgpg" style="padding: 5px;"><a
+                                                            id="orderForm:pdtrpt:1:pdtimgpglnk" href="#"
+                                                            class="ui-commandlink ui-widget"
+                                                            onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:1:pdtimgpglnk&quot;,p:&quot;orderForm:pdtrpt:1:pdtimgpglnk&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"><img
+                                                                id="orderForm:pdtrpt:1:pdtimg"
+                                                                src="https://dh1msuk8kbcis.cloudfront.net/2c9890f06db1e51e016db366164a4857_775857.jpg"
+                                                                alt="" height="150"></a></div>
+                                                </div>
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div class="container rb-prod-desc-container">
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:1:slctpdtnm"
+                                                                style="font-weight: bold;">HALF DAY AM (BOARD)</label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:1:slctpdtdesc">A 3-hour morning
+                                                                lesson is perfect for those who wish to get up on the
+                                                                hill early. The snow is fresh, which makes it easy to
+                                                                learn. You will brush up on your technique and learn new
+                                                                skills from your instructor. The rest of the day is
+                                                                yours to enjoy (or practise if you like!) The instructor
+                                                                will meet you at your ski-in ski-out accommodation or at
+                                                                the ski lift of your choice. </label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item "><button
+                                                                id="orderForm:pdtrpt:1:pdtbtn"
+                                                                name="orderForm:pdtrpt:1:pdtbtn"
+                                                                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                                                onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:1:pdtbtn&quot;,p:&quot;orderForm:pdtrpt:1:pdtbtn&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"
+                                                                type="submit" role="button" aria-disabled="false"><span
+                                                                    class="ui-button-text ui-c">Select
+                                                                    Item</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="2c9890f06db1e51e016db36a47d248d2"></div>
+                            <div id="orderForm:pdtrpt:2:pdtpnl"
+                                class="ui-panel ui-widget ui-widget-content ui-corner-all rb-prod-item-panel rb-prod-2c9890f06db1e51e016db36a47d248d2"
+                                style="margin: 5px;" data-widget="widget_orderForm_pdtrpt_2_pdtpnl">
+                                <div id="orderForm:pdtrpt:2:pdtpnl_content" class="ui-panel-content ui-widget-content">
+                                    <div id="orderForm:pdtrpt:2:pdtpg"
+                                        class="ui-panelgrid ui-widget ui-panelgrid-blank">
+                                        <div id="orderForm:pdtrpt:2:pdtpg_content"
+                                            class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                            <div class="ui-g">
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div id="orderForm:pdtrpt:2:pdtimgpg" style="padding: 5px;"><a
+                                                            id="orderForm:pdtrpt:2:pdtimgpglnk" href="#"
+                                                            class="ui-commandlink ui-widget"
+                                                            onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:2:pdtimgpglnk&quot;,p:&quot;orderForm:pdtrpt:2:pdtimgpglnk&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"><img
+                                                                id="orderForm:pdtrpt:2:pdtimg"
+                                                                src="https://dh1msuk8kbcis.cloudfront.net/2c9890f06db1e51e016db36a47d248d2_989920.jpg"
+                                                                alt="" height="150"></a></div>
+                                                </div>
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div class="container rb-prod-desc-container">
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:2:slctpdtnm"
+                                                                style="font-weight: bold;">HALF DAY PM (BOARD)</label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:2:slctpdtdesc">A 3-hour private
+                                                                lesson is perfect for those who wish to start their day
+                                                                later and skip the morning rush. Fewer people on the
+                                                                hill means you can enjoy the time with your instructor
+                                                                and focus on building confidence in a quiet environment.
+                                                                Afternoon lessons are also great for beginners. The
+                                                                instructor will meet you at your ski-in ski-out
+                                                                accommodation or at the ski lift of your choice.
+                                                            </label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item "><button
+                                                                id="orderForm:pdtrpt:2:pdtbtn"
+                                                                name="orderForm:pdtrpt:2:pdtbtn"
+                                                                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                                                onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:2:pdtbtn&quot;,p:&quot;orderForm:pdtrpt:2:pdtbtn&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"
+                                                                type="submit" role="button" aria-disabled="false"><span
+                                                                    class="ui-button-text ui-c">Select
+                                                                    Item</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="2c999018762a937601763bf1d9a366d9"></div>
+                            <div id="orderForm:pdtrpt:3:pdtpnl"
+                                class="ui-panel ui-widget ui-widget-content ui-corner-all rb-prod-item-panel rb-prod-2c999018762a937601763bf1d9a366d9"
+                                style="margin: 5px;" data-widget="widget_orderForm_pdtrpt_3_pdtpnl">
+                                <div id="orderForm:pdtrpt:3:pdtpnl_content" class="ui-panel-content ui-widget-content">
+                                    <div id="orderForm:pdtrpt:3:pdtpg"
+                                        class="ui-panelgrid ui-widget ui-panelgrid-blank">
+                                        <div id="orderForm:pdtrpt:3:pdtpg_content"
+                                            class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                            <div class="ui-g">
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div id="orderForm:pdtrpt:3:pdtimgpg" style="padding: 5px;"><a
+                                                            id="orderForm:pdtrpt:3:pdtimgpglnk" href="#"
+                                                            class="ui-commandlink ui-widget"
+                                                            onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:3:pdtimgpglnk&quot;,p:&quot;orderForm:pdtrpt:3:pdtimgpglnk&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"><img
+                                                                id="orderForm:pdtrpt:3:pdtimg"
+                                                                src="https://dh1msuk8kbcis.cloudfront.net/2c999018762a937601763bf1d9a366d9_697502.jpg"
+                                                                alt="" height="150"></a></div>
+                                                </div>
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div class="container rb-prod-desc-container">
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:3:slctpdtnm"
+                                                                style="font-weight: bold;">PREMIUM DAY 7 HOURS
+                                                                (SB)</label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:3:slctpdtdesc">You want to have an
+                                                                intensive lesson program and explore more of the
+                                                                mountain. A 7-hour lesson gives you complete flexibility
+                                                                and all the time you need. Start the morning at your
+                                                                chosen time from 8:30-10 am. The instructor will meet
+                                                                you at your ski-in ski-out hotel or on the mountain. For
+                                                                a Pick-up and Drop-off Service from your accommodation
+                                                                to the slope, select this under "Other
+                                                                Services".</label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item "><button
+                                                                id="orderForm:pdtrpt:3:pdtbtn"
+                                                                name="orderForm:pdtrpt:3:pdtbtn"
+                                                                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                                                onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:3:pdtbtn&quot;,p:&quot;orderForm:pdtrpt:3:pdtbtn&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"
+                                                                type="submit" role="button" aria-disabled="false"><span
+                                                                    class="ui-button-text ui-c">Select
+                                                                    Item</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="2c9890f06db1e51e016db38610664f7a"></div>
+                            <div id="orderForm:pdtrpt:4:pdtpnl"
+                                class="ui-panel ui-widget ui-widget-content ui-corner-all rb-prod-item-panel rb-prod-2c9890f06db1e51e016db38610664f7a"
+                                style="margin: 5px;" data-widget="widget_orderForm_pdtrpt_4_pdtpnl">
+                                <div id="orderForm:pdtrpt:4:pdtpnl_content" class="ui-panel-content ui-widget-content">
+                                    <div id="orderForm:pdtrpt:4:pdtpg"
+                                        class="ui-panelgrid ui-widget ui-panelgrid-blank">
+                                        <div id="orderForm:pdtrpt:4:pdtpg_content"
+                                            class="ui-panelgrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                            <div class="ui-g">
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div id="orderForm:pdtrpt:4:pdtimgpg" style="padding: 5px;"><a
+                                                            id="orderForm:pdtrpt:4:pdtimgpglnk" href="#"
+                                                            class="ui-commandlink ui-widget"
+                                                            onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:4:pdtimgpglnk&quot;,p:&quot;orderForm:pdtrpt:4:pdtimgpglnk&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"><img
+                                                                id="orderForm:pdtrpt:4:pdtimg"
+                                                                src="https://dh1msuk8kbcis.cloudfront.net/2c9890f06db1e51e016db38610664f7a_441186.jpg"
+                                                                alt="" height="150"></a></div>
+                                                </div>
+                                                <div class="ui-panelgrid-cell ui-g-12 ui-md-6">
+                                                    <div class="container rb-prod-desc-container">
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:4:slctpdtnm"
+                                                                style="font-weight: bold;">NIGHT LESSON 2 HRS
+                                                                (BOARD)</label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item"><label
+                                                                id="orderForm:pdtrpt:4:slctpdtdesc">Night riding in
+                                                                Niseko is a magical experience. The days are short
+                                                                during the winter months so the lights are switched on
+                                                                and what a beautiful sight the mountain becomes. You
+                                                                will learn under the bright lights with fewer people and
+                                                                similar temperatures as the daytime (it can even be
+                                                                warmer at night so do not worry about being cold). Enjoy
+                                                                this truly special on-snow experience unique to Niseko.
+                                                            </label>
+                                                        </div>
+                                                        <div class="item rb-prod-desc-item "><button
+                                                                id="orderForm:pdtrpt:4:pdtbtn"
+                                                                name="orderForm:pdtrpt:4:pdtbtn"
+                                                                class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only"
+                                                                onclick="PrimeFaces.ab({s:&quot;orderForm:pdtrpt:4:pdtbtn&quot;,p:&quot;orderForm:pdtrpt:4:pdtbtn&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"
+                                                                type="submit" role="button" aria-disabled="false"><span
+                                                                    class="ui-button-text ui-c">Select
+                                                                    Item</span></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <div onclick="scrollToTop('body');" style="cursor: pointer">
-                                <div id="orderForm:j_idt113"
+                                <div id="orderForm:j_idt174"
                                     class="ui-panel ui-widget ui-widget-content ui-corner-all rb-scroll-top-panel"
-                                    data-widget="widget_orderForm_j_idt113">
-                                    <div id="orderForm:j_idt113_content" class="ui-panel-content ui-widget-content">
+                                    data-widget="widget_orderForm_j_idt174">
+                                    <div id="orderForm:j_idt174_content" class="ui-panel-content ui-widget-content">
                                         <label id="orderForm:scrolltop" style="cursor: pointer">Looking for something
                                             else? Select from a different category.</label></div>
                                 </div>
@@ -516,19 +750,19 @@
                                         <table role="grid">
                                             <thead id="orderForm:itemdtbsk_head">
                                                 <tr role="row">
-                                                    <th id="orderForm:itemdtbsk:j_idt122" class="ui-state-default"
+                                                    <th id="orderForm:itemdtbsk:j_idt189" class="ui-state-default"
                                                         role="columnheader" aria-label="Item" scope="col"
                                                         style="text-align: center;;width:300px"><span
                                                             class="ui-column-title">Item</span></th>
-                                                    <th id="orderForm:itemdtbsk:j_idt147" class="ui-state-default"
+                                                    <th id="orderForm:itemdtbsk:j_idt228" class="ui-state-default"
                                                         role="columnheader" aria-label="Start Date" scope="col"
                                                         style="text-align: center; vertical-align: top;;width:200px">
                                                         <span class="ui-column-title">Start Date</span></th>
-                                                    <th id="orderForm:itemdtbsk:j_idt148" class="ui-state-default"
+                                                    <th id="orderForm:itemdtbsk:j_idt231" class="ui-state-default"
                                                         role="columnheader" aria-label="Price" scope="col"
                                                         style="text-align: center; vertical-align: top;;width:200px">
                                                         <span class="ui-column-title">Price</span></th>
-                                                    <th id="orderForm:itemdtbsk:j_idt165" class="ui-state-default"
+                                                    <th id="orderForm:itemdtbsk:j_idt260" class="ui-state-default"
                                                         role="columnheader" scope="col"
                                                         style="text-align: center; vertical-align: top;;width:50px">
                                                         <span class="ui-column-title"></span></th>
@@ -542,7 +776,7 @@
                                                     <td role="gridcell" style="text-align: center;"><span
                                                             class="ui-column-title">Item</span><label
                                                             id="orderForm:itemdtbsk:0:itempdt"
-                                                            style="font-weight: bold;">Rusutsu → CTS </label>
+                                                            style="font-weight: bold;">FULL DAY 6 HOURS (BOARD)</label>
                                                         <div id="orderForm:itemdtbsk:0:bskitempdtopt"
                                                             class="ui-datagrid ui-widget"
                                                             style="margin-top: 5px; margin-bottom:10px; font-size: 0.9em;">
@@ -554,11 +788,10 @@
                                                                             style="flex-direction: column;align-content: flex-start;">
                                                                             <div class="item"><label
                                                                                     id="orderForm:itemdtbsk:0:bskitempdtopt:0:pdtoptnm"
-                                                                                    style="font-weight: bold;">Vehicle:
-                                                                                </label><span
-                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:0:descoptvalue">Taxi:
-                                                                                    Prius/Vanette (1-2 guests)</span>
-                                                                            </div>
+                                                                                    style="font-weight: bold;">Number of
+                                                                                    Days: </label><span
+                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:0:bdloptvalue">1
+                                                                                    Day</span></div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -568,10 +801,10 @@
                                                                             style="flex-direction: column;align-content: flex-start;">
                                                                             <div class="item"><label
                                                                                     id="orderForm:itemdtbsk:0:bskitempdtopt:1:pdtoptnm"
-                                                                                    style="font-weight: bold;">Departure
-                                                                                    Flight No: </label><span
-                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:1:criterionValueId"></span>
-                                                                            </div>
+                                                                                    style="font-weight: bold;">Number of
+                                                                                    Riders: </label><span
+                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:1:bdloptvalue">1
+                                                                                    People</span></div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -581,8 +814,8 @@
                                                                             style="flex-direction: column;align-content: flex-start;">
                                                                             <div class="item"><label
                                                                                     id="orderForm:itemdtbsk:0:bskitempdtopt:2:pdtoptnm"
-                                                                                    style="font-weight: bold;">Depart.
-                                                                                    Flight Time: </label><span
+                                                                                    style="font-weight: bold;">Ages of
+                                                                                    Riders: </label><span
                                                                                     id="orderForm:itemdtbsk:0:bskitempdtopt:2:criterionValueId"></span>
                                                                             </div>
                                                                         </div>
@@ -594,9 +827,9 @@
                                                                             style="flex-direction: column;align-content: flex-start;">
                                                                             <div class="item"><label
                                                                                     id="orderForm:itemdtbsk:0:bskitempdtopt:3:pdtoptnm"
-                                                                                    style="font-weight: bold;">Number of
-                                                                                    Adults: </label><span
-                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:3:criterionValueId">4</span>
+                                                                                    style="font-weight: bold;">Ability
+                                                                                    Level: </label><span
+                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:3:criterionValueId">Intermediate</span>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -607,9 +840,9 @@
                                                                             style="flex-direction: column;align-content: flex-start;">
                                                                             <div class="item"><label
                                                                                     id="orderForm:itemdtbsk:0:bskitempdtopt:4:pdtoptnm"
-                                                                                    style="font-weight: bold;">Number of
-                                                                                    Kids &lt; 6: </label><span
-                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:4:descoptvalue">0</span>
+                                                                                    style="font-weight: bold;">Preferred
+                                                                                    Start Time: </label><span
+                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:4:descoptvalue">09:00</span>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -620,9 +853,9 @@
                                                                             style="flex-direction: column;align-content: flex-start;">
                                                                             <div class="item"><label
                                                                                     id="orderForm:itemdtbsk:0:bskitempdtopt:5:pdtoptnm"
-                                                                                    style="font-weight: bold;">Number of
-                                                                                    Kids &lt; 3: </label><span
-                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:5:descoptvalue">0</span>
+                                                                                    style="font-weight: bold;">Duration:
+                                                                                </label><span
+                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:5:criterionLabelId_">06:00</span>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -633,10 +866,10 @@
                                                                             style="flex-direction: column;align-content: flex-start;">
                                                                             <div class="item"><label
                                                                                     id="orderForm:itemdtbsk:0:bskitempdtopt:6:pdtoptnm"
-                                                                                    style="font-weight: bold;">Property:
-                                                                                </label><span
-                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:6:descoptvalue">The
-                                                                                    Vale Rusutsu</span></div>
+                                                                                    style="font-weight: bold;">Accommodation
+                                                                                    booked: </label><span
+                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:6:criterionValueId"></span>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -646,10 +879,10 @@
                                                                             style="flex-direction: column;align-content: flex-start;">
                                                                             <div class="item"><label
                                                                                     id="orderForm:itemdtbsk:0:bskitempdtopt:7:pdtoptnm"
-                                                                                    style="font-weight: bold;">Luggage:
-                                                                                </label><span
-                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:7:criterionValueId">1</span>
-                                                                            </div>
+                                                                                    style="font-weight: bold;">How did
+                                                                                    you find us?: </label><span
+                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:7:descoptvalue">Returning
+                                                                                    Guest</span></div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -659,22 +892,9 @@
                                                                             style="flex-direction: column;align-content: flex-start;">
                                                                             <div class="item"><label
                                                                                     id="orderForm:itemdtbsk:0:bskitempdtopt:8:pdtoptnm"
-                                                                                    style="font-weight: bold;">Ski &amp;
-                                                                                    Board Bags: </label><span
-                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:8:descoptvalue">Yes</span>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="ui-g">
-                                                                    <div class="ui-datagrid-column ui-g-12 ui-md-12">
-                                                                        <div class="container"
-                                                                            style="flex-direction: column;align-content: flex-start;">
-                                                                            <div class="item"><label
-                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:9:pdtoptnm"
-                                                                                    style="font-weight: bold;">Child
-                                                                                    Seat: </label><span
-                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:9:descoptvalue">0</span>
+                                                                                    style="font-weight: bold;">If other,
+                                                                                    specify: </label><span
+                                                                                    id="orderForm:itemdtbsk:0:bskitempdtopt:8:criterionValueId"></span>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -688,7 +908,7 @@
                                                         style="text-align: center; vertical-align: top;"><span
                                                             class="ui-column-title">Start Date</span><label
                                                             id="orderForm:itemdtbsk:0:itemdt"
-                                                            class="">2024/05/02</label></td>
+                                                            class="">2023/12/22</label></td>
                                                     <td role="gridcell"
                                                         style="text-align: center; vertical-align: top;"><span
                                                             class="ui-column-title">Price</span>
@@ -696,9 +916,9 @@
                                                         </div>
                                                         <div><label id="orderForm:itemdtbsk:0:itemprc"
                                                                 class="cur rb-item-gross-value"
-                                                                original-value-formatted="￥28,800"
-                                                                original-value="28800"
-                                                                original-value-currency="JPY">￥28,800</label>
+                                                                original-value-formatted="￥95,000"
+                                                                original-value="95000"
+                                                                original-value-currency="JPY">￥95,000</label>
                                                         </div><span id="orderForm:itemdtbsk:0:tooltipicon"
                                                             class="status-pill">REQUEST<span
                                                                 class="fa fa-fw fa-info-circle"></span></span>
@@ -717,6 +937,160 @@
                                                             onclick="PrimeFaces.confirm({source:&quot;orderForm:itemdtbsk:0:rmvitem&quot;,header:&quot;&quot;,message:&quot;Remove item from Shopping Cart?&quot;,icon:&quot;null&quot;,beforeShow:&quot;&quot;});return false;"><span
                                                                 class="fa fa-trash-o"></span></a></td>
                                                 </tr>
+                                                <tr data-ri="1"
+                                                    class="ui-widget-content ui-datatable-odd rb-req-confirmation"
+                                                    role="row">
+                                                    <td role="gridcell" style="text-align: center;"><span
+                                                            class="ui-column-title">Item</span><label
+                                                            id="orderForm:itemdtbsk:1:itempdt"
+                                                            style="font-weight: bold;">Babysitting - 1 Child</label>
+                                                        <div id="orderForm:itemdtbsk:1:bskitempdtopt"
+                                                            class="ui-datagrid ui-widget"
+                                                            style="margin-top: 5px; margin-bottom:10px; font-size: 0.9em;">
+                                                            <div id="orderForm:itemdtbsk:1:bskitempdtopt_content"
+                                                                class="ui-datagrid-content ui-widget-content ui-grid ui-grid-responsive">
+                                                                <div class="ui-g">
+                                                                    <div class="ui-datagrid-column ui-g-12 ui-md-12">
+                                                                        <div class="container"
+                                                                            style="flex-direction: column;align-content: flex-start;">
+                                                                            <div class="item"><label
+                                                                                    id="orderForm:itemdtbsk:1:bskitempdtopt:0:pdtoptnm"
+                                                                                    style="font-weight: bold;">Duration
+                                                                                    (Hours): </label><span
+                                                                                    id="orderForm:itemdtbsk:1:bskitempdtopt:0:descoptvalue">03:00</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ui-g">
+                                                                    <div class="ui-datagrid-column ui-g-12 ui-md-12">
+                                                                        <div class="container"
+                                                                            style="flex-direction: column;align-content: flex-start;">
+                                                                            <div class="item"><label
+                                                                                    id="orderForm:itemdtbsk:1:bskitempdtopt:1:pdtoptnm"
+                                                                                    style="font-weight: bold;">Start
+                                                                                    Time: </label><span
+                                                                                    id="orderForm:itemdtbsk:1:bskitempdtopt:1:criterionValueId">01:30</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ui-g">
+                                                                    <div class="ui-datagrid-column ui-g-12 ui-md-12">
+                                                                        <div class="container"
+                                                                            style="flex-direction: column;align-content: flex-start;">
+                                                                            <div class="item"><label
+                                                                                    id="orderForm:itemdtbsk:1:bskitempdtopt:2:pdtoptnm"
+                                                                                    style="font-weight: bold;">Child 1 -
+                                                                                    Name &amp; Age: </label><span
+                                                                                    id="orderForm:itemdtbsk:1:bskitempdtopt:2:criterionValueId"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ui-g">
+                                                                    <div class="ui-datagrid-column ui-g-12 ui-md-12">
+                                                                        <div class="container"
+                                                                            style="flex-direction: column;align-content: flex-start;">
+                                                                            <div class="item"><label
+                                                                                    id="orderForm:itemdtbsk:1:bskitempdtopt:3:pdtoptnm"
+                                                                                    style="font-weight: bold;">Area:
+                                                                                </label><span
+                                                                                    id="orderForm:itemdtbsk:1:bskitempdtopt:3:descoptvalue">Hirafu</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ui-g">
+                                                                    <div class="ui-datagrid-column ui-g-12 ui-md-12">
+                                                                        <div class="container"
+                                                                            style="flex-direction: column;align-content: flex-start;">
+                                                                            <div class="item"><label
+                                                                                    id="orderForm:itemdtbsk:1:bskitempdtopt:4:pdtoptnm"
+                                                                                    style="font-weight: bold;">Accommodation
+                                                                                    Name: </label><span
+                                                                                    id="orderForm:itemdtbsk:1:bskitempdtopt:4:criterionValueId"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ui-g">
+                                                                    <div class="ui-datagrid-column ui-g-12 ui-md-12">
+                                                                        <div class="container"
+                                                                            style="flex-direction: column;align-content: flex-start;">
+                                                                            <div class="item"><label
+                                                                                    id="orderForm:itemdtbsk:1:bskitempdtopt:5:pdtoptnm"
+                                                                                    style="font-weight: bold;">Room
+                                                                                    Number: </label><span
+                                                                                    id="orderForm:itemdtbsk:1:bskitempdtopt:5:criterionValueId"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ui-g">
+                                                                    <div class="ui-datagrid-column ui-g-12 ui-md-12">
+                                                                        <div class="container"
+                                                                            style="flex-direction: column;align-content: flex-start;">
+                                                                            <div class="item"><label
+                                                                                    id="orderForm:itemdtbsk:1:bskitempdtopt:6:pdtoptnm"
+                                                                                    style="font-weight: bold;">-:
+                                                                                </label><span
+                                                                                    id="orderForm:itemdtbsk:1:bskitempdtopt:6:criterionValueId"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="ui-g">
+                                                                    <div class="ui-datagrid-column ui-g-12 ui-md-12">
+                                                                        <div class="container"
+                                                                            style="flex-direction: column;align-content: flex-start;">
+                                                                            <div class="item"><label
+                                                                                    id="orderForm:itemdtbsk:1:bskitempdtopt:7:pdtoptnm"
+                                                                                    style="font-weight: bold;">-:
+                                                                                </label><span
+                                                                                    id="orderForm:itemdtbsk:1:bskitempdtopt:7:criterionValueId"></span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div id="orderForm:itemdtbsk:1:skipass" class="rb-skipass">
+                                                        </div>
+                                                    </td>
+                                                    <td role="gridcell"
+                                                        style="text-align: center; vertical-align: top;"><span
+                                                            class="ui-column-title">Start Date</span><label
+                                                            id="orderForm:itemdtbsk:1:itemdt"
+                                                            class="">2023/12/22</label></td>
+                                                    <td role="gridcell"
+                                                        style="text-align: center; vertical-align: top;"><span
+                                                            class="ui-column-title">Price</span>
+                                                        <div>
+                                                        </div>
+                                                        <div><label id="orderForm:itemdtbsk:1:itemprc"
+                                                                class="cur rb-item-gross-value"
+                                                                original-value-formatted="￥18,150"
+                                                                original-value="18150"
+                                                                original-value-currency="JPY">￥18,150</label>
+                                                        </div><span id="orderForm:itemdtbsk:1:tooltipicon"
+                                                            class="status-pill">REQUEST<span
+                                                                class="fa fa-fw fa-info-circle"></span></span>
+                                                    </td>
+                                                    <td role="gridcell"
+                                                        style="text-align: center; vertical-align: top;"><span
+                                                            class="ui-column-title"></span><a
+                                                            id="orderForm:itemdtbsk:1:edititem" href="#"
+                                                            class="ui-commandlink ui-widget"
+                                                            onclick="PrimeFaces.ab({s:&quot;orderForm:itemdtbsk:1:edititem&quot;,p:&quot;orderForm:itemdtbsk:1:edititem&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"
+                                                            style="margin-right: 10px;"><span
+                                                                class="fa fa-edit"></span></a><a
+                                                            id="orderForm:itemdtbsk:1:rmvitem" href="#"
+                                                            class="ui-commandlink ui-widget"
+                                                            data-pfconfirmcommand="PrimeFaces.ab({s:&quot;orderForm:itemdtbsk:1:rmvitem&quot;,p:&quot;orderForm:itemdtbsk:1:rmvitem&quot;,u:&quot;orderForm&quot;,onco:function(xhr,status,args){updateCurrency();;}});return false;"
+                                                            onclick="PrimeFaces.confirm({source:&quot;orderForm:itemdtbsk:1:rmvitem&quot;,header:&quot;&quot;,message:&quot;Remove item from Shopping Cart?&quot;,icon:&quot;null&quot;,beforeShow:&quot;&quot;});return false;"><span
+                                                                class="fa fa-trash-o"></span></a></td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -727,7 +1101,7 @@
                                         class="ui-panel ui-widget ui-widget-content ui-corner-all"
                                         data-widget="widget_orderForm_dispnl">
                                         <div id="orderForm:dispnl_content" class="ui-panel-content ui-widget-content">
-                                            <input id="orderForm:disCode" name="orderForm:disCode" type="text"
+                                            <input id="orderForm:disCode" name="orderForm:disCode" type="text" value=""
                                                 maxlength="32" placeholder="Discount Code" size="32"
                                                 style="width:120px; margin-right: 10px;"
                                                 class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
@@ -743,8 +1117,8 @@
                             <div id="orderForm:bskpnl_footer" class="ui-panel-footer ui-widget-content">
                                 <div class="rb-total" style="text-align: right;"><label id="orderForm:totalSalelbl"
                                         style="font-weight: bold;">TOTAL: </label><label id="orderForm:totalSale"
-                                        style="font-weight: bold;" class="cur" original-value-formatted="￥28,800"
-                                        original-value="28800" original-value-currency="JPY">￥28,800</label></div>
+                                        style="font-weight: bold;" class="cur" original-value-formatted="￥113,150"
+                                        original-value="113150" original-value-currency="JPY">￥113,150</label></div>
                             </div>
                         </div>
                         <div id="orderForm:orderNav" class="rb-order-nav" style="margin-top: 10px; text-align: right;">
@@ -768,14 +1142,13 @@
                             class="ui-button-text ui-c">Next</span></button></div>
             </div>
             <div id="orderForm:addbskdlg"
-                class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container rb-add-prod-dialog rb-dl-vendor-2c999018742b39e401744c4ab8d257d2 rb-dl-prod-2c999018746a856101746bc65e5a1931 rb-dl-parent-cat-2c999018746fa9a2017475f2323b743c rb-dl-child-cat-2c999018746fa9a20174953c237676df ui-draggable"
+                class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container rb-add-prod-dialog rb-dl-vendor-2c98902a579b022101579cdef3ef0f93 rb-dl-prod-2c9890f06da8158d016dae88c3855ea3 rb-dl-parent-cat-2c9890f06d7ee72a016d809b0f327840 rb-dl-child-cat-2c98902a579b022101579cf7067810b4 ui-draggable"
                 role="dialog" aria-labelledby="orderForm:addbskdlg_title" aria-hidden="true"
-                style="width: auto; height: auto; left: 504px; top: 75px; z-index: 1060; display: none;"
-                aria-live="off">
+                style="width: auto; height: auto; left: 0px; top: 42px; z-index: 1042; display: none;" aria-live="off">
                 <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle">
-                    <span id="orderForm:addbskdlg_title" class="ui-dialog-title">Rusutsu → CTS </span><a href="#"
-                        class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all" aria-label="Close"
-                        role="button"><span class="ui-icon ui-icon-closethick"></span></a></div>
+                    <span id="orderForm:addbskdlg_title" class="ui-dialog-title">FULL DAY 6 HOURS (BOARD)</span><a
+                        href="#" class="ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all"
+                        aria-label="Close" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div>
                 <div class="ui-dialog-content ui-widget-content" style="height: auto;"><input id="orderForm:focusProp"
                         name="orderForm:focusProp" type="text" value=""
                         class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" role="textbox"
@@ -784,7 +1157,7 @@
                             <script>
                                 var rates = {
 
-                                    '2023-06-01': '2024-05-31'
+                                    '2023-12-02': '2024-04-16'
 
                                 };
                                 var newRates = {};
@@ -794,50 +1167,6 @@
                                     newRates[from] = to;
                                 }
                                 var allStopSell = {
-
-                                    '2023-12-30': 1,
-
-                                    '2023-12-21': 1,
-
-                                    '2023-12-20': 1,
-
-                                    '2023-12-31': 1,
-
-                                    '2023-12-23': 1,
-
-                                    '2023-12-22': 1,
-
-                                    '2024-01-02': 1,
-
-                                    '2024-01-01': 1,
-
-                                    '2024-01-04': 1,
-
-                                    '2024-01-03': 1,
-
-                                    '2024-01-06': 1,
-
-                                    '2024-01-05': 1,
-
-                                    '2023-12-25': 1,
-
-                                    '2023-12-24': 1,
-
-                                    '2023-12-16': 1,
-
-                                    '2023-12-27': 1,
-
-                                    '2023-12-26': 1,
-
-                                    '2023-12-18': 1,
-
-                                    '2023-12-29': 1,
-
-                                    '2023-12-17': 1,
-
-                                    '2023-12-28': 1,
-
-                                    '2023-12-19': 1
 
                                 };
                                 function beforeShowDay(date) {
@@ -861,47 +1190,74 @@
                         <div id="orderForm:stdtpg" class="flex-option"><label id="orderForm:stdtlbl"
                                 style="font-weight: bold;">Date</label><span id="orderForm:stdtcal"
                                 class="ui-calendar"><input id="orderForm:stdtcal_input" name="orderForm:stdtcal_input"
-                                    type="text" aria-required="true" value="2024/05/02"
+                                    type="text" aria-required="true" value="2023/12/22"
                                     class="ui-inputfield ui-widget ui-state-default ui-corner-all hasDatepicker"
                                     readonly="readonly" role="textbox" aria-disabled="false"
                                     aria-readonly="true"></span></div>
-                        <div class="flex-option"><label id="orderForm:pdtoptnm_0"
-                                style="font-weight: bold;">Vehicle</label>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_0" style="font-weight: bold;">Number of
+                                Days</label>
                             <div id="orderForm:cbval_0"
                                 class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox"
                                 aria-haspopup="true" aria-expanded="false" aria-owns="orderForm:cbval_0_items"
-                                style="min-width: 212px;">
+                                style="min-width: 64px;">
                                 <div class="ui-helper-hidden-accessible"><input id="orderForm:cbval_0_focus"
                                         name="orderForm:cbval_0_focus" type="text" autocomplete="off"
                                         aria-expanded="false" aria-autocomplete="list"
                                         aria-activedescendant="orderForm:cbval_0_0"
-                                        aria-describedby="orderForm:cbval_0_0" aria-disabled="false"></div>
+                                        aria-describedby="orderForm:cbval_0_0" aria-disabled="false"
+                                        readonly="readonly"></div>
                                 <div class="ui-helper-hidden-accessible"><select id="orderForm:cbval_0_input"
                                         name="orderForm:cbval_0_input" tabindex="-1" aria-hidden="true"
                                         onchange="PrimeFaces.ab({s:&quot;orderForm:cbval_0&quot;,e:&quot;change&quot;,p:&quot;orderForm:cbval_0&quot;,u:&quot;orderForm:pricepg orderForm:butpg orderForm:nolespg orderForm:stdtpg orderForm:grossprice orderForm:net orderForm:sellprice growl&quot;,onst:function(cfg){showModal();;},onco:function(xhr,status,args){hideModal();updateCurrency();;}});">
-                                        <option value="1" selected="selected">Taxi: Prius/Vanette (1-2 guests)</option>
-                                        <option value="2">Camry/Crown (1-2 guests)</option>
-                                        <option value="3">Vellfire/Alphard (1-3 guests)</option>
-                                        <option value="4">Grand Cabin (1-7 guests)</option>
+                                        <option value="1" selected="selected">1 Day</option>
+                                        <option value="2">2 Day</option>
+                                        <option value="3">3 Day</option>
+                                        <option value="4">4 Day</option>
+                                        <option value="5">5 Day</option>
+                                        <option value="6">6 Day</option>
+                                        <option value="7">7 Day</option>
+                                        <option value="8">8 Day</option>
+                                        <option value="9">9 Day</option>
+                                        <option value="10">10 Day</option>
                                     </select></div><label id="orderForm:cbval_0_label"
-                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">Taxi: Prius/Vanette (1-2
-                                    guests)</label>
+                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">1 Day</label>
                                 <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
                                         class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
                             </div>
                         </div>
-                        <div class="flex-option"><label id="orderForm:pdtoptnm_1" style="font-weight: bold;">Departure
-                                Flight No</label><input id="orderForm:cbtval_1" name="orderForm:cbtval_1" type="text"
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_1" style="font-weight: bold;">Number of
+                                Riders *</label>
+                            <div id="orderForm:cbval_1"
+                                class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox"
+                                aria-haspopup="true" aria-expanded="false" aria-owns="orderForm:cbval_1_items"
+                                style="min-width: 129px;">
+                                <div class="ui-helper-hidden-accessible"><input id="orderForm:cbval_1_focus"
+                                        name="orderForm:cbval_1_focus" type="text" autocomplete="off"
+                                        aria-expanded="false" aria-autocomplete="list"
+                                        aria-activedescendant="orderForm:cbval_1_1"
+                                        aria-describedby="orderForm:cbval_1_1" aria-disabled="false"
+                                        readonly="readonly"></div>
+                                <div class="ui-helper-hidden-accessible"><select id="orderForm:cbval_1_input"
+                                        name="orderForm:cbval_1_input" tabindex="-1" aria-hidden="true"
+                                        onchange="PrimeFaces.ab({s:&quot;orderForm:cbval_1&quot;,e:&quot;change&quot;,p:&quot;orderForm:cbval_1&quot;,u:&quot;orderForm:pricepg orderForm:butpg orderForm:nolespg orderForm:stdtpg orderForm:grossprice orderForm:net orderForm:sellprice growl&quot;,onst:function(cfg){showModal();;},onco:function(xhr,status,args){hideModal();updateCurrency();;}});">
+                                        <option value="">-- Please Select --</option>
+                                        <option value="1" selected="selected">1 People</option>
+                                        <option value="2">2 People</option>
+                                        <option value="3">3 People</option>
+                                        <option value="4">4 People</option>
+                                    </select></div><label id="orderForm:cbval_1_label"
+                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">1 People</label>
+                                <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
+                                        class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
+                            </div>
+                        </div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_2" style="font-weight: bold;">Ages of
+                                Riders</label><input id="orderForm:cbtval_2" name="orderForm:cbtval_2" type="text"
                                 value="" maxlength="24" size="24"
                                 class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
                                 role="textbox" aria-disabled="false" aria-readonly="false"></div>
-                        <div class="flex-option"><label id="orderForm:pdtoptnm_2" style="font-weight: bold;">Depart.
-                                Flight Time</label><input id="orderForm:cbtval_2" name="orderForm:cbtval_2" type="text"
-                                value="" maxlength="24" size="24"
-                                class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
-                                role="textbox" aria-disabled="false" aria-readonly="false"></div>
-                        <div class="flex-option"><label id="orderForm:pdtoptnm_3" style="font-weight: bold;">Number of
-                                Adults *</label>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_3" style="font-weight: bold;">Ability
+                                Level *</label>
                             <div id="orderForm:cbval_3"
                                 class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox"
                                 aria-haspopup="true" aria-expanded="false" aria-owns="orderForm:cbval_3_items"
@@ -909,186 +1265,94 @@
                                 <div class="ui-helper-hidden-accessible"><input id="orderForm:cbval_3_focus"
                                         name="orderForm:cbval_3_focus" type="text" autocomplete="off"
                                         aria-expanded="false" aria-autocomplete="list"
-                                        aria-activedescendant="orderForm:cbval_3_4"
-                                        aria-describedby="orderForm:cbval_3_4" aria-disabled="false"></div>
+                                        aria-activedescendant="orderForm:cbval_3_3"
+                                        aria-describedby="orderForm:cbval_3_3" aria-disabled="false"
+                                        readonly="readonly"></div>
                                 <div class="ui-helper-hidden-accessible"><select id="orderForm:cbval_3_input"
                                         name="orderForm:cbval_3_input" tabindex="-1" aria-hidden="true"
                                         onchange="PrimeFaces.ab({s:&quot;orderForm:cbval_3&quot;,e:&quot;change&quot;,p:&quot;orderForm:cbval_3&quot;,u:&quot;orderForm:pricepg orderForm:butpg orderForm:nolespg orderForm:stdtpg orderForm:grossprice orderForm:net orderForm:sellprice growl&quot;,onst:function(cfg){showModal();;},onco:function(xhr,status,args){hideModal();updateCurrency();;}});">
                                         <option value="">-- Please Select --</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4" selected="selected">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
+                                        <option value="First Timer">First Timer</option>
+                                        <option value="Beginner">Beginner</option>
+                                        <option value="Intermediate" selected="selected">Intermediate</option>
+                                        <option value="Advanced">Advanced</option>
                                     </select></div><label id="orderForm:cbval_3_label"
-                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">4</label>
+                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">Intermediate</label>
                                 <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
                                         class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
                             </div>
                         </div>
-                        <div class="flex-option"><label id="orderForm:pdtoptnm_4" style="font-weight: bold;">Number of
-                                Kids &lt; 6</label>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_4" style="font-weight: bold;">Preferred
+                                Start Time *</label>
                             <div id="orderForm:cbval_4"
                                 class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox"
                                 aria-haspopup="true" aria-expanded="false" aria-owns="orderForm:cbval_4_items"
-                                style="min-width: 30px;">
+                                style="min-width: 129px;">
                                 <div class="ui-helper-hidden-accessible"><input id="orderForm:cbval_4_focus"
                                         name="orderForm:cbval_4_focus" type="text" autocomplete="off"
                                         aria-expanded="false" aria-autocomplete="list"
-                                        aria-activedescendant="orderForm:cbval_4_0"
-                                        aria-describedby="orderForm:cbval_4_0" aria-disabled="false"></div>
+                                        aria-activedescendant="orderForm:cbval_4_2"
+                                        aria-describedby="orderForm:cbval_4_2" aria-disabled="false"
+                                        readonly="readonly"></div>
                                 <div class="ui-helper-hidden-accessible"><select id="orderForm:cbval_4_input"
                                         name="orderForm:cbval_4_input" tabindex="-1" aria-hidden="true"
                                         onchange="PrimeFaces.ab({s:&quot;orderForm:cbval_4&quot;,e:&quot;change&quot;,p:&quot;orderForm:cbval_4&quot;,u:&quot;orderForm:pricepg orderForm:butpg orderForm:nolespg orderForm:stdtpg orderForm:grossprice orderForm:net orderForm:sellprice growl&quot;,onst:function(cfg){showModal();;},onco:function(xhr,status,args){hideModal();updateCurrency();;}});">
-                                        <option value="1" selected="selected">0</option>
-                                        <option value="2">1</option>
-                                        <option value="3">2</option>
-                                        <option value="4">3</option>
-                                        <option value="5">4</option>
-                                        <option value="6">5</option>
-                                        <option value="7">6</option>
+                                        <option value="">-- Please Select --</option>
+                                        <option value="1">08:30</option>
+                                        <option value="2" selected="selected">09:00</option>
+                                        <option value="3">09:30</option>
+                                        <option value="4">10:00</option>
                                     </select></div><label id="orderForm:cbval_4_label"
-                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">0</label>
+                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">09:00</label>
                                 <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
                                         class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
                             </div>
                         </div>
-                        <div class="flex-option"><label id="orderForm:pdtoptnm_5" style="font-weight: bold;">Number of
-                                Kids &lt; 3</label>
-                            <div id="orderForm:cbval_5"
-                                class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox"
-                                aria-haspopup="true" aria-expanded="false" aria-owns="orderForm:cbval_5_items"
-                                style="min-width: 30px;">
-                                <div class="ui-helper-hidden-accessible"><input id="orderForm:cbval_5_focus"
-                                        name="orderForm:cbval_5_focus" type="text" autocomplete="off"
-                                        aria-expanded="false" aria-autocomplete="list"
-                                        aria-activedescendant="orderForm:cbval_5_0"
-                                        aria-describedby="orderForm:cbval_5_0" aria-disabled="false"></div>
-                                <div class="ui-helper-hidden-accessible"><select id="orderForm:cbval_5_input"
-                                        name="orderForm:cbval_5_input" tabindex="-1" aria-hidden="true"
-                                        onchange="PrimeFaces.ab({s:&quot;orderForm:cbval_5&quot;,e:&quot;change&quot;,p:&quot;orderForm:cbval_5&quot;,u:&quot;orderForm:pricepg orderForm:butpg orderForm:nolespg orderForm:stdtpg orderForm:grossprice orderForm:net orderForm:sellprice growl&quot;,onst:function(cfg){showModal();;},onco:function(xhr,status,args){hideModal();updateCurrency();;}});">
-                                        <option value="1" selected="selected">0</option>
-                                        <option value="2">1</option>
-                                        <option value="3">2</option>
-                                        <option value="4">3</option>
-                                        <option value="5">4</option>
-                                        <option value="6">5</option>
-                                        <option value="7">6</option>
-                                    </select></div><label id="orderForm:cbval_5_label"
-                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">0</label>
-                                <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
-                                        class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
-                            </div>
-                        </div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_5"
+                                style="font-weight: bold;">Duration</label><span
+                                id="orderForm:criterionLabelId_5">06:00</span></div>
                         <div class="flex-option"><label id="orderForm:pdtoptnm_6"
-                                style="font-weight: bold;">Property</label>
-                            <div id="orderForm:cbval_6"
-                                class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox"
-                                aria-haspopup="true" aria-expanded="false" aria-owns="orderForm:cbval_6_items"
-                                style="min-width: 128px;">
-                                <div class="ui-helper-hidden-accessible"><input id="orderForm:cbval_6_focus"
-                                        name="orderForm:cbval_6_focus" type="text" autocomplete="off"
-                                        aria-expanded="false" aria-autocomplete="list"
-                                        aria-activedescendant="orderForm:cbval_6_0"
-                                        aria-describedby="orderForm:cbval_6_0" aria-disabled="false"></div>
-                                <div class="ui-helper-hidden-accessible"><select id="orderForm:cbval_6_input"
-                                        name="orderForm:cbval_6_input" tabindex="-1" aria-hidden="true"
-                                        onchange="PrimeFaces.ab({s:&quot;orderForm:cbval_6&quot;,e:&quot;change&quot;,p:&quot;orderForm:cbval_6&quot;,u:&quot;orderForm:pricepg orderForm:butpg orderForm:nolespg orderForm:stdtpg orderForm:grossprice orderForm:net orderForm:sellprice growl&quot;,onst:function(cfg){showModal();;},onco:function(xhr,status,args){hideModal();updateCurrency();;}});">
-                                        <option value="1" selected="selected">The Vale Rusutsu</option>
-                                    </select></div><label id="orderForm:cbval_6_label"
-                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">The Vale Rusutsu</label>
-                                <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
-                                        class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
-                            </div>
-                        </div>
-                        <div class="flex-option"><label id="orderForm:pdtoptnm_7" style="font-weight: bold;">Luggage
-                                *</label>
+                                style="font-weight: bold;">Accommodation booked</label><input id="orderForm:cbtval_6"
+                                name="orderForm:cbtval_6" type="text" value="" maxlength="24" size="24"
+                                class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                role="textbox" aria-disabled="false" aria-readonly="false"></div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_7" style="font-weight: bold;">How did you
+                                find us? *</label>
                             <div id="orderForm:cbval_7"
                                 class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox"
                                 aria-haspopup="true" aria-expanded="false" aria-owns="orderForm:cbval_7_items"
-                                style="min-width: 129px;">
+                                style="min-width: 240px;">
                                 <div class="ui-helper-hidden-accessible"><input id="orderForm:cbval_7_focus"
                                         name="orderForm:cbval_7_focus" type="text" autocomplete="off"
                                         aria-expanded="false" aria-autocomplete="list"
-                                        aria-activedescendant="orderForm:cbval_7_1"
-                                        aria-describedby="orderForm:cbval_7_1" aria-disabled="false"></div>
+                                        aria-activedescendant="orderForm:cbval_7_5"
+                                        aria-describedby="orderForm:cbval_7_5" aria-disabled="false"
+                                        readonly="readonly"></div>
                                 <div class="ui-helper-hidden-accessible"><select id="orderForm:cbval_7_input"
                                         name="orderForm:cbval_7_input" tabindex="-1" aria-hidden="true"
                                         onchange="PrimeFaces.ab({s:&quot;orderForm:cbval_7&quot;,e:&quot;change&quot;,p:&quot;orderForm:cbval_7&quot;,u:&quot;orderForm:pricepg orderForm:butpg orderForm:nolespg orderForm:stdtpg orderForm:grossprice orderForm:net orderForm:sellprice growl&quot;,onst:function(cfg){showModal();;},onco:function(xhr,status,args){hideModal();updateCurrency();;}});">
                                         <option value="">-- Please Select --</option>
-                                        <option value="1" selected="selected">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="14">14</option>
+                                        <option value="1">Internet search</option>
+                                        <option value="2">Social Media - Facebook, Instagram</option>
+                                        <option value="3">Hotel, Travel Agent</option>
+                                        <option value="4">Recommendation by friend</option>
+                                        <option value="5" selected="selected">Returning Guest</option>
+                                        <option value="6">Other</option>
                                     </select></div><label id="orderForm:cbval_7_label"
-                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">1</label>
+                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">Returning Guest</label>
                                 <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
                                         class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
                             </div>
                         </div>
-                        <div class="flex-option"><label id="orderForm:pdtoptnm_8" style="font-weight: bold;">Ski &amp;
-                                Board Bags *</label>
-                            <div id="orderForm:cbval_8"
-                                class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox"
-                                aria-haspopup="true" aria-expanded="false" aria-owns="orderForm:cbval_8_items"
-                                style="min-width: 129px;">
-                                <div class="ui-helper-hidden-accessible"><input id="orderForm:cbval_8_focus"
-                                        name="orderForm:cbval_8_focus" type="text" autocomplete="off"
-                                        aria-expanded="false" aria-autocomplete="list"
-                                        aria-activedescendant="orderForm:cbval_8_2"
-                                        aria-describedby="orderForm:cbval_8_2" aria-disabled="false"></div>
-                                <div class="ui-helper-hidden-accessible"><select id="orderForm:cbval_8_input"
-                                        name="orderForm:cbval_8_input" tabindex="-1" aria-hidden="true"
-                                        onchange="PrimeFaces.ab({s:&quot;orderForm:cbval_8&quot;,e:&quot;change&quot;,p:&quot;orderForm:cbval_8&quot;,u:&quot;orderForm:pricepg orderForm:butpg orderForm:nolespg orderForm:stdtpg orderForm:grossprice orderForm:net orderForm:sellprice growl&quot;,onst:function(cfg){showModal();;},onco:function(xhr,status,args){hideModal();updateCurrency();;}});">
-                                        <option value="">-- Please Select --</option>
-                                        <option value="1">Choice</option>
-                                        <option value="2" selected="selected">Yes</option>
-                                        <option value="3">No</option>
-                                    </select></div><label id="orderForm:cbval_8_label"
-                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">Yes</label>
-                                <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
-                                        class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
-                            </div>
-                        </div>
-                        <div class="flex-option"><label id="orderForm:pdtoptnm_9" style="font-weight: bold;">Child
-                                Seat</label>
-                            <div id="orderForm:cbval_9"
-                                class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" role="combobox"
-                                aria-haspopup="true" aria-expanded="false" aria-owns="orderForm:cbval_9_items"
-                                style="min-width: 30px;">
-                                <div class="ui-helper-hidden-accessible"><input id="orderForm:cbval_9_focus"
-                                        name="orderForm:cbval_9_focus" type="text" autocomplete="off"
-                                        aria-expanded="false" aria-autocomplete="list"
-                                        aria-activedescendant="orderForm:cbval_9_0"
-                                        aria-describedby="orderForm:cbval_9_0" aria-disabled="false"></div>
-                                <div class="ui-helper-hidden-accessible"><select id="orderForm:cbval_9_input"
-                                        name="orderForm:cbval_9_input" tabindex="-1" aria-hidden="true"
-                                        onchange="PrimeFaces.ab({s:&quot;orderForm:cbval_9&quot;,e:&quot;change&quot;,p:&quot;orderForm:cbval_9&quot;,u:&quot;orderForm:pricepg orderForm:butpg orderForm:nolespg orderForm:stdtpg orderForm:grossprice orderForm:net orderForm:sellprice growl&quot;,onst:function(cfg){showModal();;},onco:function(xhr,status,args){hideModal();updateCurrency();;}});">
-                                        <option value="1" selected="selected">0</option>
-                                        <option value="2">1</option>
-                                        <option value="3">2</option>
-                                    </select></div><label id="orderForm:cbval_9_label"
-                                    class="ui-selectonemenu-label ui-inputfield ui-corner-all">0</label>
-                                <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right"><span
-                                        class="ui-icon ui-icon-triangle-1-s ui-c"></span></div>
-                            </div>
-                        </div>
+                        <div class="flex-option"><label id="orderForm:pdtoptnm_8" style="font-weight: bold;">If other,
+                                specify</label><input id="orderForm:cbtval_8" name="orderForm:cbtval_8" type="text"
+                                value="" maxlength="24" size="24"
+                                class="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all"
+                                role="textbox" aria-disabled="false" aria-readonly="false"></div>
                         <div id="orderForm:pricepg" class="flex-option"><label id="orderForm:grosslbl"
                                 style="font-weight: bold;">Cost</label><label id="orderForm:gross"
-                                class="cur rb-prod-gross-value" original-value-formatted="￥28,800"
-                                original-value="28800" original-value-currency="JPY">￥28,800</label></div>
+                                class="cur rb-prod-gross-value" original-value-formatted="￥95,000"
+                                original-value="95000" original-value-currency="JPY">￥95,000</label></div>
                         <div id="orderForm:forcedtmsgpg"></div>
                         <div id="orderForm:qtypg" class="flex-option"><label id="orderForm:qtylbl"
                                 style="font-weight: bold;">Quantity</label>
@@ -1098,7 +1362,8 @@
                                 <div class="ui-helper-hidden-accessible"><input id="orderForm:qty_focus"
                                         name="orderForm:qty_focus" type="text" autocomplete="off" aria-expanded="false"
                                         aria-autocomplete="list" aria-activedescendant="orderForm:qty_0"
-                                        aria-describedby="orderForm:qty_0" aria-disabled="false"></div>
+                                        aria-describedby="orderForm:qty_0" aria-disabled="false" readonly="readonly">
+                                </div>
                                 <div class="ui-helper-hidden-accessible"><select id="orderForm:qty_input"
                                         name="orderForm:qty_input" tabindex="-1" aria-hidden="true">
                                         <option value="1" selected="selected">1</option>
@@ -1136,7 +1401,7 @@
                     </div>
                 </div>
             </div>
-            <input type="hidden" name="javax.faces.ViewState" value="8796544282263150045:-5104376069406621512"
+            <input type="hidden" name="javax.faces.ViewState" value="6720358719199196926:3096729588393620054"
                 autocomplete="off">
         </form>
         <form id="guestDialogForm" name="guestDialogForm" method="post" action="/public/booking/order02.jsf"
@@ -1162,12 +1427,12 @@
                         aria-label="Close" role="button"><span class="ui-icon ui-icon-closethick"></span></a></div>
                 <div class="ui-dialog-content ui-widget-content" style="height: auto;"></div>
             </div><input type="hidden" name="javax.faces.ViewState" id="j_id1:javax.faces.ViewState:2"
-                value="8796544282263150045:-5104376069406621512" autocomplete="off">
+                value="6720358719199196926:3096729588393620054" autocomplete="off">
         </form>
         <div id="privacypolicydlg"
             class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container rb-privacy-policy-dialog"
             role="dialog" aria-labelledby="privacypolicydlg_title" aria-hidden="true" aria-live="off"
-            style="width: auto; height: auto; left: 429px; top: 303.5px; z-index: 1003; display: none;">
+            style="width: auto; height: auto; left: 0px; top: 308.5px; z-index: 1003; display: none;">
             <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top ui-draggable-handle"><span
                     id="privacypolicydlg_title" class="ui-dialog-title"></span></div>
             <div class="ui-dialog-content ui-widget-content" style="height: auto;">
@@ -1188,9 +1453,9 @@
             </div>
         </div>
     </div>
-    <div id="j_idt1151"></div>
+    <div id="j_idt1383"></div>
     <div id="ajaxLoader" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container"
-        style="background-color: transparent; box-shadow: none; border: none; width: auto; height: auto; left: 680px; top: 367.5px; z-index: 1061; display: none;"
+        style="background-color: transparent; box-shadow: none; border: none; width: auto; height: auto; left: 155px; top: 382px; z-index: 1043; display: none;"
         role="dialog" aria-labelledby="ajaxLoader_title" aria-hidden="true" aria-live="off">
         <div class="ui-dialog-content ui-widget-content" style="height: auto;"><img id="waitImage"
                 src="/template/default/images/ajaxLoader.gif"></div>
@@ -1250,15 +1515,15 @@
         <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
             <ul id="locform:languageSelect_items"
                 class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
-                role="listbox" aria-activedescendant="locform:languageSelect_3">
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="English"
-                    tabindex="-1" role="option" id="locform:languageSelect_0">English</li>
+                role="listbox" aria-activedescendant="locform:languageSelect_0">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
+                    data-label="English" tabindex="-1" role="option" id="locform:languageSelect_0">English</li>
                 <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="日本語"
                     tabindex="-1" role="option" id="locform:languageSelect_1">日本語</li>
                 <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="한국어"
                     tabindex="-1" role="option" id="locform:languageSelect_2">한국어</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
-                    data-label="Français" tabindex="-1" role="option" id="locform:languageSelect_3">Français</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Français"
+                    tabindex="-1" role="option" id="locform:languageSelect_3">Français</li>
                 <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="中文(简体)"
                     tabindex="-1" role="option" id="locform:languageSelect_4">中文(简体)</li>
                 <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="中文(繁體)"
@@ -1266,7 +1531,7 @@
             </ul>
         </div>
     </div>
-    <div id="growl_container" class="ui-growl ui-widget" style="z-index: 1062;"></div>
+    <div id="growl_container" class="ui-growl ui-widget" style="z-index: 1044;"></div>
     <div class="ui-dialog-docking-zone"></div>
     <div id="confirmdlg"
         class="ui-confirm-dialog ui-dialog ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container rb-confirm-dialog"
@@ -1289,132 +1554,15 @@
                     class="ui-button-text ui-c">No</span></button></div>
     </div><readwise-tooltip-container></readwise-tooltip-container>
     <div id="forest-ext-shadow-host"></div>
-    <div id="ui-datepicker-div"
-        class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-input-overlay"
-        style="position: fixed; top: 171.797px; left: 704.805px; display: none; z-index: 1047;">
-        <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a
-                class="ui-datepicker-prev ui-corner-all" data-handler="prev" data-event="click" title="Précédent"><span
-                    class="ui-icon ui-icon-circle-triangle-w">Précédent</span></a><a
-                class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title="Suivant"><span
-                    class="ui-icon ui-icon-circle-triangle-e">Suivant</span></a>
-            <div class="ui-datepicker-title"><select class="ui-datepicker-year" data-handler="selectYear"
-                    data-event="change" aria-label="select year">
-                    <option value="2023">2023</option>
-                    <option value="2024" selected="selected">2024</option>
-                    <option value="2025">2025</option>
-                </select><select class="ui-datepicker-month" data-handler="selectMonth" data-event="change"
-                    aria-label="select month">
-                    <option value="0">Jan</option>
-                    <option value="1">Fév</option>
-                    <option value="2">Mar</option>
-                    <option value="3">Avr</option>
-                    <option value="4" selected="selected">Mai</option>
-                    <option value="5">Jun</option>
-                    <option value="6">Jul</option>
-                    <option value="7">Aoû</option>
-                    <option value="8">Sep</option>
-                    <option value="9">Oct</option>
-                    <option value="10">Nov</option>
-                    <option value="11">Déc</option>
-                </select></div>
-        </div>
-        <table class="ui-datepicker-calendar">
-            <thead>
-                <tr>
-                    <th scope="col"><span title="Lundi">L</span></th>
-                    <th scope="col"><span title="Mardi">M</span></th>
-                    <th scope="col"><span title="Mercredi">M</span></th>
-                    <th scope="col"><span title="Jeudi">J</span></th>
-                    <th scope="col"><span title="Vendredi">V</span></th>
-                    <th scope="col" class="ui-datepicker-week-end"><span title="Samedi">S</span></th>
-                    <th scope="col" class="ui-datepicker-week-end"><span title="Dimanche">D</span></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
-                    <td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">1</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">2</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">3</a></td>
-                    <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click"
-                        data-month="4" data-year="2024"><a class="ui-state-default" href="#">4</a></td>
-                    <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click"
-                        data-month="4" data-year="2024"><a class="ui-state-default" href="#">5</a></td>
-                </tr>
-                <tr>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">6</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">7</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">8</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">9</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">10</a></td>
-                    <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click"
-                        data-month="4" data-year="2024"><a class="ui-state-default" href="#">11</a></td>
-                    <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click"
-                        data-month="4" data-year="2024"><a class="ui-state-default" href="#">12</a></td>
-                </tr>
-                <tr>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">13</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">14</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">15</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">16</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">17</a></td>
-                    <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click"
-                        data-month="4" data-year="2024"><a class="ui-state-default" href="#">18</a></td>
-                    <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click"
-                        data-month="4" data-year="2024"><a class="ui-state-default" href="#">19</a></td>
-                </tr>
-                <tr>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">20</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">21</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">22</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">23</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">24</a></td>
-                    <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click"
-                        data-month="4" data-year="2024"><a class="ui-state-default" href="#">25</a></td>
-                    <td class=" ui-datepicker-week-end undefined" data-handler="selectDay" data-event="click"
-                        data-month="4" data-year="2024"><a class="ui-state-default" href="#">26</a></td>
-                </tr>
-                <tr>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">27</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">28</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">29</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">30</a></td>
-                    <td class=" undefined" data-handler="selectDay" data-event="click" data-month="4" data-year="2024">
-                        <a class="ui-state-default" href="#">31</a></td>
-                    <td
-                        class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
-                        &nbsp;</td>
-                    <td
-                        class=" ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">
-                        &nbsp;</td>
-                </tr>
-            </tbody>
-        </table>
+    <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all">
     </div>
     <div id="orderForm:itemdtbsk:0:tooltip" class="ui-tooltip ui-widget ui-tooltip-bottom">
+        <div class="ui-tooltip-arrow"></div>
+        <div class="ui-tooltip-text ui-shadow ui-corner-all">
+            Requires confirmation by the vendor
+        </div>
+    </div>
+    <div id="orderForm:itemdtbsk:1:tooltip" class="ui-tooltip ui-widget ui-tooltip-bottom">
         <div class="ui-tooltip-arrow"></div>
         <div class="ui-tooltip-text ui-shadow ui-corner-all">
             Requires confirmation by the vendor
@@ -1427,17 +1575,45 @@
                 class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
                 role="listbox" aria-activedescendant="orderForm:cbval_0_0">
                 <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
-                    data-label="Taxi: Prius/Vanette (1-2 guests)" tabindex="-1" role="option" id="orderForm:cbval_0_0">
-                    Taxi: Prius/Vanette (1-2 guests)</li>
+                    data-label="1 Day" tabindex="-1" role="option" id="orderForm:cbval_0_0">1 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="2 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_1">2 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="3 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_2">3 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="4 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_3">4 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="5 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_4">5 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="6 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_5">6 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="7 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_6">7 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="8 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_7">8 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="9 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_8">9 Day</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="10 Day"
+                    tabindex="-1" role="option" id="orderForm:cbval_0_9">10 Day</li>
+            </ul>
+        </div>
+    </div>
+    <div id="orderForm:cbval_1_panel"
+        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
+        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
+            <ul id="orderForm:cbval_1_items"
+                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
+                role="listbox" aria-activedescendant="orderForm:cbval_1_1">
                 <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
-                    data-label="Camry/Crown (1-2 guests)" tabindex="-1" role="option" id="orderForm:cbval_0_1">
-                    Camry/Crown (1-2 guests)</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
-                    data-label="Vellfire/Alphard (1-3 guests)" tabindex="-1" role="option" id="orderForm:cbval_0_2">
-                    Vellfire/Alphard (1-3 guests)</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
-                    data-label="Grand Cabin (1-7 guests)" tabindex="-1" role="option" id="orderForm:cbval_0_3">Grand
-                    Cabin (1-7 guests)</li>
+                    data-label="-- Please Select --" tabindex="-1" role="option" id="orderForm:cbval_1_0">-- Please
+                    Select --</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
+                    data-label="1 People" tabindex="-1" role="option" id="orderForm:cbval_1_1">1 People</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="2 People"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_2">2 People</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="3 People"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_3">3 People</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="4 People"
+                    tabindex="-1" role="option" id="orderForm:cbval_1_4">4 People</li>
             </ul>
         </div>
     </div>
@@ -1446,24 +1622,18 @@
         <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
             <ul id="orderForm:cbval_3_items"
                 class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
-                role="listbox" aria-activedescendant="orderForm:cbval_3_4">
+                role="listbox" aria-activedescendant="orderForm:cbval_3_3">
                 <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
                     data-label="-- Please Select --" tabindex="-1" role="option" id="orderForm:cbval_3_0">-- Please
                     Select --</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="1" tabindex="-1"
-                    role="option" id="orderForm:cbval_3_1">1</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="2" tabindex="-1"
-                    role="option" id="orderForm:cbval_3_2">2</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="3" tabindex="-1"
-                    role="option" id="orderForm:cbval_3_3">3</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="First Timer"
+                    tabindex="-1" role="option" id="orderForm:cbval_3_1">First Timer</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Beginner"
+                    tabindex="-1" role="option" id="orderForm:cbval_3_2">Beginner</li>
                 <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
-                    data-label="4" tabindex="-1" role="option" id="orderForm:cbval_3_4">4</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="5" tabindex="-1"
-                    role="option" id="orderForm:cbval_3_5">5</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="6" tabindex="-1"
-                    role="option" id="orderForm:cbval_3_6">6</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="7" tabindex="-1"
-                    role="option" id="orderForm:cbval_3_7">7</li>
+                    data-label="Intermediate" tabindex="-1" role="option" id="orderForm:cbval_3_3">Intermediate</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Advanced"
+                    tabindex="-1" role="option" id="orderForm:cbval_3_4">Advanced</li>
             </ul>
         </div>
     </div>
@@ -1472,56 +1642,18 @@
         <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
             <ul id="orderForm:cbval_4_items"
                 class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
-                role="listbox" aria-activedescendant="orderForm:cbval_4_0">
+                role="listbox" aria-activedescendant="orderForm:cbval_4_2">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="-- Please Select --" tabindex="-1" role="option" id="orderForm:cbval_4_0">-- Please
+                    Select --</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="08:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_4_1">08:30</li>
                 <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
-                    data-label="0" tabindex="-1" role="option" id="orderForm:cbval_4_0">0</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="1" tabindex="-1"
-                    role="option" id="orderForm:cbval_4_1">1</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="2" tabindex="-1"
-                    role="option" id="orderForm:cbval_4_2">2</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="3" tabindex="-1"
-                    role="option" id="orderForm:cbval_4_3">3</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="4" tabindex="-1"
-                    role="option" id="orderForm:cbval_4_4">4</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="5" tabindex="-1"
-                    role="option" id="orderForm:cbval_4_5">5</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="6" tabindex="-1"
-                    role="option" id="orderForm:cbval_4_6">6</li>
-            </ul>
-        </div>
-    </div>
-    <div id="orderForm:cbval_5_panel"
-        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
-        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
-            <ul id="orderForm:cbval_5_items"
-                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
-                role="listbox" aria-activedescendant="orderForm:cbval_5_0">
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
-                    data-label="0" tabindex="-1" role="option" id="orderForm:cbval_5_0">0</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="1" tabindex="-1"
-                    role="option" id="orderForm:cbval_5_1">1</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="2" tabindex="-1"
-                    role="option" id="orderForm:cbval_5_2">2</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="3" tabindex="-1"
-                    role="option" id="orderForm:cbval_5_3">3</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="4" tabindex="-1"
-                    role="option" id="orderForm:cbval_5_4">4</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="5" tabindex="-1"
-                    role="option" id="orderForm:cbval_5_5">5</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="6" tabindex="-1"
-                    role="option" id="orderForm:cbval_5_6">6</li>
-            </ul>
-        </div>
-    </div>
-    <div id="orderForm:cbval_6_panel"
-        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
-        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
-            <ul id="orderForm:cbval_6_items"
-                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
-                role="listbox" aria-activedescendant="orderForm:cbval_6_0">
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
-                    data-label="The Vale Rusutsu" tabindex="-1" role="option" id="orderForm:cbval_6_0">The Vale Rusutsu
-                </li>
+                    data-label="09:00" tabindex="-1" role="option" id="orderForm:cbval_4_2">09:00</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="09:30"
+                    tabindex="-1" role="option" id="orderForm:cbval_4_3">09:30</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="10:00"
+                    tabindex="-1" role="option" id="orderForm:cbval_4_4">10:00</li>
             </ul>
         </div>
     </div>
@@ -1530,71 +1662,26 @@
         <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
             <ul id="orderForm:cbval_7_items"
                 class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
-                role="listbox" aria-activedescendant="orderForm:cbval_7_1">
+                role="listbox" aria-activedescendant="orderForm:cbval_7_5">
                 <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
                     data-label="-- Please Select --" tabindex="-1" role="option" id="orderForm:cbval_7_0">-- Please
                     Select --</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
-                    data-label="1" tabindex="-1" role="option" id="orderForm:cbval_7_1">1</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="2" tabindex="-1"
-                    role="option" id="orderForm:cbval_7_2">2</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="3" tabindex="-1"
-                    role="option" id="orderForm:cbval_7_3">3</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="4" tabindex="-1"
-                    role="option" id="orderForm:cbval_7_4">4</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="5" tabindex="-1"
-                    role="option" id="orderForm:cbval_7_5">5</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="6" tabindex="-1"
-                    role="option" id="orderForm:cbval_7_6">6</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="7" tabindex="-1"
-                    role="option" id="orderForm:cbval_7_7">7</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="8" tabindex="-1"
-                    role="option" id="orderForm:cbval_7_8">8</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="9" tabindex="-1"
-                    role="option" id="orderForm:cbval_7_9">9</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="10" tabindex="-1"
-                    role="option" id="orderForm:cbval_7_10">10</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="11" tabindex="-1"
-                    role="option" id="orderForm:cbval_7_11">11</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="12" tabindex="-1"
-                    role="option" id="orderForm:cbval_7_12">12</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="13" tabindex="-1"
-                    role="option" id="orderForm:cbval_7_13">13</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="14" tabindex="-1"
-                    role="option" id="orderForm:cbval_7_14">14</li>
-            </ul>
-        </div>
-    </div>
-    <div id="orderForm:cbval_8_panel"
-        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
-        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
-            <ul id="orderForm:cbval_8_items"
-                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
-                role="listbox" aria-activedescendant="orderForm:cbval_8_2">
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Internet search"
+                    tabindex="-1" role="option" id="orderForm:cbval_7_1">Internet search</li>
                 <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
-                    data-label="-- Please Select --" tabindex="-1" role="option" id="orderForm:cbval_8_0">-- Please
-                    Select --</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Choice"
-                    tabindex="-1" role="option" id="orderForm:cbval_8_1">Choice</li>
+                    data-label="Social Media - Facebook, Instagram" tabindex="-1" role="option"
+                    id="orderForm:cbval_7_2">Social Media - Facebook, Instagram</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Hotel, Travel Agent" tabindex="-1" role="option" id="orderForm:cbval_7_3">Hotel, Travel
+                    Agent</li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all"
+                    data-label="Recommendation by friend" tabindex="-1" role="option" id="orderForm:cbval_7_4">
+                    Recommendation by friend</li>
                 <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
-                    data-label="Yes" tabindex="-1" role="option" id="orderForm:cbval_8_2">Yes</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="No" tabindex="-1"
-                    role="option" id="orderForm:cbval_8_3">No</li>
-            </ul>
-        </div>
-    </div>
-    <div id="orderForm:cbval_9_panel"
-        class="ui-selectonemenu-panel ui-widget ui-widget-content ui-corner-all ui-helper-hidden ui-shadow ui-input-overlay">
-        <div class="ui-selectonemenu-items-wrapper" style="max-height:200px">
-            <ul id="orderForm:cbval_9_items"
-                class="ui-selectonemenu-items ui-selectonemenu-list ui-widget-content ui-widget ui-corner-all ui-helper-reset"
-                role="listbox" aria-activedescendant="orderForm:cbval_9_0">
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all ui-state-highlight"
-                    data-label="0" tabindex="-1" role="option" id="orderForm:cbval_9_0">0</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="1" tabindex="-1"
-                    role="option" id="orderForm:cbval_9_1">1</li>
-                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="2" tabindex="-1"
-                    role="option" id="orderForm:cbval_9_2">2</li>
+                    data-label="Returning Guest" tabindex="-1" role="option" id="orderForm:cbval_7_5">Returning Guest
+                </li>
+                <li class="ui-selectonemenu-item ui-selectonemenu-list-item ui-corner-all" data-label="Other"
+                    tabindex="-1" role="option" id="orderForm:cbval_7_6">Other</li>
             </ul>
         </div>
     </div>
