@@ -661,8 +661,11 @@ div#orderForm\:addbskpg{
 
     // }
     .ui-datatable-reflow .ui-datatable-data td[role="gridcell"]:not(.ui-helper-hidden) {
-        display: block !important;
+        // display: block !important;
+        display: flex;
+        flex-direction: column;
     }
+
 
     .flex-option{
         padding: 8px 4px;
