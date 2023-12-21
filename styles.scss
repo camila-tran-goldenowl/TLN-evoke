@@ -838,17 +838,17 @@ div#orderForm\:newguestpg{
 @media screen and (max-width: 640px){
 
     div#orderForm\:itemdtbsk tbody td{
-        display: contents !important;
+        // display: contents !important;
 
-        span.ui-column-title{
-            display: block;
-        }
+        // span.ui-column-title{
+        //     display: block;
+        // }
 
-        > label{
-            display: flex !important;
-            width: fit-content !important;
-            margin: auto;
-        }
+        // > label{
+        //     display: flex !important;
+        //     width: fit-content !important;
+        //     margin: auto;
+        // }
     }
 
    
