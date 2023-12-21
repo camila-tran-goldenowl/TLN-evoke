@@ -1,3 +1,5 @@
+
+
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head id="j_idt2">
@@ -774,7 +776,9 @@
                                                     class="ui-widget-content ui-datatable-even rb-req-confirmation"
                                                     role="row">
                                                     <td role="gridcell" style="text-align: center;"><span
-                                                            class="ui-column-title">Item</span>
+                                                            class="ui-column-title">Item</span><label
+                                                            id="orderForm:itemdtbsk:0:itempdt"
+                                                            style="font-weight: bold;">FULL DAY 6 HOURS (BOARD)</label>
                                                         <div id="orderForm:itemdtbsk:0:bskitempdtopt"
                                                             class="ui-datagrid ui-widget"
                                                             style="margin-top: 5px; margin-bottom:10px; font-size: 0.9em;">
@@ -902,13 +906,46 @@
                                                         <div id="orderForm:itemdtbsk:0:skipass" class="rb-skipass">
                                                         </div>
                                                     </td>
-                                                    
+                                                    <td role="gridcell"
+                                                        style="text-align: center; vertical-align: top;"><span
+                                                            class="ui-column-title">Start Date</span><label
+                                                            id="orderForm:itemdtbsk:0:itemdt"
+                                                            class="">2023/12/22</label></td>
+                                                    <td role="gridcell"
+                                                        style="text-align: center; vertical-align: top;"><span
+                                                            class="ui-column-title">Price</span>
+                                                        <div>
+                                                        </div>
+                                                        <div><label id="orderForm:itemdtbsk:0:itemprc"
+                                                                class="cur rb-item-gross-value"
+                                                                original-value-formatted="￥95,000"
+                                                                original-value="95000"
+                                                                original-value-currency="JPY">￥95,000</label>
+                                                        </div><span id="orderForm:itemdtbsk:0:tooltipicon"
+                                                            class="status-pill">REQUEST<span
+                                                                class="fa fa-fw fa-info-circle"></span></span>
+                                                    </td>
+                                                    <td role="gridcell"
+                                                        style="text-align: center; vertical-align: top;"><span
+                                                            class="ui-column-title"></span><a
+                                                            id="orderForm:itemdtbsk:0:edititem" href="#"
+                                                            class="ui-commandlink ui-widget"
+                                                            onclick="PrimeFaces.ab({s:&quot;orderForm:itemdtbsk:0:edititem&quot;,p:&quot;orderForm:itemdtbsk:0:edititem&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"
+                                                            style="margin-right: 10px;"><span
+                                                                class="fa fa-edit"></span></a><a
+                                                            id="orderForm:itemdtbsk:0:rmvitem" href="#"
+                                                            class="ui-commandlink ui-widget"
+                                                            data-pfconfirmcommand="PrimeFaces.ab({s:&quot;orderForm:itemdtbsk:0:rmvitem&quot;,p:&quot;orderForm:itemdtbsk:0:rmvitem&quot;,u:&quot;orderForm&quot;,onco:function(xhr,status,args){updateCurrency();;}});return false;"
+                                                            onclick="PrimeFaces.confirm({source:&quot;orderForm:itemdtbsk:0:rmvitem&quot;,header:&quot;&quot;,message:&quot;Remove item from Shopping Cart?&quot;,icon:&quot;null&quot;,beforeShow:&quot;&quot;});return false;"><span
+                                                                class="fa fa-trash-o"></span></a></td>
                                                 </tr>
                                                 <tr data-ri="1"
                                                     class="ui-widget-content ui-datatable-odd rb-req-confirmation"
                                                     role="row">
                                                     <td role="gridcell" style="text-align: center;"><span
-                                                            class="ui-column-title">Item</span>
+                                                            class="ui-column-title">Item</span><label
+                                                            id="orderForm:itemdtbsk:1:itempdt"
+                                                            style="font-weight: bold;">Babysitting - 1 Child</label>
                                                         <div id="orderForm:itemdtbsk:1:bskitempdtopt"
                                                             class="ui-datagrid ui-widget"
                                                             style="margin-top: 5px; margin-bottom:10px; font-size: 0.9em;">
@@ -1023,6 +1060,38 @@
                                                         <div id="orderForm:itemdtbsk:1:skipass" class="rb-skipass">
                                                         </div>
                                                     </td>
+                                                    <td role="gridcell"
+                                                        style="text-align: center; vertical-align: top;"><span
+                                                            class="ui-column-title">Start Date</span><label
+                                                            id="orderForm:itemdtbsk:1:itemdt"
+                                                            class="">2023/12/22</label></td>
+                                                    <td role="gridcell"
+                                                        style="text-align: center; vertical-align: top;"><span
+                                                            class="ui-column-title">Price</span>
+                                                        <div>
+                                                        </div>
+                                                        <div><label id="orderForm:itemdtbsk:1:itemprc"
+                                                                class="cur rb-item-gross-value"
+                                                                original-value-formatted="￥18,150"
+                                                                original-value="18150"
+                                                                original-value-currency="JPY">￥18,150</label>
+                                                        </div><span id="orderForm:itemdtbsk:1:tooltipicon"
+                                                            class="status-pill">REQUEST<span
+                                                                class="fa fa-fw fa-info-circle"></span></span>
+                                                    </td>
+                                                    <td role="gridcell"
+                                                        style="text-align: center; vertical-align: top;"><span
+                                                            class="ui-column-title"></span><a
+                                                            id="orderForm:itemdtbsk:1:edititem" href="#"
+                                                            class="ui-commandlink ui-widget"
+                                                            onclick="PrimeFaces.ab({s:&quot;orderForm:itemdtbsk:1:edititem&quot;,p:&quot;orderForm:itemdtbsk:1:edititem&quot;,u:&quot;growl orderForm:addbskdlg orderForm:showDayScript&quot;,onco:function(xhr,status,args){PF('productDialog').show();;}});return false;"
+                                                            style="margin-right: 10px;"><span
+                                                                class="fa fa-edit"></span></a><a
+                                                            id="orderForm:itemdtbsk:1:rmvitem" href="#"
+                                                            class="ui-commandlink ui-widget"
+                                                            data-pfconfirmcommand="PrimeFaces.ab({s:&quot;orderForm:itemdtbsk:1:rmvitem&quot;,p:&quot;orderForm:itemdtbsk:1:rmvitem&quot;,u:&quot;orderForm&quot;,onco:function(xhr,status,args){updateCurrency();;}});return false;"
+                                                            onclick="PrimeFaces.confirm({source:&quot;orderForm:itemdtbsk:1:rmvitem&quot;,header:&quot;&quot;,message:&quot;Remove item from Shopping Cart?&quot;,icon:&quot;null&quot;,beforeShow:&quot;&quot;});return false;"><span
+                                                                class="fa fa-trash-o"></span></a></td>
                                                 </tr>
                                             </tbody>
                                         </table>
