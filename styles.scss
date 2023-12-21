@@ -833,7 +833,14 @@ div#orderForm\:newguestpg{
         }
     }
 }
+_::-webkit-full-page-media, _:future, :root .safari_only {
+    div#orderForm\:itemdtbsk tbody td{
+        display: block;
+        width: 100%;
+        display: block;
+    }
 
+}
 // device  break layout
 @media screen and (max-width: 640px){
 
