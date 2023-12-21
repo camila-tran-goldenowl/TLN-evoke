@@ -654,12 +654,11 @@ div#orderForm\:addbskpg{
 }
 
 @media (max-width: 640px){
-    // form#orderForm{
-    //     .ui-dialog{
-    //         width: 90vw !important;
-    //     }
-
-    // }
+    form#locform{
+        .ui-inputfield{
+            padding: 0 !important;
+        }
+    }
 
     .flex-option{
         padding: 8px 4px;
