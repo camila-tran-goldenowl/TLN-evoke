@@ -833,3 +833,23 @@ div#orderForm\:newguestpg{
         }
     }
 }
+
+// device  break layout
+@media screen and (max-width: 640px){
+
+    div#orderForm\:itemdtbsk tbody td{
+        display: contents !important;
+
+        span.ui-column-title{
+            display: block;
+        }
+
+        > label{
+            display: flex !important;
+            width: fit-content !important;
+            margin: auto;
+        }
+    }
+
+   
+}
