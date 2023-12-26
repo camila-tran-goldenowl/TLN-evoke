@@ -22,6 +22,9 @@ $link-color:#3388CC;
 @mixin main-font{
     font-family: Montserrat !important;
 }
+@mixin second-font{
+    font-family: Delmon Delicate !important;
+}
 
 @mixin small-title {
     font-size: 6px !important;
@@ -842,6 +845,14 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
     }
 }
 
-.rb-vendor-desc{
+.rb-vendor-desc,
+.rb-child-cat-desc{
     @include black-text();
+}
+
+.rb-vendor-desc{
+    &::before{
+        content: 'About: ';
+        font-weight:500;
+    }
 }
