@@ -856,3 +856,12 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
         font-weight:500;
     }
 }
+
+div[id*=":pdtpnl"]{
+    &:first-child{
+        &::before{
+            display: block;
+            content: "About";
+        }
+    }
+}
