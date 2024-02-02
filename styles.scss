@@ -506,6 +506,7 @@ div#orderForm\:butpg{
     button#orderForm\:confirmedititem,
     button#orderForm\:canceledititem{
         @include button();
+        @include title();
     }
 }
 
