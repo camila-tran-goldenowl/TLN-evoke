@@ -3,21 +3,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 
-$primary-sea-color: #79A2AA;
-$primary-brown-color: #625956;
-$primary-black-color: #18181B;
-
-$secondary-yellow-color: #FFD075;
-$secondary-orange-color: #F89426;
-$secondary-beige-color: #F9F6F0;
-$secondary-white-color: #FFFDFA;
-$secondary-grey-color: #DCDDDE;
-$secondary-light-grey-color: #F4F4F4;
-
-$success-color:#54AF91;
-$fail-color:#EA5F5F;
-$dark-grey: #66686A;
-$link-color:#3388CC;
+:root {
+    --primary-sea-color: #79A2AA;
+    --primary-brown-color: #625956;
+    --primary-black-color: #18181B;
+  
+    --secondary-yellow-color: #FFD075;
+    --secondary-orange-color: #F89426;
+    --secondary-beige-color: #F9F6F0;
+    --secondary-white-color: #FFFDFA;
+    --secondary-grey-color: #DCDDDE;
+    --secondary-light-grey-color: #F4F4F4;
+  
+    --success-color: #54AF91;
+    --fail-color: #EA5F5F;
+    --dark-grey: #66686A;
+    --link-color: #3388CC;
+}
 
 @mixin main-font{
     font-family: Inter !important;
@@ -69,13 +71,13 @@ $link-color:#3388CC;
 @mixin button{
     border: none !important;
     padding: 0.8rem 1.5rem;
-	background-color: $secondary-orange-color !important;
+	background-color: var(--secondary-orange-color) !important;
     border-radius: 0 !important;
     text-transform: uppercase;
 }
 
 @mixin black-text{
-    color: $primary-black-color !important;
+    color: var(--primary-black-color) !important;
 }
 
 @mixin hover-underline{
@@ -85,13 +87,13 @@ $link-color:#3388CC;
     text-underline-offset: 4px;
 }
 @mixin border{
-    border: 1px solid $secondary-grey-color !important;
+    border: 1px solid var(--secondary-grey-color) !important;
 }
 
 @mixin input{
     @include black-text;
     @include body-text;
-    border: 1px solid $secondary-grey-color;
+    border: 1px solid var(--secondary-grey-color);
     background-color: white;
     padding: 8px 15px;
 }
@@ -194,7 +196,7 @@ form#locform{
 }
 
 html .ui-widget-content .ui-state-highlight{
-    color: $primary-black-color !important
+    color: var(--primary-black-color) !important
 }
 
 .ui-selectonemenu-trigger{
@@ -207,7 +209,7 @@ html .ui-widget-content .ui-state-highlight{
 }
 
 .ui-selectonemenu.ui-widget.ui-state-focus{
-    border: 1px solid $secondary-orange-color !important;
+    border: 1px solid var(--secondary-orange-color) !important;
 }
 
 html .ui-selectonemenu .ui-selectonemenu-trigger .ui-icon{
@@ -221,7 +223,7 @@ html .ui-selectonemenu .ui-selectonemenu-trigger .ui-icon{
     text-underline-offset: 4px;
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    text-decoration-color: $secondary-orange-color;
+    text-decoration-color: var(--secondary-orange-color);
 }
 html .vc-chip-container .chip {
     @include body-text();
@@ -238,7 +240,7 @@ html .vc-chip-container .chip {
 }
 
 .ui-button.ui-widget.ui-state-default {
-    background:$secondary-orange-color !important;
+    background:var(--secondary-orange-color) !important;
     color: white !important;
 }
 
@@ -340,7 +342,7 @@ html .rb-h-selwrapper {
 .rb-parent-cat-container .rb-parent-cat-sel .rb-cat-box a, 
 .rb-child-cat-container .rb-child-cat-sel a img, 
 .rb-child-cat-container .rb-child-cat-sel .rb-cat-box a{
-    box-shadow: 0 0 0px 4px $secondary-grey-color !important;
+    box-shadow: 0 0 0px 4px var(--secondary-grey-color) !important;
 }
 
 
@@ -351,7 +353,7 @@ img[id*="pdtimg"] {
 
 .rb-prod-item-panel >.ui-panel-content.ui-widget-content{
     @include border;
-    background-color: $secondary-white-color;
+    background-color: var(--secondary-white-color);
     border-radius: 0 !important;
     box-shadow: none !important;
     
@@ -367,7 +369,7 @@ img[id*="pdtimg"] {
         }
 
         button{
-            background-color: $secondary-orange-color !important;
+            background-color: var(--secondary-orange-color) !important;
             border: none;
             padding: 13.5px 20px !important;
             font-weight: 400!important;
@@ -412,7 +414,7 @@ div#orderForm\:itemdtbsk{
 
         .ui-state-default{
             padding: 1.6rem 1rem;
-            background-color: $secondary-grey-color !important;
+            background-color: var(--secondary-grey-color) !important;
             
 
             .ui-column-title{
@@ -450,10 +452,10 @@ div#orderForm\:itemdtbsk{
 
 
 table tbody tr:nth-child(odd) td, table tbody tr:nth-child(odd) td{
-    background: $secondary-light-grey-color !important;
+    background: var(--secondary-light-grey-color) !important;
 }
 table tbody tr:nth-child(even) td, table tbody tr:nth-child(even) td{
-    background: $secondary-grey-color !important;
+    background: var(--secondary-grey-color) !important;
 }
 
 // checkout
@@ -493,7 +495,7 @@ button#orderForm\:next{
         padding: .3em 0 0.3em 0.5em;
 
         .ui-button-text.ui-c{
-            background-color: $secondary-orange-color;
+            background-color: var(--secondary-orange-color);
             color: white !important;
         }
         
@@ -538,7 +540,7 @@ div#confirmdlg{
 
     // header
     .ui-dialog-titlebar{
-        background-color: $secondary-grey-color !important;
+        background-color: var(--secondary-grey-color) !important;
         padding: 0.8rem calc(1rem - 1px) 0.8rem 1rem !important;
         border-bottom: 0!important;
 
@@ -568,11 +570,11 @@ div#confirmdlg{
 }
 
 .ui-state-error{
-    background-color: $fail-color;
+    background-color: var(--fail-color);
 }
 
 .ui-growl-info{
-    background-color: $success-color;
+    background-color: var(--success-color);
 }
 .ui-growl-item-container{
     opacity: 1;
@@ -604,7 +606,7 @@ div#confirmdlg{
 
 .rb-prod-dialog-but{
     margin-top: 2rem;
-    background-color: $secondary-orange-color;
+    background-color: var(--secondary-orange-color);
     padding: 13px 0 !important; 
 
     #orderForm\:butpg{
@@ -619,12 +621,12 @@ div#confirmdlg{
         @include title();
         @include black-text();
         padding: 0 !important;
-        background-color: $secondary-orange-color;
+        background-color: var(--secondary-orange-color);
         font-weight: 400 !important;
     }
 
     .ui-button.ui-widget.ui-state-default{
-        background-color: $secondary-orange-color !important;
+        background-color: var(--secondary-orange-color) !important;
         border: 0;
     }
 }
@@ -643,7 +645,7 @@ div#confirmdlg{
     .ui-selectonemenu,
     input#orderForm\:stdtcal_input{
         @include border;
-        caret-color: $primary-black-color;
+        caret-color: var(--primary-black-color);
     }
 
     .rb-prod-gross-value,
@@ -710,7 +712,7 @@ html .ui-datepicker{
     }
 
     td.ui-datepicker-week-end.ui-datepicker-days-cell-over.undefined.ui-datepicker-current-day:has(a.ui-state-active){
-        background-color: $secondary-orange-color !important;
+        background-color: var(--secondary-orange-color) !important;
     }
 
     .ui-state-default{
@@ -726,7 +728,7 @@ html .ui-datepicker{
 //     border: 0 !important;
 
 //     .ui-datepicker-header{
-//         background-color: $secondary-orange-color !important;
+//         background-color: var(--secondary-orange-color) !important;
 //         border: none !important;
 
 //         .ui-datepicker-title{
@@ -766,7 +768,7 @@ button#orderForm\:gcontshop {
     width: 40px;
     height: 40px;
     border-radius: 50% !important;
-    background-color: $secondary-light-grey-color !important;
+    background-color: var(--secondary-light-grey-color) !important;
     padding: 1rem 0 1rem 1rem !important;
     
     .fa-arrow-left{
@@ -812,7 +814,7 @@ div#orderForm\:newguestpg{
     padding-right: 1em !important;
 
     &.ui-state-error{
-        border: 1px solid $fail-color !important;
+        border: 1px solid var(--fail-color) !important;
     }
 
     .ui-selectonemenu-label{
@@ -823,11 +825,11 @@ div#orderForm\:newguestpg{
 .ui-inputfield{
 
     &.ui-state-error{
-        border: 1px solid $fail-color !important;
+        border: 1px solid var(--fail-color) !important;
     }
    
     &.ui-state-focus{
-        border: 1px solid $secondary-orange-color !important;
+        border: 1px solid var(--secondary-orange-color) !important;
         box-shadow: none !important;
     }
 }
@@ -838,7 +840,7 @@ div#orderForm\:newguestpg{
             padding-right: 0 !important;
 
             .ui-button-text.ui-c{
-                background-color: $secondary-orange-color;
+                background-color: var(--secondary-orange-color);
                 color: white !important;
             }
             
